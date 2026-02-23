@@ -49,4 +49,8 @@ In particular, the current six-panel “dyed spacetime” atlas render (PNGs + a
 
 - toy_models/out_spacetime_sixpanel_full_v3/
 
+And a Q-comparison variant (dual overlay: fit Q_best vs robust Q_est in Panels 1 and 6) is written under:
+
+- toy_models/out_spacetime_sixpanel_full_v3_qcompare/
+
 See toy_models/DYED_SPACETIME_RENDERING_METHODOLOGY.md for exact output filenames.

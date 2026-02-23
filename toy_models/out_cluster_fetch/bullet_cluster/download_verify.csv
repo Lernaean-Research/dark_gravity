@@ -1,0 +1,12 @@
+catalog,obsid,local_dir,exists,file_count,local_bytes,expected_bytes,local_over_expected
+chanmaster,554,toy_models/data/bullet_cluster/raw/heasarc/chandra/554,True,35,137999711,138024287,0.9998219443799772
+chanmaster,4984,toy_models/data/bullet_cluster/raw/heasarc/chandra/4984,True,43,364756333,364780909,0.9999326280531857
+chanmaster,4985,toy_models/data/bullet_cluster/raw/heasarc/chandra/4985,True,34,136247769,136272345,0.99981965526461
+chanmaster,4986,toy_models/data/bullet_cluster/raw/heasarc/chandra/4986,True,36,201734242,201758818,0.9998781911975714
+chanmaster,5355,toy_models/data/bullet_cluster/raw/heasarc/chandra/5355,True,35,135610330,135634906,0.9998188077042646
+chanmaster,5356,toy_models/data/bullet_cluster/raw/heasarc/chandra/5356,True,47,457356091,457380667,0.9999462679518983
+chanmaster,5357,toy_models/data/bullet_cluster/raw/heasarc/chandra/5357,True,42,379469410,379493986,0.9999352400804581
+chanmaster,5358,toy_models/data/bullet_cluster/raw/heasarc/chandra/5358,True,35,155666780,155691356,0.9998421492327423
+chanmaster,5361,toy_models/data/bullet_cluster/raw/heasarc/chandra/5361,True,44,389462719,389487295,0.9999369016645331
+chanmaster,3184,toy_models/data/bullet_cluster/raw/heasarc/chandra/3184,True,45,392418482,392443058,0.9999373769022053
+xmmmaster,0112980201,toy_models/data/bullet_cluster/raw/heasarc/xmm/0112980201,True,2115,597111467,597299883,0.9996845537637582

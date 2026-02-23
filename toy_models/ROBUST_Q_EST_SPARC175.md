@@ -104,7 +104,7 @@ Computed from the local per-galaxy CSVs using the procedure above:
 This repo includes a small script that writes a CSV catalogue:
 
 ```bash
-python toy_models/q_est_sparc175.py
+./.venv/Scripts/python.exe toy_models/q_est_sparc175.py
 ```
 
 Outputs:
@@ -113,7 +113,7 @@ Outputs:
 To also print the representative sample table:
 
 ```bash
-python toy_models/q_est_sparc175.py --print-sample
+./.venv/Scripts/python.exe toy_models/q_est_sparc175.py --print-sample
 ```
 
 ## How to compute from raw `*_rotmod.dat` (if you download them)
@@ -121,13 +121,13 @@ python toy_models/q_est_sparc175.py --print-sample
 If you have a directory of SPARC rotmod files (e.g. from the SPARC download), run:
 
 ```bash
-python toy_models/q_est_sparc175.py --rotmod-dir path/to/Rotmod_LTG --out-csv q_est_from_rotmod.csv
+./.venv/Scripts/python.exe toy_models/q_est_sparc175.py --rotmod-dir path/to/Rotmod_LTG --out-csv q_est_from_rotmod.csv
 ```
 
 You can override the mass-to-light scalings if needed:
 
 ```bash
-python toy_models/q_est_sparc175.py --rotmod-dir path/to/Rotmod_LTG --ups-disk 0.5 --ups-bul 0.7
+./.venv/Scripts/python.exe toy_models/q_est_sparc175.py --rotmod-dir path/to/Rotmod_LTG --ups-disk 0.5 --ups-bul 0.7
 ```
 
 ## Optional: using `Q_est` in simple regressions
@@ -177,3 +177,61 @@ print({'b': beta[0], 'a': beta[1], 'c': beta[2]})
 - If you want to compare to the toy-model fitted amplitude `q_best_kms2`, join
   `q_est.csv` with `toy_models/out_sparc_runs_full_with_composition/summary.csv` on
   the `galaxy` column.
+
+## Using `Q_est` in the six-panel atlas (Q-comparison overlay)
+
+The six-panel renderer can plot a **dual overlay** on Panels 1 and 6 to show the
+contrast between:
+
+- the runner’s fitted amplitude (fit $Q_{best}$), and
+- the robust outer estimator (robust $Q_{est}$).
+
+This is purely a visualization comparison: it does **not** change the
+data-derived reconstruction panels (effective potential, dyed depth, 3D proxy,
+orbits), which depend only on $v_{obs}(R)$.
+
+Render a full-catalogue Q-comparison atlas (PNGs + multi-page PDF):
+
+```bash
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
+  --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
+  --out-dir toy_models/out_spacetime_sixpanel_full_v3_qcompare \
+  --six-panel --make-pdf \
+  --img-n 320 --dpi 160 --interp bilinear \
+  --fabric-norm global --global-percentile 95 \
+  --fabric-extent per_galaxy \
+  --surface-height-mode manual --surface-height-frac 0.35 \
+  --surface-height-norm per_galaxy \
+  --surface-color-norm auto --surface-z-exag 1 \
+  --q-override q_est \
+  --summary toy_models/out_sparc_runs_full_with_composition/summary.csv \
+  --q-est toy_models/out_sparc_runs_full_with_composition/q_est.csv
+```
+
+Notes:
+
+- This mode requires that the per-galaxy CSVs contain the runner outputs
+  (`gextra_kms2_per_kpc`, `gbar_kms2_per_kpc`) and that `q_best_kms2>0` for the
+  galaxy; otherwise, the override is skipped for that page.
+- Because the fitted toy-model amplitude is constrained $Q\ge 0$, negative
+  `q_est_kms2` values are clamped to 0 when used as a toy-model overlay.
+
+## Compare against prior fitted results (full 175)
+
+This repository includes a small comparison script that joins `q_est.csv` to
+the runner’s `summary.csv` and computes robust deltas/correlations (including a
+split by the `outer_rule` selection).
+
+```bash
+./.venv/Scripts/python.exe toy_models/analyze_q_est_comparison.py \
+  --q-est toy_models/out_sparc_runs_full_with_composition/q_est.csv \
+  --summary toy_models/out_sparc_runs_full_with_composition/summary.csv \
+  --out-dir toy_models/out_q_est_analysis
+```
+
+Outputs:
+- `toy_models/out_q_est_analysis/q_est_comparison_report.md`
+- `toy_models/out_q_est_analysis/q_est_joined_summary.csv`
+- `toy_models/out_q_est_analysis/scatter_q_est_vs_q_best.png`
+- `toy_models/out_q_est_analysis/scatter_v_est_vs_v_extra.png`
+- `toy_models/out_q_est_analysis/hist_delta_v.png`

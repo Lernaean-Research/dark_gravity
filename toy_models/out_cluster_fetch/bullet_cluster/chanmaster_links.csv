@@ -1,0 +1,11 @@
+catalog,index,ID,access_url,aws,sciserver,content_length_bytes
+chanmaster,0,ivo://nasa.heasarc/chanmaster?2487,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/4//554/,s3://nasa-heasarc/chandra/data/byobsid/4/554/,/FTP/chandra/data/byobsid/4/554/,138024287
+chanmaster,1,ivo://nasa.heasarc/chanmaster?2488,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/4//4984/,s3://nasa-heasarc/chandra/data/byobsid/4/4984/,/FTP/chandra/data/byobsid/4/4984/,364780909
+chanmaster,2,ivo://nasa.heasarc/chanmaster?2489,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/5//4985/,s3://nasa-heasarc/chandra/data/byobsid/5/4985/,/FTP/chandra/data/byobsid/5/4985/,136272345
+chanmaster,3,ivo://nasa.heasarc/chanmaster?2490,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/6//4986/,s3://nasa-heasarc/chandra/data/byobsid/6/4986/,/FTP/chandra/data/byobsid/6/4986/,201758818
+chanmaster,4,ivo://nasa.heasarc/chanmaster?2491,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/5//5355/,s3://nasa-heasarc/chandra/data/byobsid/5/5355/,/FTP/chandra/data/byobsid/5/5355/,135634906
+chanmaster,5,ivo://nasa.heasarc/chanmaster?2492,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/6//5356/,s3://nasa-heasarc/chandra/data/byobsid/6/5356/,/FTP/chandra/data/byobsid/6/5356/,457380667
+chanmaster,6,ivo://nasa.heasarc/chanmaster?2493,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/7//5357/,s3://nasa-heasarc/chandra/data/byobsid/7/5357/,/FTP/chandra/data/byobsid/7/5357/,379493986
+chanmaster,7,ivo://nasa.heasarc/chanmaster?2494,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/8//5358/,s3://nasa-heasarc/chandra/data/byobsid/8/5358/,/FTP/chandra/data/byobsid/8/5358/,155691356
+chanmaster,8,ivo://nasa.heasarc/chanmaster?2495,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/1//5361/,s3://nasa-heasarc/chandra/data/byobsid/1/5361/,/FTP/chandra/data/byobsid/1/5361/,389487295
+chanmaster,9,ivo://nasa.heasarc/chanmaster?2496,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/4//3184/,s3://nasa-heasarc/chandra/data/byobsid/4/3184/,/FTP/chandra/data/byobsid/4/3184/,392443058

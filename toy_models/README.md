@@ -62,6 +62,43 @@ Methodology and unit conventions:
 - `toy_models/SPARC_ROTMod_METHODOLOGY.md`
 - `toy_models/ROBUST_Q_EST_SPARC175.md` (robust non-fitted outer deficit estimator; writes `q_est.csv`)
 
+## Cluster radial-profile adapter (Bullet Cluster-style inputs)
+
+`toy_models/cluster_profile_q_est.py` adapts the **exact same** robust outer statistic
+used for SPARC galaxies (Huber location of $\Delta v^2$ in an outer region) to any system
+where you can supply a **1D radial profile** of either:
+
+- effective circular speeds (`v_tot_kms`, `v_bar_kms`), or
+- enclosed masses (`M_tot_Msun`, `M_bar_Msun`) via $v^2 = GM/r$.
+
+This is useful for quick cross-domain *scale checks* (e.g., comparing cluster-scale
+outer deficits to the SPARC-derived $q_{est}$ distribution), but it is **not** a full
+2D Bullet-Cluster offset test.
+
+## Environment (one-time setup)
+
+This repo is meant to be run from the workspace virtual environment at `.venv/`.
+
+Bootstrap (creates `.venv` and installs `requirements.txt`):
+
+- `./scripts/bootstrap_venv.ps1`
+
+Then run scripts via:
+
+- `./.venv/Scripts/python.exe toy_models/<script>.py [args]`
+
+Data drop-in template:
+
+- `toy_models/data/bullet_cluster/profile_template.csv`
+
+Bullet Cluster dataset links + suggested folder layout:
+
+- `toy_models/data/bullet_cluster/DATASET_LINKS.md`
+
+If you want to bulk-download the HEASARC public S3 directories listed in the manifest:
+
+- `./toy_models/download_bullet_cluster_heasarc.ps1`
+
 ## Correlation analyzer (stdlib-only)
 
 `toy_models/analyze_summary_correlations.py` computes Pearson and Spearman correlations from a
@@ -101,7 +138,7 @@ Inputs are the per-galaxy CSVs produced by the SPARC runner (one CSV per galaxy)
 Render the full six-panel atlas to PNGs (one page per galaxy):
 
 ```bash
-python toy_models/visualize_dyed_spacetime.py \
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
   --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
   --out-dir toy_models/out_spacetime_sixpanel_full_v3 \
   --six-panel \
@@ -116,7 +153,7 @@ python toy_models/visualize_dyed_spacetime.py \
 Package the same settings into a single multi-page PDF:
 
 ```bash
-python toy_models/visualize_dyed_spacetime.py \
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
   --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
   --out-dir toy_models/out_spacetime_sixpanel_full_v3 \
   --six-panel --make-pdf \
@@ -126,9 +163,32 @@ python toy_models/visualize_dyed_spacetime.py \
   --surface-height-mode manual --surface-height-frac 0.35 \
   --surface-height-norm per_galaxy \
   --surface-color-norm auto --surface-z-exag 1
+
 ```
 
+Render a Q-comparison atlas (dual overlay: fit $Q_{best}$ vs robust $Q_{est}$):
+
+```bash
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
+  --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
+  --out-dir toy_models/out_spacetime_sixpanel_full_v3_qcompare \
+  --six-panel --make-pdf \
+  --img-n 320 --dpi 160 --interp bilinear \
+  --fabric-norm global --global-percentile 95 \
+  --fabric-extent per_galaxy \
+  --surface-height-mode manual --surface-height-frac 0.35 \
+  --surface-height-norm per_galaxy \
+  --surface-color-norm auto --surface-z-exag 1 \
+  --q-override q_est \
+  --summary toy_models/out_sparc_runs_full_with_composition/summary.csv \
+  --q-est toy_models/out_sparc_runs_full_with_composition/q_est.csv
+```
 Outputs:
 
 - PNG pages: `toy_models/out_spacetime_sixpanel_full_v3/png/*.png`
 - Multi-page PDF (when `--make-pdf`): `toy_models/out_spacetime_sixpanel_full_v3/dyed_spacetime_pages.pdf`
+
+Q-comparison outputs (when using `--q-override q_est`):
+
+- PNG pages: `toy_models/out_spacetime_sixpanel_full_v3_qcompare/png/*.png`
+- Multi-page PDF: `toy_models/out_spacetime_sixpanel_full_v3_qcompare/dyed_spacetime_pages.pdf`

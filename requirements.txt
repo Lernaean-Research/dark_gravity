@@ -1,0 +1,10 @@
+# Core analysis + plotting
+numpy
+matplotlib
+
+# Astronomy catalog / archive queries (VizieR, HEASARC, etc.)
+astroquery
+astropy
+
+# Notebook kernel support for VS Code / Jupyter
+ipykernel

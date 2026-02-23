@@ -24,6 +24,11 @@ Primary render outputs:
 - Multi-page atlas PDF: [toy_models/out_spacetime_sixpanel_full_v3/dyed_spacetime_pages.pdf](toy_models/out_spacetime_sixpanel_full_v3/dyed_spacetime_pages.pdf)
 - Per-galaxy PNG directory: [toy_models/out_spacetime_sixpanel_full_v3/png](toy_models/out_spacetime_sixpanel_full_v3/png)
 
+6-panel (2×3) atlas (Q-comparison variant; dual overlay in Panels 1 and 6):
+
+- Multi-page atlas PDF: [toy_models/out_spacetime_sixpanel_full_v3_qcompare/dyed_spacetime_pages.pdf](toy_models/out_spacetime_sixpanel_full_v3_qcompare/dyed_spacetime_pages.pdf)
+- Per-galaxy PNG directory: [toy_models/out_spacetime_sixpanel_full_v3_qcompare/png](toy_models/out_spacetime_sixpanel_full_v3_qcompare/png)
+
 ## How to read this atlas (executive)
 
 **Paper-ready framing.** Each page is a phenomenology-first visualization: it encodes what the observed circular-orbit kinematics imply about an **effective** radial potential in the rotation-supported sector, without claiming a unique GR metric reconstruction. The dyed-fabric panel is therefore a visual encoding of an inferred potential depth profile (with global normalization for cross-galaxy comparability), not an embedding diagram and not a computed geodesic map.

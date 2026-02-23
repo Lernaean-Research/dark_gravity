@@ -12,8 +12,15 @@ For full reproducibility details (definitions, uncertainty propagation, provenan
 
 Current full‑catalogue six‑panel output set:
 
+Default atlas (single model overlay per page):
+
 - Multi‑page PDF: [out_spacetime_sixpanel_full_v3/dyed_spacetime_pages.pdf](out_spacetime_sixpanel_full_v3/dyed_spacetime_pages.pdf)
 - Per‑galaxy PNG pages: [out_spacetime_sixpanel_full_v3/png](out_spacetime_sixpanel_full_v3/png)
+
+Q‑comparison atlas (dual overlay: fitted $Q_{best}$ vs robust $Q_{est}$):
+
+- Multi‑page PDF: [out_spacetime_sixpanel_full_v3_qcompare/dyed_spacetime_pages.pdf](out_spacetime_sixpanel_full_v3_qcompare/dyed_spacetime_pages.pdf)
+- Per‑galaxy PNG pages: [out_spacetime_sixpanel_full_v3_qcompare/png](out_spacetime_sixpanel_full_v3_qcompare/png)
 
 ## Executive summary (plain language)
 
@@ -58,9 +65,20 @@ On each page, different items have different epistemic status:
 
 - $v_{obs}$ is plotted as the primary observed curve (typically black).
 - $v_{bar}$ (baryons‑only prediction) is an overlay curve (typically blue).
-- $v_{model}$ (fitted total curve) is an overlay curve (typically red).
+- $v_{model}$ (total curve) is an overlay curve (typically red).
 - If a curve is absent, it is because the corresponding column was not present in the per‑galaxy CSV.
 - Shaded regions appear only when $e_{vobs}$ is available.
+
+Special case: Q‑comparison pages
+
+- In the Q‑comparison atlas, **two** red model curves may appear in Panel 1:
+  - **Dashed red:** $v_{model}$ from the upstream runner fit (fitted $Q_{best}$).
+  - **Solid red:** a rescaled overlay using the robust outer estimator (robust $Q_{est}$).
+- In Panel 6, the corresponding residual curves appear as:
+  - **Dashed red:** $v_{obs}-v_{model}$ (fit $Q_{best}$).
+  - **Solid red:** $v_{obs}-v_{model}$ (robust $Q_{est}$).
+
+Important: Panels 2–5 are reconstructed from $v_{obs}(R)$ and do not depend on $Q$.
 
 ### Panel 1 (top‑left): Rotation curve
 
@@ -69,7 +87,12 @@ On each page, different items have different epistemic status:
 - $v_{obs}(R)$ (observed circular speed) versus radius.
 - Optional overlays (if available in the CSV):
   - $v_{bar}(R)$: baryonic prediction.
-  - $v_{model}(R)$: a fitted total curve from the upstream runner.
+  - $v_{model}(R)$: a total curve from the upstream runner.
+
+If you are reading a Q‑comparison page, the rotation panel may include two red overlays:
+
+- **Dashed**: fitted $Q_{best}$ overlay (runner output).
+- **Solid**: robust $Q_{est}$ overlay (a rescaling used only for visual comparison).
 - If $e_{vobs}(R)$ exists: a ±1σ band around $v_{obs}(R)$.
 
 #### Rotation curve — How to use it
@@ -162,6 +185,11 @@ On each page, different items have different epistemic status:
 - Residual curves (when the corresponding overlays exist):
   - $\Delta v_{model}(R)=v_{obs}(R)-v_{model}(R)$
   - $\Delta v_{bar}(R)=v_{obs}(R)-v_{bar}(R)$
+
+On Q‑comparison pages, there may be **two** model residual curves:
+
+- **Solid red:** $v_{obs}-v_{model}$ (robust $Q_{est}$).
+- **Dashed red:** $v_{obs}-v_{model}$ (fit $Q_{best}$).
 - If $e_{vobs}$ exists, the uncertainty band is drawn **around each residual curve**:
 
 $$\Delta v(R) \pm e_{vobs}(R).$$
@@ -185,7 +213,7 @@ $$\Delta v(R) \pm e_{vobs}(R).$$
 Render PNG pages:
 
 ```bash
-python toy_models/visualize_dyed_spacetime.py \
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
   --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
   --out-dir toy_models/out_spacetime_sixpanel_full_v3 \
   --six-panel \
@@ -200,7 +228,7 @@ python toy_models/visualize_dyed_spacetime.py \
 Package as a single multi‑page PDF:
 
 ```bash
-python toy_models/visualize_dyed_spacetime.py \
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
   --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
   --out-dir toy_models/out_spacetime_sixpanel_full_v3 \
   --six-panel --make-pdf \
@@ -210,6 +238,24 @@ python toy_models/visualize_dyed_spacetime.py \
   --surface-height-mode manual --surface-height-frac 0.35 \
   --surface-height-norm per_galaxy \
   --surface-color-norm auto --surface-z-exag 1
+
+Render the Q‑comparison atlas (dual overlay: fit $Q_{best}$ vs robust $Q_{est}$):
+
+```bash
+./.venv/Scripts/python.exe toy_models/visualize_dyed_spacetime.py \
+  --galaxy-dir toy_models/out_sparc_runs_full_with_composition/galaxies \
+  --out-dir toy_models/out_spacetime_sixpanel_full_v3_qcompare \
+  --six-panel --make-pdf \
+  --img-n 320 --dpi 160 --interp bilinear \
+  --fabric-norm global --global-percentile 95 \
+  --fabric-extent per_galaxy \
+  --surface-height-mode manual --surface-height-frac 0.35 \
+  --surface-height-norm per_galaxy \
+  --surface-color-norm auto --surface-z-exag 1 \
+  --q-override q_est \
+  --summary toy_models/out_sparc_runs_full_with_composition/summary.csv \
+  --q-est toy_models/out_sparc_runs_full_with_composition/q_est.csv
+```
 ```
 
 ## Glossary (quick)
