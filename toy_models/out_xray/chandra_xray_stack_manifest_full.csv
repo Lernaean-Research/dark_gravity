@@ -1,0 +1,11 @@
+path,obs_id,exposure_s
+toy_models/data/bullet_cluster/raw/heasarc/chandra/5356/primary/acisf05356N004_full_img2.fits.gz,5356,97196.811756
+toy_models/data/bullet_cluster/raw/heasarc/chandra/3184/primary/acisf03184N004_full_img2.fits.gz,3184,87473.692202
+toy_models/data/bullet_cluster/raw/heasarc/chandra/5361/primary/acisf05361N004_full_img2.fits.gz,5361,82618.474007
+toy_models/data/bullet_cluster/raw/heasarc/chandra/5357/primary/acisf05357N004_full_img2.fits.gz,5357,79057.220298
+toy_models/data/bullet_cluster/raw/heasarc/chandra/4984/primary/acisf04984N004_full_img2.fits.gz,4984,76117.125367
+toy_models/data/bullet_cluster/raw/heasarc/chandra/4986/primary/acisf04986N004_full_img2.fits.gz,4986,41489.706786
+toy_models/data/bullet_cluster/raw/heasarc/chandra/5358/primary/acisf05358N004_full_img2.fits.gz,5358,31956.357044
+toy_models/data/bullet_cluster/raw/heasarc/chandra/4985/primary/acisf04985N004_full_img2.fits.gz,4985,27486.392653
+toy_models/data/bullet_cluster/raw/heasarc/chandra/5355/primary/acisf05355N004_full_img2.fits.gz,5355,27410.026563
+toy_models/data/bullet_cluster/raw/heasarc/chandra/554/primary/acisf00554N004_full_img2.fits.gz,554,25790.670761

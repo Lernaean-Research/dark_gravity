@@ -11,6 +11,31 @@ These scripts are **sanity checks** for the manuscript hypothesis that *intrinsi
 
 They are intentionally **phenomenological** unless otherwise stated.
 
+## Data policy (important)
+
+This repo is organized so that the remote stays **reviewable and reproducible** without bundling multi-GB third-party downloads.
+
+- Policy: `toy_models/DATA_POLICY.md`
+- Data staging overview: `toy_models/data/README.md`
+
+In short: commit scripts/manifests/small derived tables and a minimal set of figures; keep large FITS/event/archives as local-only cache.
+
+## Cluster morphology benchmarking (HFF / Bullet)
+
+The cluster-facing tooling is separate from the SPARC atlas pipeline and focuses on reproducible morphology operators and systematics sweeps.
+
+Key entry points:
+
+- `toy_models/run_hff_systematics.py` (batch systematics runner)
+- `toy_models/render_hff_systematics_sixpanels.py` (figure generation)
+- `toy_models/generate_hff_systematics_analysis.py` (writes `HFF_ALL_TEAMS_SYSTEMATICS_ANALYSIS.md`)
+- `toy_models/plot_hff_systematics_summary.py` (compact summary figure)
+
+Data staging:
+
+- `toy_models/data/hff/README.md`
+- `toy_models/data/bullet_cluster/README.md`
+
 ## `edge_response_spherical.py`
 
 - Spherical baryons (Hernquist) + an **edge-localized** “boundary-layer” acceleration term.

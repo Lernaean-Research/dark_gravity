@@ -1,0 +1,56 @@
+hlsp_frontier_model_abell2744_WSLAPplus_v4_readme.txt
+
+This directory contains gravitational lensing models of the Hubble Frontier Fields (HFF) cluster Abell2744 obtained with the free-form method WSLAP+
+
+Our team's model subdirectory contains FITS images with the following data:
+
+- *magnification_z1.fits: magnification for a lensed galaxy at z = 1
+- *magnification_z2.fits: magnification for a lensed galaxy at z = 2
+- *magnification_z4.fits: magnification for a lensed galaxy at z = 4
+- *magnification_z9.fits: magnification for a lensed galaxy at z = 9
+
+and the following scaled to DLS / DS = 1:
+
+- *kappa.fits: mass surface density
+- *gamma.fits: weak lensing shear
+- *x_arcsec_deflect.fits: deflection angle (x-component)
+- *y_arcsec_deflect.fits: deflection angle (y-component)
+- *potential.fits: lensing potential
+
+For each HHF cluster, we include to different sets of solutions depending on the multiple images included in the procedure (GOLD and ALL=GOLD+SILVER+BRONSE). The first set of solutions is obtained with the GOLD candidates, including only multiple images with available spectroscopic redshifts. The second set of solutions is obtained after using all systems that fall in the categories GOLD, SILVER and BRONSE as they are defined in common with other teams. The models labelled BEST are obtained after a larger number of iterations (300K) is allowed in the optimization procedure. By construction, the solutions labelled BEST have a smaller RMS when comparing the observed positions with the predicted ones by the lens model. However, this does not necessarily mean that the solutions "BEST" are a better representation of the true underlying mass. The solutions containing the "BEST" model are named as follows:
+
+- hlsp_frontier_model_abell2744_WSLAPplus_v4_best-GOLD_*.fits
+- hlsp_frontier_model_abell2744_WSLAPplus_v4_best-ALL_*.fits
+
+for the GOLD and ALL(=GOLD+SILVER+BRONSE) data sets. 
+
+For each data set (GOLD or ALL) we derive also a set of 100 solutions obtained after iterating 100K in the optimization per solution. This number of iterations (100K) is typically sufficient to achieve convergence and obtain reliable solutions. For each of the 100 solutions, we vary the initial starting point in the optimization and the redshift of the systems with photometric redshifts. The redshifts are sampled for each realization following a normal distribution with mean equal to the redshift of the system (z_i) and standard deviation equal to 0.2*(1+z_i).  When a photometric redshift is not available or is not reliable we use the redshift predicted by a lens model. The 100 solutions are also divided in two sets, GOLD and ALL and can be found in the subdirectory "range". The naming scheme is similar to the files described above for the BEST model case. 
+ 
+The redshift of the cluster is fixed at z=0.308. The model cover the following areas with the following resolutions as given in the FITS WCS headers:
+
+model		center RA & Dec (J2000)		width (sq) or area	resolution	pixels on a side
+--------------------------------------------------------------------------------------------------------
+WSLAPplus	00:14:20.996 & -30:23:22.264	4.4' x 4.4'		   0.51"		512
+
+About WSLAP+
+--------------
+WSLAP+ (Diego J.M. et al. 2005, 2007, 2016) derives a lens model based on strong and, when available, weak lensing data. This model was derived using strong lensing data only. The mass distribution (solution) is built as superposition of Gaussian functions and a compact component that traces the light of the member galaxies. The Gaussian functions can have equal widths (regular grid) or varying widths (multi-resolution grid). Multi-resolution grids are normally used when the cluster presents nearly spherical symmetry. For clusters with an irregular distribution, regular grids are normally used. The modeling of Abell2744 is based on a regular grid with 32x32=1024 grid points.
+ 
+The compact component is simply modeled as the observed light around prominent member galaxies. Member galaxies are selected from AstroDeep (Merlin et al. 2016, Castellano et al. 2016), GLASS (Treu et al. 2015) and Owers et al. 2011. We included a total of 400 cluster members with z = 0.308 +- 0.05.
+
+Besides, we consider a total of five layers to describe the lens: one for the less bright galaxies, two layers for each of the BCG (labeled as center BCG and South BCG) and two layers for the brightest galaxies located on the Northeast edge of the cluster.
+
+Arcs that present multiple knots are used with the knot information added as extra constraints. In particular, system 1 and system 2 include knot information.
+
+Lens model for Abell2744 will be described in more detail in Vega-Ferrero et al. (in preparation).
+
+References
+--------------
+Castellano M. et al. 2016, A&A, 590, 31
+Diego, J.M. et al. 2005, MNRAS, 360, 477 
+Diego, J.M. et al. 2007, MNRAS, 375, 958
+Diego, J.M. et al. 2016, MNRAS, 456, 356
+Merlin, E. et al. 2016, A&A, 590, 30
+Owers, M.S. et al. 2011, ApJ, 728, 27
+Treu, T. et al. 2015, ApJ, 812, 114
+Vega-Ferrero, J. et al. in prep.

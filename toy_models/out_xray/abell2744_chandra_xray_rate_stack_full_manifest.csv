@@ -1,0 +1,6 @@
+path,obs_id,exposure_s
+toy_models/data/hff/abell2744/raw/heasarc/chandra/25926/primary/acisf25926N002_full_img2.fits.gz,25926,61174.627346
+toy_models/data/hff/abell2744/raw/heasarc/chandra/25955/primary/acisf25955N003_full_img2.fits.gz,25955,43422.565031
+toy_models/data/hff/abell2744/raw/heasarc/chandra/25907/primary/acisf25907N003_full_img2.fits.gz,25907,36796.382745
+toy_models/data/hff/abell2744/raw/heasarc/chandra/25917/primary/acisf25917N002_full_img2.fits.gz,25917,35618.610037
+toy_models/data/hff/abell2744/raw/heasarc/chandra/25922/primary/acisf25922N003_full_img2.fits.gz,25922,31367.721975

@@ -10,3 +10,35 @@ Thumbs.db
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
+
+# --- toy_models: keep methodology + manifests, avoid huge third-party data ---
+# Raw FITS / archives / compressed products are typically enormous and/or not ours.
+toy_models/data/**/*.fits
+toy_models/data/**/*.fit
+toy_models/data/**/*.fz
+toy_models/data/**/*.fits.gz
+toy_models/data/**/*.fit.gz
+toy_models/data/**/*.tar
+toy_models/data/**/*.tar.gz
+toy_models/data/**/*.tgz
+toy_models/data/**/*.zip
+toy_models/data/**/*.7z
+toy_models/data/**/*.rar
+toy_models/data/**/*.gz
+toy_models/data/**/*.pdf
+toy_models/data/**/*.pdf.gz
+
+# Derived FITS can also be very large; keep derived tables/figures instead.
+toy_models/out_*/**/*.fits
+toy_models/out_*/**/*.fit
+toy_models/out_*/**/*.fits.gz
+toy_models/out_*/**/*.fit.gz
+
+# Allow lightweight provenance and manifests under data/
+!toy_models/data/**/*.md
+!toy_models/data/**/*.txt
+!toy_models/data/**/*.csv
+!toy_models/data/**/*.tsv
+!toy_models/data/**/*.json
+!toy_models/data/**/*.yml
+!toy_models/data/**/*.yaml

@@ -1,0 +1,6 @@
+path,obs_id,exposure_s
+toy_models/data/hff/macs0416/raw/heasarc/chandra/16304/primary/acisf16304N003_full_img2.fits.gz,16304,97789.268035
+toy_models/data/hff/macs0416/raw/heasarc/chandra/16523/primary/acisf16523N002_full_img2.fits.gz,16523,71123.908707
+toy_models/data/hff/macs0416/raw/heasarc/chandra/17313/primary/acisf17313N002_full_img2.fits.gz,17313,62764.645802
+toy_models/data/hff/macs0416/raw/heasarc/chandra/16236/primary/acisf16236N002_full_img2.fits.gz,16236,39852.304867
+toy_models/data/hff/macs0416/raw/heasarc/chandra/16237/primary/acisf16237N003_full_img2.fits.gz,16237,36599.769882

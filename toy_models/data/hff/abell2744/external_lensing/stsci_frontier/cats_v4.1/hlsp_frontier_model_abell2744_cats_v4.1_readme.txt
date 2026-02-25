@@ -1,0 +1,33 @@
+MODELS SUBMITTED :
+
+	- CATS v2.1 : SL model published in Jauzac et al. (2015, MNRAS, 452, 1437) - named as in Rodney et al. (2015, accepted by ApJ, arXiv1505.0621)
+	- CATS v2.2 : SL model published in Jauzac et al. (2015, MNRAS, 452, 1437), using same set of multiple images as Wang et al. (2015, sub. to ApJ, arXiv504.0240) - named as in Rodney et al. (2015, accepted by ApJ, arXiv1505.0621)
+	- CATS v3 : SL model using the multiple images ranked as GOLD and SILVER by all the lensing team
+	- CATS v3.1 : SL model using the multiple images ranked as GOLD, SILVER and BRONZE by all the lensing teams 
+	- CATS v4 : SL model using the multiple images ranked as GOLD
+	- CATS v4.1 : SL model using the multiple images ranked as GOLD, SILVER and other very photometricaly convincing candidates. 
+
+
+PRODUCTS :
+	Best model:
+	- *_z*_magnif.fits : magnification maps at redshift z
+	- *_gamma.fits : shear map
+	- *_kappa.fits : convergence map
+	- *_psi.fits : lens potential map
+	- *_deflect.fits : deflection field map
+	- *_arcs.txt : list of multiple images used for each model
+	- *_params.txt : best parameter file obtained for each model
+        Map produces during the bayesian minimization approach. Requiered to compute the statistical uncertainties
+        - range/*gamma.fits : shear maps
+        - range/*_kappa.fits : convergence maps
+        - range/*_psi.fits : lens potential maps
+
+METHODOLOGY :
+
+Producing a magnification map involves solving the lens equation for light rays originating from distant sources and deflected by the massive foreground cluster. This is ultimately an inversion problem for which several sets of codes and approaches have been developed independently (see recent review by Kneib & Natarajan 2010).
+Our collaboration uses LENSTOOL , an algorithm developed collectively by us over the years.  LENSTOOL is a hybrid code that combines observational strong- and weak-lensing data to constrain the cluster mass model. The total mass distribution of clusters is assumed to consist of several smooth, large-scale potentials that are modeled either in a parametric form or non-parametrically, along with contributions from many (typically N > 50) individual cluster galaxies that are modeled using physically motivated parametric forms. For lensing clusters a multi-scale approach is optimal, in as much as the constraints resulting from this inversion exercise are derived from a range of scales. Further details of the methodology are outlined in Jullo & Kneib (2009) and have been extended to the weak-lensing regime (Jauzac et al. 2012). 
+At present, the prevailing modeling approach is to assign a small-scale dark-matter clump to each major cluster galaxy and a large-scale dark-matter clump to prominent concentrations of cluster galaxies (Natarajan & Kneib 1997). This technique has proven very reliable and results in mass distributions that are in reasonably good agreement with theoretical predictions from high-resolution cosmological N-body simulations (Natarajan et al. 2007). This explicit one-to-one correspondence between mass and light is less accurate, however, in the outer regions of clusters where the galaxy distribution is sparser, and strong-lensing constraints are unavailable.
+In its current implementation in LENSTOOL, the optimization of the combined parametric and non-parametric model is computationally time intensive. Both the multi-scale and the parametric models are adjusted in a Bayesian way, i.e., we probe their posterior probability density with a MCMC sampler (Jullo et al. 2007). This process allows us to easily and reliably estimate the errors on derived quantities such as the amplification maps and the mass maps. The described procedure automatically produces amplification maps as well as robust accompanying error maps. We provide these maps for all six HFF clusters.
+The model has been produced for the concordance cosmological model with H0 = 70 km/s/Mpc, ΩΛ = 0.7 and ΩM = 0.3. The cluster galaxy catalog used is the one published in Mahler et al. 2017 to be submitted.
+
+

@@ -1,0 +1,35 @@
+MODEL SUBMITTED :
+	- CATS v4.1 : SL model using multiple images spectroscopically confirmed (Caminha et al. 2016), and 176 cluster galaxies (Grillo et al. 2015)
+
+
+Each of these 2 models of MACSJ0416 include :
+	- 3 cluster-scale potentials
+	- 176 galaxy-scale halos for v4 and 178 for V4.1
+	- 116 multiple images (IDs initially from Jauzac et al. 2014, MNRAS, 443, 1549, complemented by new systems from Caminha et al. 2016)
+
+The difference between the v4 and v4.1 models resides in the cluster galaxy catalogues. One uses galaxies selected by Grillo et al. (2015) - v4.1, the other one was built by Richard et al. (2017, in prep.) - v4.
+	- RMS for v4.1 : 0.72 arcsec
+
+
+PRODUCTS :
+	- *_z*_magnif.fits : magnification maps at redshift z
+	- *_gamma.fits : shear map
+	- *_kappa.fits : convergence map
+	- *_deflect.fits : deflection field map
+	- *_psi.fits : potential map
+	- *_arcs.txt : list of multiple images used for each model
+	- *_params.txt : best parameter file obtained for each model
+
+
+METHODOLOGY :
+
+The model has been produced for the concordance cosmological model with H0 = 70 km/s/Mpc, ΩΛ = 0.7 and ΩM = 0.3.
+
+Our collaboration uses LENSTOOL, an algorithm developed collectively by us over the years.  LENSTOOL is a hybrid code that can combine observational strong- and weak-lensing data to constrain the cluster mass model. Here we only use strong-lensing constraints.
+
+The total mass distribution of clusters is assumed to consist of several smooth, large-scale potentials that are modeled in a parametric form for strong-lensing only mass models, along with contributions from many (typically N > 50) individual cluster galaxies that are modeled using physically motivated parametric forms. 
+
+For lensing clusters a multi-scale approach is optimal, in as much as the constraints resulting from this inversion exercise are derived from a range of scales. Further details of the methodology are outlined in Jullo & Kneib (2009) and have been extended to the weak-lensing regime (Jauzac et al. 2012). At present, the prevailing modeling approach is to assign a small-scale dark-matter clump to each major cluster galaxy and a large-scale dark-matter clump to prominent concentrations of cluster galaxies (Natarajan & Kneib 1997) — both modeled using PIEMD potentials. 
+
+In its current implementation in LENSTOOL, the optimization of the combined parametric and non-parametric model is computationally time intensive. Both the multi-scale and the parametric models are adjusted in a Bayesian way, i.e., we probe their posterior probability density with a MCMC sampler (Jullo et al. 2007). This process allows us to easily and reliably estimate the errors on derived quantities such as the amplification maps and the mass maps. The described procedure automatically produces amplification maps as well as robust accompanying error maps.
+
