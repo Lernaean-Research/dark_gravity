@@ -8,3 +8,6 @@ astropy
 
 # Notebook kernel support for VS Code / Jupyter
 ipykernel
+
+# DOCX manipulation (appendix insertion)
+python-docx
