@@ -1,0 +1,64 @@
+=== CITATION AUDIT REPORT ===
+
+Total BibTeX entries in references.bib: 52
+Total unique citations in manuscript_overleaf.tex: 13
+
+✓ No missing references - all citations have corresponding .bib entries
+
+=== UNUSED IN .TEX (52 - 13 = 39 unused) ===
+Ackermann2015Dwarfs
+Aguilar2013AMS
+Akerib2017LUX
+Aprile2018XENON1T
+BenderOrszag1999
+Bosma1978Thesis
+Buchert2000Averaging
+BuniyHsuMurray2006NEC
+Burgess2004EFTGR
+Carroll2004Spacetime
+Carroll2019Spacetime
+Cui2017PandaX
+DeserWoodard2007Nonlocal
+Donoghue1994EFTGR
+Einstein1915Mercury
+Einstein1916GR
+Euclid2022WideSurvey
+Euclid2025Overview
+Fruscione2006CIAO
+HawkingEllis1973
+HEASARC2025Archive
+Ivezic2019LSST
+KevorkianCole1996
+LeVerrier1859Mercury
+MAST2019HFF
+McGaugh2000BTFR
+McGaughSchombert2014ML
+PoissonWill2014
+Rasanen2006Backreaction
+Riess2019LMC
+Rossing1982Chladni
+Rubakov2006NEC
+Rubakov2014NECReview
+RubinFord1970M31
+Scaramella2022EuclidWide
+Tuan2014Nodal
+Wald1984GR
+Weisskopf2002Chandra
+Zwicky1933Coma
+
+=== SECTION 9 CITATIONS ONLY ===
+Citation keys in Section 9:
+Bardeen1980GaugeInvariant
+Bekenstein2004TeVeS
+BullockBoylanKolchin2017SmallScale
+Clowe2006Bullet
+Kuhn1962Revolutions
+Lakatos1978Methodology
+Lelli2016SPARC
+LZ2023FirstResults
+McGaugh2016RAR
+Milgrom1983MOND
+Planck2018CosmoParams
+UndagoitiaRauch2016DirectDetection
+Verlinde2017Emergent
+Total unique citations in Section 9: 13

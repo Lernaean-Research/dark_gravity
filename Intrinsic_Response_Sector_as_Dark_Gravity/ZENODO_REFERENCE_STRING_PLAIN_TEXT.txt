@@ -1,0 +1,103 @@
+Ackermann, M. et al. (2015). Searching for dark matter annihilation from Milky Way dwarf spheroidal galaxies. Physical Review Letters, 115(23):231301. https://doi.org/10.1103/PhysRevLett.115.231301
+
+Aguilar, M. et al. (2013). First result from the Alpha Magnetic Spectrometer on the International Space Station. Physical Review Letters, 110(14):141102. https://doi.org/10.1103/PhysRevLett.110.141102
+
+Akerib, D. S. et al. (2017). Results from a search for dark matter in the complete LUX exposure. Physical Review Letters, 118(2):021303. https://doi.org/10.1103/PhysRevLett.118.021303
+
+Aprile, E. et al. (2018). Dark matter search results from a one-ton-year exposure of XENON1T. Physical Review Letters, 121(11):111302. https://doi.org/10.1103/PhysRevLett.121.111302
+
+Bardeen, J. M. (1980). Gauge-invariant cosmological perturbations. Physical Review D, 22(8):1882–1905. https://doi.org/10.1103/PhysRevD.22.1882
+
+Bekenstein, J. D. (2004). Relativistic gravitation theory for the modified Newtonian dynamics paradigm. Physical Review D, 70(8):083509. https://doi.org/10.1103/PhysRevD.70.083509
+
+Bender, C. M. and Orszag, S. A. (1999). Advanced Mathematical Methods for Scientists and Engineers I (2nd ed.). Springer.
+
+Bosma, A. (1978). The distribution and kinematics of neutral hydrogen in spiral galaxies of type Sab–Scd. PhD thesis, University of Groningen.
+
+Buchert, T. (2000). On average properties of inhomogeneous fluids in general relativity: Dust cosmologies. General Relativity and Gravitation, 32(1):105–125. https://doi.org/10.1023/A:1001800617177
+
+Bullock, J. S. and Boylan-Kolchin, M. (2017). Small-scale challenges to the ΛCDM paradigm. Annual Review of Astronomy and Astrophysics, 55:343–387. https://doi.org/10.1146/annurev-astro-091916-055313
+
+Buniy, R. V., Hsu, S. D. H., and Murray, B. M. (2006). The null energy condition and instability. Physical Review D, 74:063518. https://doi.org/10.1103/PhysRevD.74.063518
+
+Burgess, C. P. (2004). Quantum gravity in everyday life: General relativity as an effective field theory. Living Reviews in Relativity, 7(1):5. https://doi.org/10.12942/lrr-2004-5
+
+Carroll, S. M. (2004). Spacetime and Geometry: An Introduction to General Relativity. Addison-Wesley.
+
+Carroll, S. M. (2019). Spacetime and Geometry: An Introduction to General Relativity (2nd ed.). Cambridge University Press.
+
+Clowe, D. et al. (2006). A direct empirical proof of the existence of dark matter. The Astrophysical Journal Letters, 648(2):L109–L113. https://doi.org/10.1086/508162
+
+Cui, X. et al. (2017). Dark matter results from 54-ton-day exposure of PandaX-II experiment. Physical Review Letters, 119(18):181302. https://doi.org/10.1103/PhysRevLett.119.181302
+
+Deser, S. and Woodard, R. P. (2007). Nonlocal cosmology. Physical Review Letters, 99(11):111301. https://doi.org/10.1103/PhysRevLett.99.111301
+
+Donoghue, J. F. (1994). General relativity as an effective field theory: The leading quantum corrections. Physical Review D, 50(6):3874–3888. https://doi.org/10.1103/PhysRevD.50.3874
+
+Einstein, A. (1915). Erklärung der perihelbewegung des Merkur aus der allgemeinen relativitätstheorie. Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften, pages 831–839.
+
+Einstein, A. (1916). Die grundlage der allgemeinen relativitätstheorie. Annalen der Physik, 354(7):769–822. https://doi.org/10.1002/andp.19163540702
+
+Euclid Collaboration (2022). Euclid preparation. I. the Euclid wide survey. Astronomy & Astrophysics, 662:A112. https://doi.org/10.1051/0004-6361/202142191
+
+Euclid Collaboration (2025). Euclid. I. overview of the Euclid mission. Astronomy & Astrophysics, 697:A1. https://doi.org/10.1051/0004-6361/202450808
+
+Fruscione, A. et al. (2006). CIAO: Chandra's data analysis system. In Proceedings of SPIE, 6270:62701V. https://doi.org/10.1117/12.671760
+
+Hawking, S. W. and Ellis, G. F. R. (1973). The Large Scale Structure of Space-Time. Cambridge University Press.
+
+Ivezić, Ž., Kahn, S. M., Tyson, J. A., et al. (2019). LSST: From science drivers to reference design and anticipated data products. The Astrophysical Journal, 873(2):111. https://doi.org/10.3847/1538-3881/ab042c
+
+Kevorkian, J. and Cole, J. D. (1996). Multiple Scale and Singular Perturbation Methods. Springer.
+
+Kuhn, T. S. (1962). The Structure of Scientific Revolutions. University of Chicago Press.
+
+Lakatos, I. (1978). The Methodology of Scientific Research Programmes. Cambridge University Press.
+
+Le Verrier, U. J. (1859). Théorie du mouvement de Mercure. Annales de l'Observatoire de Paris, 5:1–196.
+
+Lelli, F., McGaugh, S. S., and Schombert, J. M. (2016). SPARC: Mass models for 175 disk galaxies with Spitzer photometry and accurate rotation curves. The Astronomical Journal, 152(6):157. https://doi.org/10.3847/0004-6256/152/6/157
+
+LUX-ZEPLIN Collaboration (2023). First dark matter search results from the LUX-ZEPLIN (LZ) experiment. Physical Review Letters, 131(4):041002. https://doi.org/10.1103/PhysRevLett.131.041002
+
+McGaugh, S. S., Lelli, F., and Schombert, J. M. (2016). Radial acceleration relation in rotationally supported galaxies. Physical Review Letters, 117(20):201101. https://doi.org/10.1103/PhysRevLett.117.201101
+
+McGaugh, S. S. and Schombert, J. M. (2014). Color–mass-to-light-ratio relations for disk galaxies. The Astronomical Journal, 148(5):77. https://doi.org/10.1088/0004-6256/148/5/77
+
+McGaugh, S. S., Schombert, J. M., Bothun, G. D., and de Blok, W. J. G. (2000). The baryonic Tully–Fisher relation. The Astrophysical Journal, 533(2):L99–L102. https://doi.org/10.1086/312585
+
+Mikulski Archive for Space Telescopes (MAST) (2019). Hubble Space Telescope Frontier Fields (HLSP archive). Retrieved from https://archive.stsci.edu/hlsp/frontier/
+
+Milgrom, M. (1983). A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis. The Astrophysical Journal, 270:365–370. https://doi.org/10.1086/161130
+
+NASA/GSFC HEASARC (2025). Archive access and documentation. Retrieved from https://heasarc.gsfc.nasa.gov/docs/archive.html
+
+Planck Collaboration (2020). Planck 2018 results. VI. Cosmological parameters. Astronomy & Astrophysics, 641:A6. https://doi.org/10.1051/0004-6361/201833910
+
+Poisson, E. and Will, C. M. (2014). Gravity: Newtonian, Post-Newtonian, Relativistic. Cambridge University Press.
+
+Räsänen, S. (2006). Accelerated expansion from structure formation. Journal of Cosmology and Astroparticle Physics, 2006(11):003. https://doi.org/10.1088/1475-7516/2006/11/003
+
+Riess, A. G. et al. (2019). Large Magellanic Cloud Cepheid standards provide a 1% foundation for the determination of the Hubble constant. The Astrophysical Journal, 876(1):85. https://doi.org/10.3847/1538-3881/ab0cea
+
+Rossing, T. D. (1982). Chladni's law for vibrating plates. American Journal of Physics, 50(3):271–274. https://doi.org/10.1119/1.12763
+
+Rubakov, V. A. (2006). The null energy condition and instability. Physical Review D, 74(6):063518. https://doi.org/10.1103/PhysRevD.74.063518
+
+Rubakov, V. A. (2014). The null energy condition and its violation. Physics-Uspekhi, 57(2):128–142. https://doi.org/10.3367/UFNe.0184.201402b.0137
+
+Rubin, V. C. and Ford, W. K. (1970). Rotation of the Andromeda Nebula from a spectroscopic survey of emission regions. The Astrophysical Journal, 159:379. https://doi.org/10.1086/150317
+
+Scaramella, R., Amiaux, J., Mellier, Y., et al. (2022). Euclid preparation. I. the Euclid wide survey. Astronomy & Astrophysics, 662:A112. https://doi.org/10.1051/0004-6361/202142191
+
+Tuan, P. H., Bambi, C., Giannoni, M.-J., and Li, J.-J. (2014). From vibrating plates to laser cavities: Nodal patterns and semiclassical correspondence. Physical Review E, 89(2):022911. https://doi.org/10.1103/PhysRevE.89.022911
+
+Undagoitia, T. M. and Rauch, L. (2016). Dark matter direct-detection experiments. Journal of Physics G: Nuclear and Particle Physics, 43(1):013001. https://doi.org/10.1088/0954-3899/43/1/013001
+
+Verlinde, E. (2017). Emergent gravity and the dark universe. SciPost Physics, 2:016. https://doi.org/10.21468/SciPostPhys.2.3.016
+
+Wald, R. M. (1984). General Relativity. University of Chicago Press.
+
+Weisskopf, M. C. et al. (2002). An overview of the performance and scientific results from the Chandra X-Ray Observatory. Publications of the Astronomical Society of the Pacific, 114(791):1–24. https://doi.org/10.1086/338108
+
+Zwicky, F. (1933). Die rotverschiebung von extragalaktischen nebeln. Helvetica Physica Acta, 6:110–127.

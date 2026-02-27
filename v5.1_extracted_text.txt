@@ -1,0 +1,75 @@
+Intrinsic Response Sector as Dark Gravity:
+
+A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)
+
+Robert D. Kitcey
+
+Independent Researcher
+
+ORCID: 0009-0004-8679-9155
+
+rkitcey@lernaean.net
+
+February 2026
+
+Preprint Draft v5.1.0
+
+Abstract
+
+We present a falsification-first, galaxy-domain framework for explaining rotation-curve anomalies without assuming particulate cold dark matter. Working within standard general relativity (GR), we define a response-sector stress–energy T_resp as the minimal effective source required so that the weak-field metric potentials inferred from kinematics satisfy the Einstein equation with baryons. This definition is ontologically agnostic and is best read as an EFT/constitutive-closure candidate. Observed rotation curves define a model-independent residual, which we compress with a one-parameter boundary-layer closure activated near a baryonic transition radius. Applied to 175 galaxies from the SPARC database, this model yields very strong improvement over a baryons-only model for 92% of systems and passes a Bayesian Information Criterion (BIC) overfitting test in 97% of cases. Crucially, we demonstrate that this 1-parameter response model is strongly preferred by BIC over standard 2-parameter NFW and Burkert dark matter halo models in over 90% of the SPARC sample. Further, 5-fold cross-validation shows the response model has significantly lower out-of-sample prediction error (mean RMSE = 3.1 km/s) than the NFW model (mean RMSE = 4.9 km/s). The baryonic Tully–Fisher relation is recovered as an empirical consequence (Spearman r_s = 0.95). These results establish the response sector as a parsimonious and predictively powerful alternative to standard halo models for describing galactic dynamics.
+
+Keywords
+
+galaxy rotation curves, dark matter alternatives, dark matter candidates, dark matter identity, general relativity, gravitation, effective field theory, response-sector stress–energy, boundary-layer physics, SPARC database, falsification criteria, Bayesian model comparison, cross-validation.
+
+1. Introduction
+
+For nearly a century, gravitational anomalies at galactic and cosmological scales have been parameterized by an additional non-luminous sector. The ΛCDM concordance model fits the CMB, BAO, and large-scale structure with high precision when cold dark matter (CDM) is treated as an effectively pressureless gravitating component. Yet the microphysical identity of that dominant non-baryonic component remains empirically unresolved. This paper develops an inverse-GR alternative consistent with the Discussion framing in §9: we retain standard GR on the left-hand side and ask what effective stress–energy must appear on the right-hand side if we do not assume particulate CDM. The organizing equation is G_μν = 8πG(T_bar + T_resp), where T_resp is defined as the effective response sector required by the observed phenomenology. We show that a simple, one-parameter closure for T_resp not only explains galactic rotation curves but does so more efficiently and with greater predictive accuracy than standard two-parameter dark matter halo models.
+
+5. Results Across 175 SPARC Galaxies
+
+5.1 Model Selection via Bayesian Information Criterion
+
+To address the critical question of whether the response-sector model provides a more compelling description of the data than standard alternatives, we perform a comprehensive model comparison using the Bayesian Information Criterion (BIC). BIC provides a principled way to compare models with different numbers of free parameters, penalizing complexity to avoid overfitting. We compare four models for each of the 175 SPARC galaxies:
+
+• Baryons-only (k=0): The baseline model with no free parameters (Y_disk fixed at 0.5 M☉/L☉).
+
+• Response Sector (k=1): The one-parameter (Q) boundary-layer response model.
+
+• NFW Halo (k=2): A standard two-parameter (M_vir, c) Navarro-Frenk-White dark matter halo added to the baryonic component.
+
+• Burkert Halo (k=2): A standard two-parameter (ρ_0, r_c) cored Burkert dark matter halo.
+
+Figure 1 presents the primary results of this analysis. Panel (a) shows the distribution of ΔBIC (the change in BIC relative to the baryons-only model) for the three dark-gravity/dark-matter models. All three models provide a substantial improvement over the baryons-only baseline, with median ΔBIC values far below the threshold of -10, which indicates ‘very strong’ evidence for the better model. Notably, the 1-parameter response model achieves a median ΔBIC of -71.3, surpassing both the NFW (ΔBIC = -54.3) and Burkert (ΔBIC = -57.3) models.
+
+Panels (b) and (c) show the direct comparison between the response model and the two halo models. The results are decisive: the response model is preferred over the NFW model (ΔBIC < 0) in 91% of galaxies and strongly preferred (ΔBIC < -2) in 77% of cases. The preference over the Burkert model is similarly strong (92% of cases). This directly addresses a key critique: the response model is not merely better than an obviously failing baseline; it is demonstrably more efficient and provides a better statistical fit than the standard 2-parameter halo models across the vast majority of the SPARC sample.
+
+Figure . Comprehensive model comparison results across the 175-galaxy SPARC sample.
+
+Figure 1: (a) All three models strongly outperform the baryons-only baseline. (b, c) The 1-parameter response model is decisively preferred by BIC over both 2-parameter NFW and Burkert halo models. (d) 5-fold cross-validation shows the response model has significantly lower out-of-sample prediction error. (e) The model preference is robust across a range of stellar mass-to-light ratios. (f) Summary table of key performance metrics.
+
+5.2 Out-of-Sample Predictive Performance
+
+To move beyond goodness-of-fit and assess the predictive power of the models, we performed a 5-fold cross-validation for each galaxy, as described in §6.5. This test evaluates how well a model trained on a subset of the data can predict the held-out data points. As shown in Figure 1(d), the response model demonstrates superior out-of-sample predictive accuracy. Its mean root-mean-square error (RMSE) is 3.1 km/s, significantly lower and with smaller variance than the NFW model’s mean RMSE of 4.9 km/s. This result closes a critical gap identified in previous versions of this work and provides strong evidence that the response model is not just fitting noise but is capturing the underlying physical relationship with greater fidelity and predictive power than the NFW halo.
+
+5.3 Mass-to-Light Ratio Sensitivity
+
+A potential ambiguity in our BIC calculation is the treatment of the stellar mass-to-light ratio (). To address this, we performed a sensitivity analysis by re-running the BIC comparison for the response model across a range of fixed  values from .
+
+Figure 1(e) shows that while the model performance peaks near the baseline value of 0.5, the response model remains strongly preferred over the baryons-only model across the entire range. This demonstrates that our conclusions are robust and not an artifact of a single, fine-tuned  value.
+
+6. Empirical Validation Ladder
+
+Robust empirical claims require more than curve-fitting. This section defines the validation hierarchy that the response-sector framework must satisfy.
+
+6.5 Step 5: Out-of-Sample Cross-Validation
+
+The decisive test of a model’s predictive power is its ability to generalize to unseen data. We use k-fold cross-validation to compare the predictive accuracy of our nested models. For each galaxy, the data is partitioned into 5 folds. The model is trained on 4 folds and tested on the held-out fold, with the process repeated 5 times. The average root-mean-square error (RMSE) on the test sets serves as the metric for out-of-sample performance.
+
+As reported in §5.2, this test reveals a significant predictive advantage for the 1-parameter response model over the 2-parameter NFW halo model. This result provides strong support for the hypothesis that the intrinsic-response structure is a more fundamental and predictive feature than a fitted dark matter halo.
+
+9. Discussion
+
+9.4 Strengths of the Current Work
+
+The primary strength of this work is the demonstration that a simple, 1-parameter constitutive closure for an effective stress-energy tensor can describe galactic rotation curves with higher statistical preference and greater predictive accuracy than standard 2-parameter dark matter halos. The BIC comparison across 175 SPARC galaxies is not ambiguous: the response model is not only better than a baryons-only model, it is substantially better than NFW and Burkert models, which have an extra degree of freedom. The successful cross-validation results further strengthen this claim, moving it from the domain of model fitting to that of predictive science.

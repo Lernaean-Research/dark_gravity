@@ -1,5 +1,18 @@
 # Spacetime Mechanics (manuscript + SPARC-derived analysis tooling)
 
+## Dark Gravity preprint (v5.1.0)
+
+- **Title:** Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)
+- **Author:** Robert D. Kitcey
+- **Contact:** rkitcey@lernaean.net
+- **ORCID:** 0009-0004-8679-9155
+- **DOI (all versions):** https://doi.org/10.5281/zenodo.18778895
+- **License:** CC BY-NC-ND 4.0 (see [LICENSE](LICENSE))
+
+**APA citation:**
+
+Kitcey, R. D. (2026). Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175) (5.1). Zenodo. https://doi.org/10.5281/zenodo.18778895
+
 This repository contains:
 
 - Manuscript drafts (DOCX/PDF)
