@@ -460,16 +460,16 @@ We present explicit falsification criteria, discriminant tests (including lensin
 
 \section{Introduction}\label{introduction}
 
-For nearly a century, gravitational anomalies at galactic and cosmological scales have been parameterized by an additional non-luminous sector. The concept originated with Zwicky's observations of the Coma cluster \citep{Zwicky1933Coma}, and anomalies in classical orbital mechanics---such as Mercury's perihelion precession historically attributed to the unseen planet Vulcan \citep{LeVerrier1859Mercury}---have precedent in gravitational physics. The ΛCDM concordance model fits the CMB, BAO, and large-scale structure \citep{Riess2019LMC, Ivezic2019LSST, Euclid2022WideSurvey, Euclid2025Overview} with high precision when cold dark matter (CDM) is treated as an effectively pressureless gravitating component.
+For nearly a century, gravitational anomalies at galactic and cosmological scales have been parameterized by an additional non-luminous sector. The concept originated with Zwicky's observations of the Coma cluster \citep{Zwicky1933}, and anomalies in classical orbital mechanics---such as Mercury's perihelion precession historically attributed to the unseen planet Vulcan \citep{LeVerrier1859}---have precedent in gravitational physics. The ΛCDM concordance model fits the CMB, BAO, and large-scale structure \citep{Riess2019, Ivezic2019, Euclid2022, Euclid2025} with high precision when cold dark matter (CDM) is treated as an effectively pressureless gravitating component.
 
-Yet the microphysical identity of that dominant non-baryonic component remains empirically unresolved. Many canonical weak-scale interaction scenarios have been constrained by direct detection, indirect searches, and collider experiments. Leading direct-detection experiments including \citep{Akerib2017LUX, Aprile2018XENON1T, Cui2017PandaX} have placed increasingly stringent bounds on traditional WIMP parameter spaces. Indirect searches \citep{Aguilar2013AMS} have further restricted viable dark-matter models. This motivates renewed attention to alternatives that treat the dark sector first as an empirical \emph{role} and only secondarily as an ontological \emph{identity}.
+Yet the microphysical identity of that dominant non-baryonic component remains empirically unresolved. Many canonical weak-scale interaction scenarios have been constrained by direct detection, indirect searches, and collider experiments. Leading direct-detection experiments including \citep{Akerib2017, Aprile2018, Cui2017} have placed increasingly stringent bounds on traditional WIMP parameter spaces. Indirect searches \citep{Aguilar2013} have further restricted viable dark-matter models. This motivates renewed attention to alternatives that treat the dark sector first as an empirical \emph{role} and only secondarily as an ontological \emph{identity}.
 
-This paper develops an inverse-GR alternative consistent with the Discussion framing in §9: we retain standard GR \citep{Einstein1916GR, Wald1984GR} on the left-hand side and ask what effective stress--energy must appear on the right-hand side if we do not assume particulate CDM. The organizing equation is
+This paper develops an inverse-GR alternative consistent with the Discussion framing in §9: we retain standard GR \citep{Einstein1916, Wald1984GR} on the left-hand side and ask what effective stress--energy must appear on the right-hand side if we do not assume particulate CDM. The organizing equation is
 \begin{equation}
 G_{\mu\nu} = 8\pi G\,\left( T_{\mu\nu}^{\text{bar}} + T_{\mu\nu}^{\text{resp}} \right)
 \label{eq:einstein-field-response}
 \end{equation}
-where \(T_{\mu\nu}^{\text{resp}}\) is defined as the effective response sector required by the observed phenomenology. We demonstrate that a simple, one-parameter closure for \(T_{\mu\nu}^{\text{resp}}\) not only explains galactic rotation curves but does so with \textbf{higher statistical preference} (lower Bayesian Information Criterion) and \textbf{greater predictive accuracy} (lower out-of-sample error via cross-validation) than standard two-parameter dark matter halo models---a claim supported by rigorous comparison across 175 SPARC galaxies (\S5). This definition remains ontologically agnostic; we do not claim spacetime is literally a fluid or solid, only that it admits an EFT/constitutive response closure \citep{Carroll2004Spacetime, Carroll2019Spacetime}.
+where \(T_{\mu\nu}^{\text{resp}}\) is defined as the effective response sector required by the observed phenomenology. We demonstrate that a simple, one-parameter closure for \(T_{\mu\nu}^{\text{resp}}\) not only explains galactic rotation curves but does so with \textbf{higher statistical preference} (lower Bayesian Information Criterion) and \textbf{greater predictive accuracy} (lower out-of-sample error via cross-validation) than standard two-parameter dark matter halo models---a claim supported by rigorous comparison across 175 SPARC galaxies (\S5). This definition remains ontologically agnostic; we do not claim spacetime is literally a fluid or solid, only that it admits an EFT/constitutive response closure \citep{Carroll2004, Carroll2019}.
 
 In the circular-orbit regime, the data provide \(V_{\text{obs}}(R)\) and therefore \(g_{\text{obs}}(R) = V_{\text{obs}}^{2}(R)\text{/}R\). The baryonic prediction \(V_{\text{bar}}(R)\) is assembled from SPARC's stellar and gas components with specified mass-to-light ratios. The model-independent residual \(\Delta(R) \equiv V_{\text{obs}}^{2}(R) - V_{\text{bar}}^{2}(R)\) defines the ``missing curvature'' attributable in ΛCDM to a halo, and attributable here to the response sector.
 
@@ -504,7 +504,7 @@ For each galaxy in the SPARC database, the observed rotation curve provides the 
 g_{\text{obs}}(R) = \frac{v_{\text{obs}}^{2}(R)}{R}
 \end{equation*}
 
-The baryonic prediction \(g_{\text{bar}}(R)\) is constructed from SPARC's decomposed photometric and gas-mass components (Lelli et al., 2016), with a chosen stellar mass-to-light ratio Υ\textsubscript{*} \citep{McGaughSchombert2014ML, RubinFord1970M31, Bosma1978Thesis}. The residual defines the ``missing curvature'' in the circular-orbit sector:
+The baryonic prediction \(g_{\text{bar}}(R)\) is constructed from SPARC's decomposed photometric and gas-mass components (Lelli et al., 2016), with a chosen stellar mass-to-light ratio Υ\textsubscript{*} \citep{McGaugh2014, Rubin1970, Bosma1978}. The residual defines the ``missing curvature'' in the circular-orbit sector:
 \begin{equation}
 g_{\text{extra}}(R) = g_{\text{obs}}(R) - g_{\text{bar}}(R)
 \label{eq:residual-acceleration}
@@ -533,7 +533,7 @@ Subtracting baryons yields an effective extra enclosed mass and, by differentiat
 \rho_{\text{extra}}(r) = \frac{1}{4\pi r^{2}}\frac{d}{dr}\left[ \frac{r(v_{\text{obs}}^{2} - v_{\text{bar}}^{2})}{G} \right]
 \end{equation*}
 
-For a flat outer rotation curve (\(v\  \rightarrow \ v\infty\)), one obtains \(M_{eff} \propto \ r\) and \(\rho_{extra} \propto \frac{1}{r2}\)---the classic isothermal halo profile \citep{RubinFord1970M31, Bosma1978Thesis}, historically motivated by early flat-curve observations in M31 and extended HI disks. In the response-sector interpretation, \(\rho_{extra}\) is not a new matter species; it is the effective stress--energy of the spacetime response to baryonic structure.
+For a flat outer rotation curve (\(v\  \rightarrow \ v\infty\)), one obtains \(M_{eff} \propto \ r\) and \(\rho_{extra} \propto \frac{1}{r2}\)---the classic isothermal halo profile \citep{Rubin1970, Bosma1978}, historically motivated by early flat-curve observations in M31 and extended HI disks. In the response-sector interpretation, \(\rho_{extra}\) is not a new matter species; it is the effective stress--energy of the spacetime response to baryonic structure.
 
 \subsection{Effective Stress--Energy: What Is Being Added in GR}\label{effective-stressenergy-what-is-being-added-in-gr}
 
@@ -562,7 +562,7 @@ A response-sector model is parsimonious only if it satisfies three conditions. F
 
 \subsection{Auxiliary-Field Boundary-Layer Model}\label{auxiliary-field-boundary-layer-model}
 
-We introduce an auxiliary scalar field \(\chi\) coupled to baryons through the action \citep{Burgess2004EFTGR, Donoghue1994EFTGR}:
+We introduce an auxiliary scalar field \(\chi\) coupled to baryons through the action \citep{Burgess2004, Donoghue1994}:
 \begin{equation}
 S = \int d^{4}x\sqrt{-g}\left[ \frac{R}{16\pi G} + \mathcal{L}_{\text{bar}}(g,\psi) + \mathcal{L}_{\chi}(g,\chi) + \mathcal{L}_{\text{int}}(g,\chi,\psi) \right]
 \label{eq:action-principle}
@@ -630,7 +630,7 @@ The baryonic velocity prediction is assembled from SPARC components:
 v_{\text{bar}}^{2}(R) = \Upsilon_{\text{disk}} v_{\text{disk}}^{2}(R) + \Upsilon_{\text{bul}} v_{\text{bul}}^{2}(R) + v_{\text{gas}}^{2}(R)
 \end{equation*}
 
-where \(\Upsilon_{disk}\) and \(\Upsilon_{bul}\) are the stellar mass-to-light ratios. We adopt \(\Upsilon_{\text{disk}} = 0.5\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) as the baseline, consistent with stellar population synthesis models at \(3.6\ \mu m\) (McGaugh \& Schombert, 2014) \citep{McGaughSchombert2014ML}, with sensitivity sweeps across \(\Upsilon_{\text{disk}} \in \text{\{}0.3,0.4,0.5,0.6,0.7\text{\}}\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) to quantify photometric systematic uncertainties.
+where \(\Upsilon_{disk}\) and \(\Upsilon_{bul}\) are the stellar mass-to-light ratios. We adopt \(\Upsilon_{\text{disk}} = 0.5\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) as the baseline, consistent with stellar population synthesis models at \(3.6\ \mu m\) (McGaugh \& Schombert, 2014) \citep{McGaugh2014}, with sensitivity sweeps across \(\Upsilon_{\text{disk}} \in \text{\{}0.3,0.4,0.5,0.6,0.7\text{\}}\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) to quantify photometric systematic uncertainties.
 
 \subsection{Transition Radius Determination}\label{transition-radius-determination}
 
@@ -745,7 +745,7 @@ To illustrate the model's performance across the galaxy mass spectrum, we presen
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{media/image3.png}
-\caption{\protect\phantomsection\label{_Toc222952639}{}DDO 154---a \citep{Ackermann2015Dwarfs} gas-dominated dwarf irregular galaxy. Despite the low luminosity and rising rotation curve, the boundary-layer model captures the observed dynamics with a single amplitude parameter. The large separation between \(v_{\mathrm{obs}}\) and \(v_{\mathrm{bar}}\) reflects the dominance of the response sector in this low-surface-brightness system.}
+\caption{\protect\phantomsection\label{_Toc222952639}{}DDO 154---a \citep{Ackermann2015} gas-dominated dwarf irregular galaxy. Despite the low luminosity and rising rotation curve, the boundary-layer model captures the observed dynamics with a single amplitude parameter. The large separation between \(v_{\mathrm{obs}}\) and \(v_{\mathrm{bar}}\) reflects the dominance of the response sector in this low-surface-brightness system.}
 \end{figure}
 
 \begin{figure}[t]
@@ -847,7 +847,7 @@ If the response sector, extended to cosmological scales, produces a growth rate 
 
 \subsection{The Discriminant Triad}\label{the-discriminant-triad}
 
-\citep{PoissonWill2014, Carroll2019Spacetime}
+\citep{PoissonWill2014, Carroll2019}
 If the framework is to serve as a serious \(\Lambda CDM\)-alternative candidate, three discriminant tests are paramount:
 
 \begin{enumerate}
@@ -873,7 +873,7 @@ Galaxy--galaxy lensing and cluster lensing constrain the Weyl potential \(\Phi_{
 
 \subsubsection{8.1.1 Working Hypothesis: Metric Equivalence}\label{working-hypothesis-metric-equivalence}
 
-As a first working hypothesis \citep{Wald1984GR, Carroll2019Spacetime}, we assume the response sector produces \(\Phi \approx \Psi\) (zero slip) in the galaxy quasi-static regime. This is the most ΛCDM-like option and the easiest to test: it predicts that the lensing mass inferred from the response-sector's rotation-curve fit matches the lensing mass measured directly. Specifically, the implied convergence κ(\emph{R}) can be computed from the fitted potential and compared against weak-lensing measurements.
+As a first working hypothesis \citep{Wald1984GR, Carroll2019}, we assume the response sector produces \(\Phi \approx \Psi\) (zero slip) in the galaxy quasi-static regime. This is the most ΛCDM-like option and the easiest to test: it predicts that the lensing mass inferred from the response-sector's rotation-curve fit matches the lensing mass measured directly. Specifically, the implied convergence κ(\emph{R}) can be computed from the fitted potential and compared against weak-lensing measurements.
 
 \subsubsection{8.1.2 Gravitational Slip as a Discriminant}\label{gravitational-slip-as-a-discriminant}
 
@@ -881,7 +881,7 @@ If the response sector includes anisotropic stress (\(\Pi_{\mu\nu} \neq 0\)), it
 
 \subsection{Cosmological Background}\label{cosmological-background}
 
-For the response sector to serve as a CDM replacement on cosmological scales, its effective energy density must evolve approximately as \(\rho_{resp}(a) \propto \ a - 3\) (dust-like) over the redshift range relevant for structure formation and distance measurements. This is the background viability requirement: the response sector must not ruin the distance--redshift relation that ΛCDM fits well \citep{Buchert2000Averaging, Rasanen2006Backreaction, Riess2019LMC}.
+For the response sector to serve as a CDM replacement on cosmological scales, its effective energy density must evolve approximately as \(\rho_{resp}(a) \propto \ a - 3\) (dust-like) over the redshift range relevant for structure formation and distance measurements. This is the background viability requirement: the response sector must not ruin the distance--redshift relation that ΛCDM fits well \citep{Buchert2000, Rasanen2006, Riess2019}.
 
 \subsection{Cosmological Perturbations}\label{cosmological-perturbations}
 
@@ -901,11 +901,11 @@ We adopt explicit domain partitioning: this work establishes the galaxy-domain c
 
 \subsection{Relation to MOND and TeVeS}\label{relation-to-mond-and-teves}
 
-Modified Newtonian Dynamics (MOND; Milgrom, 1983) shares the empirical acceleration scale \emph{a}\textsubscript{0} and produces flat rotation curves through a modified force law. \citep{PoissonWill2014, Wald1984GR, Carroll2019Spacetime} The response-sector framework differs in several respects: it retains standard GR on the left-hand side (the geometry is not modified); it provides an explicit stress--energy interpretation; it naturally accommodates both compression and rarefaction phases; and it admits a cosmological completion route. MOND's relativistic extension TeVeS (Bekenstein, 2004) introduces a scalar and vector field---one of our completion routes (§3.5i) is structurally similar but derived from an inverse-GR starting point rather than a modified-gravity one.
+Modified Newtonian Dynamics (MOND; Milgrom, 1983) shares the empirical acceleration scale \emph{a}\textsubscript{0} and produces flat rotation curves through a modified force law. \citep{PoissonWill2014, Wald1984GR, Carroll2019} The response-sector framework differs in several respects: it retains standard GR on the left-hand side (the geometry is not modified); it provides an explicit stress--energy interpretation; it naturally accommodates both compression and rarefaction phases; and it admits a cosmological completion route. MOND's relativistic extension TeVeS (Bekenstein, 2004) introduces a scalar and vector field---one of our completion routes (§3.5i) is structurally similar but derived from an inverse-GR starting point rather than a modified-gravity one.
 
 \subsection{Relation to Emergent Gravity and Nonlocal Gravity}\label{relation-to-emergent-gravity-and-nonlocal-gravity}
 
-Verlinde's (2017) emergent gravity program derives a MOND-like force from entropic considerations. The response-sector approach is compatible but more conservative: we do not assume a thermodynamic origin for gravity, only that the gravitational sector admits an effective constitutive response. Nonlocal gravity models \citep{DeserWoodard2007Nonlocal, Rasanen2006Backreaction} can be rewritten as effective sources on the right-hand side of the Einstein equation, placing them within our bookkeeping framework.
+Verlinde's (2017) emergent gravity program derives a MOND-like force from entropic considerations. The response-sector approach is compatible but more conservative: we do not assume a thermodynamic origin for gravity, only that the gravitational sector admits an effective constitutive response. Nonlocal gravity models \citep{Deser2007, Rasanen2006} can be rewritten as effective sources on the right-hand side of the Einstein equation, placing them within our bookkeeping framework.
 
 \subsection{Strengths of the Current Work}\label{strengths-of-the-current-work}
 
@@ -919,7 +919,7 @@ The framework, as presented, has clear limitations. The boundary-layer model is 
 
 \subsection{The Historical Lesson}\label{the-historical-lesson}
 
-The Vulcan episode \citep{LeVerrier1859Mercury, Einstein1915Mercury, Einstein1916GR} provides a cautionary tale: gravitational anomalies initially attributed to unseen matter ultimately revealed a deeper geometric structure. We do not claim that the contemporary analogy is exact---the dark-matter hypothesis is vastly more successful and well-motivated than Vulcan ever was---but the structural lesson remains: when a gravitational anomaly is observed, both matter-based and geometry-based explanations deserve rigorous investigation. The persistent null results in dark-matter searches lend urgency to this investigation.
+The Vulcan episode \citep{LeVerrier1859, Einstein1915, Einstein1916} provides a cautionary tale: gravitational anomalies initially attributed to unseen matter ultimately revealed a deeper geometric structure. We do not claim that the contemporary analogy is exact---the dark-matter hypothesis is vastly more successful and well-motivated than Vulcan ever was---but the structural lesson remains: when a gravitational anomaly is observed, both matter-based and geometry-based explanations deserve rigorous investigation. The persistent null results in dark-matter searches lend urgency to this investigation.
 
 \subsection{A Candidate Identity for the Cold Dark Matter Role}\label{a-candidate-identity-for-the-cold-dark-matter-role}
 
@@ -1064,7 +1064,7 @@ Adopting Branch B as the default, the ladder of falsifiers is as follows:
 \textbf{Branch B note:} In this branch, weak and strong lensing are not expected to be identical to a metric-equivalent mapping from rotation curves; instead, lensing becomes the \textbf{primary probe} of slip structure and its activation rules.
 
 \subsubsection{9.9.3 From Critique to Collaboration: A Playbook for Scientific Engagement}\label{from-critique-to-collaboration-a-playbook-for-scientific-engagement}
-The framework's incomplete status is not a vulnerability but a \textbf{well-defined research opportunity}, characteristic of a progressive research program in the sense of Lakatos \citep{Lakatos1978Methodology}. It invites collaboration by turning common criticisms into testable questions, as summarized in the following playbook:
+The framework's incomplete status is not a vulnerability but a \textbf{well-defined research opportunity}, characteristic of a progressive research program in the sense of Lakatos \citep{Lakatos1978}. It invites collaboration by turning common criticisms into testable questions, as summarized in the following playbook:
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2367}}
@@ -1095,7 +1095,7 @@ The framework's incomplete status is not a vulnerability but a \textbf{well-defi
 \endlastfoot
 \textbf{``This is just dark matter in disguise.''} & The distinction is between an \textbf{independent} particle fluid and a \textbf{constitutive} metric response with fewer degrees of freedom. & Compare the predictive compression (e.g., via Bayesian Information Criterion) of the response model against free halo models. \\
 \textbf{``You're just fitting residuals.''} & The scientific content lies in the \textbf{compression} of those residuals with a low-DOF model and the robustness of the estimator (e.g., \(Q_{\text{est}}\)). & Holdout cross-validation, rank stability of estimators, and analysis of residual morphology across the SPARC dataset \citep{Lelli2016SPARC}. \\
-\textbf{``Not covariant / violates conservation.''} & Total stress-energy is conserved by definition. The open question is the specific form of the covariant completion. & Propose a candidate functional \(\mathcal{F}\) and test its predictions, e.g., via the discriminants ladder. The goal is a gauge-invariant formulation analogous to Bardeen potentials \citep{Bardeen1980GaugeInvariant}. \\
+\textbf{``Not covariant / violates conservation.''} & Total stress-energy is conserved by definition. The open question is the specific form of the covariant completion. & Propose a candidate functional \(\mathcal{F}\) and test its predictions, e.g., via the discriminants ladder. The goal is a gauge-invariant formulation analogous to Bardeen potentials \citep{Bardeen1980}. \\
 \textbf{``Clusters and cosmology kill you.''} & These are the highest rungs of the discriminants ladder, not semantic refutations. They test the universality of the identity claim. & Execute the analyses for Rungs 3 and 5 of the validation plan. \\
 \end{longtable}
 
@@ -1103,12 +1103,12 @@ The framework's incomplete status is not a vulnerability but a \textbf{well-defi
 
 The intrinsic response framework offers a compelling synthesis in the long-standing dark matter debate. It reframes the problem by proposing a candidate identity --an emergent metric response -- that is shaped by the very null results that have placed the particle hypothesis under strain. It is ontologically parsimonious, empirically grounded in the tight kinematic correlations of galaxies \citep{McGaugh2016RAR}, and structured as a progressive and falsifiable research program.
 
-The framework is incomplete, but it is not vague. It has gone beyond speculation to make specific and testable predictions that distinguish it from both standard ΛCDM and MOND-like alternatives \citep{BullockBoylanKolchin2017SmallScale,Verlinde2017Emergent}. For these reasons, it has earned the right to serious scientific engagement. The question is no longer whether it is too incomplete to consider, but whether it is too compelling to ignore.
+The framework is incomplete, but it is not vague. It has gone beyond speculation to make specific and testable predictions that distinguish it from both standard ΛCDM and MOND-like alternatives \citep{Bullock2017,Verlinde2017}. For these reasons, it has earned the right to serious scientific engagement. The question is no longer whether it is too incomplete to consider, but whether it is too compelling to ignore.
 
 \subsection{Discussion References}\label{discussion-references}
 
 The discussion section draws on the following works (merged into the main BibTeX bibliography, without duplicates):
-\citep{Planck2018CosmoParams,Kuhn1962Revolutions,UndagoitiaRauch2016DirectDetection,LZ2023FirstResults,Milgrom1983MOND,Bekenstein2004TeVeS,Clowe2006Bullet,Lakatos1978Methodology,Lelli2016SPARC,Bardeen1980GaugeInvariant,McGaugh2016RAR,BullockBoylanKolchin2017SmallScale,Verlinde2017Emergent}.
+\citep{Planck2020,Kuhn1962,Undagoitia2016,LUX2023,Milgrom1983,Bekenstein2004,Clowe2006,Lakatos1978,Lelli2016SPARC,Bardeen1980,McGaugh2016RAR,Bullock2017,Verlinde2017}.
 
 % (removed empty section placeholder from Pandoc)
 
@@ -1493,9 +1493,9 @@ This appendix documents the preregistered cluster morphology operator used to co
 
 • \(\kappa\) maps (multi-team lens models): HFF community lens reconstructions accessed from the MAST Frontier Fields HLSP archive (MAST, 2019).
 
-• X-ray proxy (stacked Chandra img2 maps) \citep{Weisskopf2002Chandra, HEASARC2025Archive, Fruscione2006CIAO}: HEASARC-served *\_full\_img2.fits.gz image products were stacked into a common WCS grid and used as a morphology/centroid proxy for the hot intracluster medium (ICM) (NASA/GSFC HEASARC, 2025; Weisskopf et al., 2002).
+• X-ray proxy (stacked Chandra img2 maps) \citep{Weisskopf2002, HEASARC2025, Fruscione2006}: HEASARC-served *\_full\_img2.fits.gz image products were stacked into a common WCS grid and used as a morphology/centroid proxy for the hot intracluster medium (ICM) (NASA/GSFC HEASARC, 2025; Weisskopf et al., 2002).
 
-For reproducibility, the X-ray proxy construction follows a lightweight procedure using the \citep{Fruscione2006CIAO} CIAO toolset: implemented in toy models/make\_chandra\_xray\_map.py, each img2 image is divided by a scalar exposure keyword (EXPOSURE, with LIVETIME/ONTIME fallbacks), reprojected onto a common WCS grid \citep{MAST2019HFF}, and combined as an exposure-weighted mean rate map.
+For reproducibility, the X-ray proxy construction follows a lightweight procedure using the \citep{Fruscione2006} CIAO toolset: implemented in toy models/make\_chandra\_xray\_map.py, each img2 image is divided by a scalar exposure keyword (EXPOSURE, with LIVETIME/ONTIME fallbacks), reprojected onto a common WCS grid \citep{MAST2019}, and combined as an exposure-weighted mean rate map.
 
 Important limitation: this work does not perform event-level Chandra reduction (exposure map correction, background modeling, point-source masking, etc.) in CIAO (Fruscione et al., 2006). The X-ray product is therefore intended as a geometric locator of bright ICM structure for centroid comparisons, not a calibrated surface-brightness measurement.
 
@@ -1517,7 +1517,7 @@ For each cluster, each κ team model, and each ROI radius, we apply the same fix
   Measured quantity: record the κ--X-ray centroid separation in arcseconds.
 \end{enumerate}
 
-\citep{MAST2019HFF, Weisskopf2002Chandra, Fruscione2006CIAO} This definition is intentionally simple and falsifiable: it is fixed across clusters, teams, and thresholds, with only the ROI radius swept to quantify footprint sensitivity.
+\citep{MAST2019, Weisskopf2002, Fruscione2006} This definition is intentionally simple and falsifiable: it is fixed across clusters, teams, and thresholds, with only the ROI radius swept to quantify footprint sensitivity.
 
 \subsection{C.3 Robustness grid: multi-team systematics and ROI sensitivity}\label{c.3-robustness-grid-multi-team-systematics-and-roi-sensitivity}
 
@@ -1583,15 +1583,15 @@ This is a direct analog of Chladni/cymatics: \(\varphi_{n}\) are mode shapes; th
 
 \subsection{Where ``harmonics'' live in a unified spacetime theory}\label{d.3-where-harmonics-live-in-a-unified-spacetime-theory}
 
-In the covariant formulation \citep{HawkingEllis1973, Wald1984GR, Carroll2019Spacetime}, Spacetime unification means that the fundamental response dynamics can be written covariantly (e.g., for a scalar template, a hyperbolic operator \(\mathcal{D}\) such as (□ \(–\ m\_ eff\hat{}2)\chi\  = \ J\)). In stationary or quasi-stationary systems, variable separation reduces the covariant problem to a spatial eigenproblem: \(\chi(t,\ x) = \ \Sigma_{n}q_{n(t)\varphi_{n(x)}}\), where \(\varphi_{n}\) are eigenfunctions of the induced spatial operator \(\mathcal{L}\) and \(q_{n}(t)\) obey driven oscillator equations with characteristic frequencies \(\Omega_{n}^{2} \propto \ \lambda_{n}\). SPARC rotation curves constrain the near-static regime in which \(q_{n}(t)\) has equilibrated, leaving the spatial spectral content as the observable imprint (Carroll, 2019; Hawking \& Ellis, 1973; Wald, 1984).
+In the covariant formulation \citep{HawkingEllis1973, Wald1984GR, Carroll2019}, Spacetime unification means that the fundamental response dynamics can be written covariantly (e.g., for a scalar template, a hyperbolic operator \(\mathcal{D}\) such as (□ \(–\ m\_ eff\hat{}2)\chi\  = \ J\)). In stationary or quasi-stationary systems, variable separation reduces the covariant problem to a spatial eigenproblem: \(\chi(t,\ x) = \ \Sigma_{n}q_{n(t)\varphi_{n(x)}}\), where \(\varphi_{n}\) are eigenfunctions of the induced spatial operator \(\mathcal{L}\) and \(q_{n}(t)\) obey driven oscillator equations with characteristic frequencies \(\Omega_{n}^{2} \propto \ \lambda_{n}\). SPARC rotation curves constrain the near-static regime in which \(q_{n}(t)\) has equilibrated, leaving the spatial spectral content as the observable imprint (Carroll, 2019; Hawking \& Ellis, 1973; Wald, 1984).
 
 \subsection{Observable proxy: node count and Δ-sign flips in the SPARC window}\label{d.4-observable-proxy-node-count-and-ux3b4-sign-flips-in-the-sparc-window}
 
-SPARC provides baryonic mass models and high-quality rotation curves for 175 disk galaxies (Lelli et al., 2016). Define \(\Delta(R)\) operationally \citep{McGaughSchombert2014ML, Ivezic2019LSST} as the signed residual between the observed and baryonic expectations in the rotation curve (e.g., \(\Delta v^{2(R)} \equiv \ v_{obs}^{2}–\ v_{bar}^{2}\)). In an oscillatory response sector, \(\Phi_{resp}\) (and therefore the inferred extra acceleration) can alternate in sign across radius, producing compression and rarefaction lobes. In the operator language above, each change in radial sign in \(\Delta(R)\) corresponds to crossing a nodal annulus/shell of the net excited response pattern \(\Sigma_{n}c_{n}\varphi_{n}\). Hence, within the finite SPARC radial sampling window, the number of \(\Delta\)-sign flips provides a model-agnostic proxy for the degree of higher-\(n\) (harmonic/overtone) participation: zero flips indicates a fundamental-dominated response; multiple flips indicate increasing harmonic content (higher node count) selected by \(\left\langle \varphi_{n},\ S \right\rangle\) and by activation/quenching boundaries.
+SPARC provides baryonic mass models and high-quality rotation curves for 175 disk galaxies (Lelli et al., 2016). Define \(\Delta(R)\) operationally \citep{McGaugh2014, Ivezic2019} as the signed residual between the observed and baryonic expectations in the rotation curve (e.g., \(\Delta v^{2(R)} \equiv \ v_{obs}^{2}–\ v_{bar}^{2}\)). In an oscillatory response sector, \(\Phi_{resp}\) (and therefore the inferred extra acceleration) can alternate in sign across radius, producing compression and rarefaction lobes. In the operator language above, each change in radial sign in \(\Delta(R)\) corresponds to crossing a nodal annulus/shell of the net excited response pattern \(\Sigma_{n}c_{n}\varphi_{n}\). Hence, within the finite SPARC radial sampling window, the number of \(\Delta\)-sign flips provides a model-agnostic proxy for the degree of higher-\(n\) (harmonic/overtone) participation: zero flips indicates a fundamental-dominated response; multiple flips indicate increasing harmonic content (higher node count) selected by \(\left\langle \varphi_{n},\ S \right\rangle\) and by activation/quenching boundaries.
 
 \subsection{Consequences for lensing and stability constraints}\label{d.5-consequences-for-lensing-and-stability-constraints}
 
-Because the response tensor is effectively inferred from kinematics, sign-alternating lobes should be treated as an empirical prediction of the effective sector rather than as an immediate pathology. In particular, annular rarefaction phases imply a ring-like suppression of weak-lensing observables (e.g., \(\Delta\Sigma\) or \(\kappa\) relative to control stacks) in the same radial ranges, providing a falsifiable discriminant using upcoming wide-field surveys (Scaramella et al., 2022; Euclid Collaboration, 2025; Ivezić et al., 2019). At the fundamental level, \citep{BuniyHsuMurray2006NEC, Rubakov2006NEC, Rubakov2014NECReview} the minimal non-negotiable stability line is to keep the underlying response-field EFT free of ghosts/gradient instabilities; for broad k-essence classes this is ensured by requiring a positive kinetic coefficient (\(P_{,X} \geq \ 0\)), which enforces the null energy condition for the fundamental field stress-energy even if the effective, inverse-constructed response density changes sign locally (Rubakov, 2006). For context, relativistic MOND completions (e.g., TeVeS) also introduce extra fields that alter lensing but do not generically predict phase-correlated annular suppression tied to \(\Delta\)-sign flips (Bekenstein, 2004).
+Because the response tensor is effectively inferred from kinematics, sign-alternating lobes should be treated as an empirical prediction of the effective sector rather than as an immediate pathology. In particular, annular rarefaction phases imply a ring-like suppression of weak-lensing observables (e.g., \(\Delta\Sigma\) or \(\kappa\) relative to control stacks) in the same radial ranges, providing a falsifiable discriminant using upcoming wide-field surveys (Scaramella et al., 2022; Euclid Collaboration, 2025; Ivezić et al., 2019). At the fundamental level, \citep{Buniy2006, Rubakov2006, Rubakov2014} the minimal non-negotiable stability line is to keep the underlying response-field EFT free of ghosts/gradient instabilities; for broad k-essence classes this is ensured by requiring a positive kinetic coefficient (\(P_{,X} \geq \ 0\)), which enforces the null energy condition for the fundamental field stress-energy even if the effective, inverse-constructed response density changes sign locally (Rubakov, 2006). For context, relativistic MOND completions (e.g., TeVeS) also introduce extra fields that alter lensing but do not generically predict phase-correlated annular suppression tied to \(\Delta\)-sign flips (Bekenstein, 2004).
 
 % ============================================================================
 % Appendix E: Distributed Forcing and Collective Dark Gravity Modes
@@ -1619,13 +1619,13 @@ This appendix extends the framework to regimes where baryonic driving comes from
 multiple, spatially separated mass concentrations:
 \begin{itemize}
   \item \textbf{Galaxy groups:} multiple galaxies with comparable masses and separations 
-    of order 100~kpc to~1~Mpc \citep{BullockBoylanKolchin2017SmallScale}.
+    of order 100~kpc to~1~Mpc \citep{Bullock2017}.
   \item \textbf{Galaxy clusters:} tens to thousands of galaxies embedded in diffuse 
     thermal gas; gravitational centers inferred from X-ray / lensing often offset from 
-    any single luminous peak \citep{Clowe2006Bullet, MAST2019HFF}.
+    any single luminous peak \citep{Clowe2006, MAST2019}.
   \item \textbf{Globular clusters:} hundreds of thousands to millions of stars 
     experiencing rapid relaxation and multi-body encounters; outer members can appear 
-    kinematically bound to invisible central mass(es) \citep{BullockBoylanKolchin2017SmallScale}.
+    kinematically bound to invisible central mass(es) \citep{Bullock2017}.
 \end{itemize}
 
 Our central claim: within the intrinsic response framework, these systems naturally exhibit 
@@ -1633,8 +1633,8 @@ Our central claim: within the intrinsic response framework, these systems natura
 whose location and strength are determined by the weighted superposition of mode overlaps 
 from distributed baryonic sources. Crucially, such centers need not coincide with any 
 single baryonic peak. This mechanism provides a parsimonious alternative to invoking 
-separate ``dark matter'' inventories for each subsystem \citep{Clowe2006Bullet} or to evoking exotic 
-multi-component models \citep{Bekenstein2004TeVeS, Verlinde2017Emergent}.
+separate ``dark matter'' inventories for each subsystem \citep{Clowe2006} or to evoking exotic 
+multi-component models \citep{Bekenstein2004, Verlinde2017}.
 
 \begin{figure}[ht]
   \centering
@@ -1837,7 +1837,7 @@ excited and remain macroscopically expressed under coarse-graining.
 
 During formation and subsequent relaxation (phase mixing, two-body encounters, dynamical 
 friction), the coarse-grained field can become increasingly dominated by the lowest-cost, 
-large-scale organizing component of the response \citep{BullockBoylanKolchin2017SmallScale}. In that case, $\Phi_{\text{resp}}$ develops 
+large-scale organizing component of the response \citep{Bullock2017}. In that case, $\Phi_{\text{resp}}$ develops 
 a smooth collective minimum at an organizing centroid of the stellar distribution---without 
 requiring a single dominant central luminous object. Outer members can then visibly appear 
 to orbit ``nothing'' while remaining tightly bound by $R_{\text{eff}} = \sqrt{-\Phi_{\text{total}}}$.
@@ -1876,7 +1876,7 @@ operator-controlled response in this regime.
     the weighted mode geometry. This configuration naturally produces center offsets between dynamical centroids and photometric 
     peaks without requiring exotic dark matter inventories. The organizing center's location depends on the eigenmode profile 
     $\varphi_n(\mathbf{x})$ and the baryonic source distribution, providing a testable prediction for lensing-dynamics consistency 
-    studies \citep{Clowe2006Bullet, Euclid2025Overview}.
+    studies \citep{Clowe2006, Euclid2025}.
   }
   \label{fig:collective_centroid_globular}
 \end{figure}
@@ -1952,12 +1952,12 @@ slip, $|\eta_{\text{slip}}| \ll 1$), under which the inferred ``dark gravity'' c
 lenses as any effective mass distribution would.
 
 \textbf{Therefore, the strongest discriminant} in galaxy groups and clusters is whether the 
-same intrinsic-response organization that shapes dynamics also maps consistently onto lensing \citep{Clowe2006Bullet}. 
+same intrinsic-response organization that shapes dynamics also maps consistently onto lensing \citep{Clowe2006}. 
 If gravitational slip is present in a covariant completion, it must be \textbf{controlled} 
 (not opportunistic) and should yield falsifiable relations between dynamical centroids and 
 lensing centroids, including environment- and morphology-dependent signatures that can be 
-confronted directly with group/cluster datasets from \textit{e.g.}\ Euclid \citep{Euclid2025Overview}, LSST \citep{Ivezic2019LSST}, or 
-dedicated cluster surveys \citep{MAST2019HFF}.
+confronted directly with group/cluster datasets from \textit{e.g.}\ Euclid \citep{Euclid2025}, LSST \citep{Ivezic2019}, or 
+dedicated cluster surveys \citep{MAST2019}.
 
 \subsection{Summary}\label{e.8-summary}
 
@@ -1981,8 +1981,7 @@ next observational rung.
 
 % BibTeX bibliography (see references.bib)
 % APA 7th bibliography style with author-date format
-% Include ALL entries from references.bib (not just cited ones)
-\nocite{*}
+% Only cited references will be included
 \bibliographystyle{apalike}
 \bibliography{references_formatted_complete}
 
