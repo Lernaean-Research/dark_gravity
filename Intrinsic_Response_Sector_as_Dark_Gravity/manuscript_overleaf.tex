@@ -196,12 +196,12 @@
 \normalsize ORCID: 0009-0004-8679-9155\\
 \normalsize \texttt{rkitcey@lernaean.net}}
 
-\date{February 2026\\Preprint Draft v5.1}
+\date{February 2026\\Preprint Draft v5.2}
 
 \begin{document}
 \maketitle
 
-\noindent\textbf{Versioned preprint:} Kitcey, R. D. (2026). \emph{Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)} (v5.1.0). Zenodo.\,\href{https://doi.org/10.5281/zenodo.18778895}{doi:10.5281/zenodo.18778895}
+\noindent\textbf{Versioned preprint:} Kitcey, R. D. (2026). \emph{Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)} (v5.2.0). Zenodo.\,\href{https://doi.org/10.5281/zenodo.18778895}{doi:10.5281/zenodo.18778895}
 
 \begin{abstract}
 We present a falsification-first, galaxy-domain framework for explaining rotation-curve anomalies without assuming particulate cold dark matter. Working within standard general relativity (GR), we define a response-sector stress--energy \(T_{\mu\nu}^{\mathrm{resp}}\) as the minimal effective source required so that the weak-field metric potentials inferred from kinematics satisfy the Einstein equation with baryons. This definition is ontologically agnostic and is best read as an effective field theory/constitutive-closure candidate. Observed rotation curves define a model-independent residual, which we compress with a one-parameter boundary-layer closure activated near a baryonic transition radius \(R_{t}\) and constrained by an approximate flux-conservation law outside the activation zone.
@@ -402,7 +402,25 @@ We present explicit falsification criteria, discriminant tests (including lensin
 
 \hyperref[d.5-consequences-for-lensing-and-stability-constraints]{D.5 Consequences for lensing and stability constraints \hyperref[d.5-consequences-for-lensing-and-stability-constraints]{63}}
 
-\hyperref[references]{References \hyperref[references]{64}}
+\hyperref[appendix-e-distributed-forcing]{Appendix E. Distributed Forcing and Collective Dark Gravity Modes \hyperref[appendix-e-distributed-forcing]{65}}
+
+\hyperref[e.1-overview]{E.1 Overview: From Single-Peak to Multi-Centered Drivers \hyperref[e.1-overview]{65}}
+
+\hyperref[e.2-mathematical-foundation]{E.2 Mathematical Foundation: Linearity and Mode Superposition \hyperref[e.2-mathematical-foundation]{65}}
+
+\hyperref[e.3-collective-minima]{E.3 Collective Minima from Distributed Sources \hyperref[e.3-collective-minima]{66}}
+
+\hyperref[e.4-vibe-check]{E.4 Vibe Check: Is the Distributed-Forcing Picture Physically Coherent? \hyperref[e.4-vibe-check]{66}}
+
+\hyperref[e.5-globular-clusters]{E.5 Globular Clusters as a Test Laboratory \hyperref[e.5-globular-clusters]{66}}
+
+\hyperref[e.6-observational-discriminants]{E.6 Observational Discriminants from Velocity Dispersion Profiles \hyperref[e.6-observational-discriminants]{67}}
+
+\hyperref[e.7-lensing-dynamics-consistency]{E.7 Lensing--Dynamics Consistency: The Decisive Rung \hyperref[e.7-lensing-dynamics-consistency]{67}}
+
+\hyperref[e.8-summary]{E.8 Summary and Outlook \hyperref[e.8-summary]{67}}
+
+\hyperref[references]{References \hyperref[references]{67}}
 
 \section{Tables}\label{tables}
 
@@ -482,15 +500,14 @@ The standard approach to galaxy dynamics begins with a theoretical mass model (b
 \subsection{Kinematics to Required Radial Acceleration}\label{kinematics-to-required-radial-acceleration}
 
 For each galaxy in the SPARC database, the observed rotation curve provides the centripetal acceleration at galactocentric radius \emph{R}:
-\begin{equation}
+\begin{equation*}
 g_{\text{obs}}(R) = \frac{v_{\text{obs}}^{2}(R)}{R}
-\label{eq:centripetal-accel}
-\end{equation}
+\end{equation*}
 
 The baryonic prediction \(g_{\text{bar}}(R)\) is constructed from SPARC's decomposed photometric and gas-mass components (Lelli et al., 2016), with a chosen stellar mass-to-light ratio Υ\textsubscript{*} \citep{McGaughSchombert2014ML, RubinFord1970M31, Bosma1978Thesis}. The residual defines the ``missing curvature'' in the circular-orbit sector:
 \begin{equation}
 g_{\text{extra}}(R) = g_{\text{obs}}(R) - g_{\text{bar}}(R)
-\label{eq:extra-accel}
+\label{eq:residual-acceleration}
 \end{equation}
 
 This residual is model-independent: it is a direct comparison of observed kinematics with the baryonic gravitational prediction. In the CDM interpretation, \(g_{extra}\) is sourced by an additional mass component. In the response-sector interpretation, it is the effective geometric response of spacetime to the baryonic source.
@@ -498,26 +515,23 @@ This residual is model-independent: it is a direct comparison of observed kinema
 \subsection{Weak-Field Metric Potentials}\label{weak-field-metric-potentials}
 
 In the Newtonian gauge for weak gravitational fields, the line element takes the form:
-\begin{equation}
+\begin{equation*}
 ds^{2} = -(1 + 2\Phi)\, dt^{2} + (1 - 2\Psi)\, d\mathbf{x}^{2}
-\label{eq:newtonian-gauge-metric}
-\end{equation}
+\end{equation*}
 
 To leading order for nonrelativistic motion, the radial acceleration is \textbf{a} ≈ −∇Φ. Gravitational lensing depends on the Weyl combination \(\Phi_{lens}\) ∝ (Φ + Ψ)/2 \citep{PoissonWill2014}. Thus, rotation curves primarily constrain \(\Phi\), while lensing constrains the combination (Φ + Ψ). A metric-equivalent response-sector claim is strongest if it produces Φ ≈ Ψ in the relevant regime; if it predicts gravitational slip (\(\Phi\  \neq \ \Psi\)), that slip becomes a key discriminant (see §8).
 
 \subsection{Effective Enclosed Mass and Density}\label{effective-enclosed-mass-and-density}
 
 For spherically symmetric intuition (useful even for disk galaxies), circular orbits obey \(v^2(r) = \frac{GM(<r)}{r}\). Given the observed rotation curve, we define an effective enclosed mass:
-\begin{equation}
+\begin{equation*}
 M_{\text{eff}}(<r) = r\frac{v_{\text{obs}}^{2}(r)}{G}
-\label{eq:effective-enclosed-mass}
-\end{equation}
+\end{equation*}
 
 Subtracting baryons yields an effective extra enclosed mass and, by differentiation, an effective extra density:
-\begin{equation}
+\begin{equation*}
 \rho_{\text{extra}}(r) = \frac{1}{4\pi r^{2}}\frac{d}{dr}\left[ \frac{r(v_{\text{obs}}^{2} - v_{\text{bar}}^{2})}{G} \right]
-\label{eq:effective-extra-density}
-\end{equation}
+\end{equation*}
 
 For a flat outer rotation curve (\(v\  \rightarrow \ v\infty\)), one obtains \(M_{eff} \propto \ r\) and \(\rho_{extra} \propto \frac{1}{r2}\)---the classic isothermal halo profile \citep{RubinFord1970M31, Bosma1978Thesis}, historically motivated by early flat-curve observations in M31 and extended HI disks. In the response-sector interpretation, \(\rho_{extra}\) is not a new matter species; it is the effective stress--energy of the spacetime response to baryonic structure.
 
@@ -526,10 +540,9 @@ For a flat outer rotation curve (\(v\  \rightarrow \ v\infty\)), one obtains \(M
 In standard GR, the Einstein equation reads Eq.~\eqref{eq:einstein-field-response}. The entire program is to interpret \(T_{\mu\nu}^{\text{resp}}\) as a polarization-like response of the gravitational sector, activated by baryonic structure (especially at boundary/transition regions), with a small parameter set and a universal functional form. This makes the ``extra'' empirically necessary but not an ad hoc per-galaxy function.
 
 The response-sector stress--energy admits a standard fluid decomposition:
-\begin{equation}
+\begin{equation*}
 T^{\text{resp}}_{\mu\nu} = (\rho_{\text{resp}} + p_{\text{resp}})u_{\mu}u_{\nu} + p_{\text{resp}}g_{\mu\nu} + \Pi_{\mu\nu}
-\label{eq:stress-energy-decomposition}
-\end{equation}
+\end{equation*}
 
 where \(\rho_{resp}\) is the effective halo density in the inverse-GR sense, \(p_{resp}\) determines whether the sector is dust-like on large scales, and \(\Pi_{\mu\nu}\) is the anisotropic stress that directly controls gravitational slip and lensing deviations.
 
@@ -613,10 +626,9 @@ The Spitzer Photometry and Accurate Rotation Curves (SPARC) database (Lelli et a
 \subsection{Baryonic Velocity Construction}\label{baryonic-velocity-construction}
 
 The baryonic velocity prediction is assembled from SPARC components:
-\begin{equation}
+\begin{equation*}
 v_{\text{bar}}^{2}(R) = \Upsilon_{\text{disk}} v_{\text{disk}}^{2}(R) + \Upsilon_{\text{bul}} v_{\text{bul}}^{2}(R) + v_{\text{gas}}^{2}(R)
-\label{eq:baryonic-velocity}
-\end{equation}
+\end{equation*}
 
 where \(\Upsilon_{disk}\) and \(\Upsilon_{bul}\) are the stellar mass-to-light ratios. We adopt \(\Upsilon_{\text{disk}} = 0.5\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) as the baseline, consistent with stellar population synthesis models at \(3.6\ \mu m\) (McGaugh \& Schombert, 2014) \citep{McGaughSchombert2014ML}, with sensitivity sweeps across \(\Upsilon_{\text{disk}} \in \text{\{}0.3,0.4,0.5,0.6,0.7\text{\}}\,\text{M}_{\text{⊙}}\text{/}\text{L}_{\text{⊙}}\) to quantify photometric systematic uncertainties.
 
@@ -626,10 +638,9 @@ For each galaxy, we identify the transition radius \emph{R}\textsubscript{t} as 
 
 \subsection{Fit Procedure and Amplitude Determination}\label{fit-procedure-and-amplitude-determination}
 
-\begin{equation}
+\begin{equation*}
 \chi^{2}(Q) = \sum_{i=1}^{N}\left( \frac{v_{\text{model}}(R_{i}; Q) - v_{\text{obs}}(R_{i})}{\sigma_{v,i}} \right)^{2}
-\label{eq:chi-squared-fit}
-\end{equation}
+\end{equation*}
 
 The single free parameter \(Q_{best}\) is determined for each galaxy by minimizing the weighted \(\chi^{2}\) between \(v_{model}\) and \(v_{obs}\). As an independent check, we compute \(Q_{est}\), a robust outer-subset estimator using Huber's \emph{M}-estimator applied to the velocity deficit \(\Delta v(R) = v_{\text{obs}}(R) - v_{\text{bar}}(R)\) in the outer region (\(R > R_{t}\)). The Huber estimator down-weights outliers while remaining efficient under Gaussian conditions, providing an amplitude estimate that does not depend on the model's functional form.
 
@@ -1581,6 +1592,8 @@ SPARC provides baryonic mass models and high-quality rotation curves for 175 dis
 \subsection{Consequences for lensing and stability constraints}\label{d.5-consequences-for-lensing-and-stability-constraints}
 
 Because the response tensor is effectively inferred from kinematics, sign-alternating lobes should be treated as an empirical prediction of the effective sector rather than as an immediate pathology. In particular, annular rarefaction phases imply a ring-like suppression of weak-lensing observables (e.g., \(\Delta\Sigma\) or \(\kappa\) relative to control stacks) in the same radial ranges, providing a falsifiable discriminant using upcoming wide-field surveys (Scaramella et al., 2022; Euclid Collaboration, 2025; Ivezić et al., 2019). At the fundamental level, \citep{BuniyHsuMurray2006NEC, Rubakov2006NEC, Rubakov2014NECReview} the minimal non-negotiable stability line is to keep the underlying response-field EFT free of ghosts/gradient instabilities; for broad k-essence classes this is ensured by requiring a positive kinetic coefficient (\(P_{,X} \geq \ 0\)), which enforces the null energy condition for the fundamental field stress-energy even if the effective, inverse-constructed response density changes sign locally (Rubakov, 2006). For context, relativistic MOND completions (e.g., TeVeS) also introduce extra fields that alter lensing but do not generically predict phase-correlated annular suppression tied to \(\Delta\)-sign flips (Bekenstein, 2004).
+
+\input{Appendix_E.tex}
 
 \section{References}\label{}
 
