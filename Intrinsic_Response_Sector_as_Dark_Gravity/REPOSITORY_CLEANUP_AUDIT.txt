@@ -1,0 +1,94 @@
+================================================================================
+REMOTE REPOSITORY AUDIT - 2026-03-04 20:13
+Repository: Lernaean-Research/dark_gravity
+================================================================================
+
+SUMMARY:
+Total files in remote: 39
+Files to remove: 28
+Files to keep: 16
+
+================================================================================
+FILES TO KEEP (Core project files - 16 files):
+================================================================================
+
+MANUSCRIPT & BIBLIOGRAPHY:
+✓ manuscript_overleaf.tex (2078 lines, current version, Mar 2 2026)
+✓ manuscript_overleaf.pdf (59 pages, 3.47 MB)
+✓ references_formatted_complete.bib (52 entries, active bibliography)
+
+MEDIA FILES (13 images):
+✓ media/Comprehensive model comparison results across the 175-galaxy SPARC sample.png
+✓ media/image1.jpg (conceptual schematic)
+✓ media/image2.png (NGC 2403)
+✓ media/image3.png (DDO 154)
+✓ media/image4.png (NGC 2841)
+✓ media/image5.png (UGC 06614)
+✓ media/image6.png
+✓ media/image7.png
+✓ media/image8.png  
+✓ media/imageE1.jpg (Appendix E figures)
+✓ media/imageE2.jpg
+✓ media/imageE3.jpg
+✓ media/imageE4.jpg
+
+================================================================================
+FILES TO REMOVE (Superseded/redundant - 28 files):
+================================================================================
+
+SUPERSEDED VERSIONS (3):
+✗ Appendix_E.tex - Content integrated into manuscript_overleaf.tex (lines 1597-1981)
+✗ manuscript_v5.0.7_stable.tex - Older version (Feb 26), superseded by manuscript_overleaf.tex (Mar 2)
+✗ references.bib - Duplicate, manuscript uses references_formatted_complete.bib
+
+AUDIT & WORKING DOCUMENTS (18):
+✗ ARXIV_PUBLISHING_GUIDE_v5.1.0.md
+✗ CITATION_AND_BIBLIOGRAPHY_AUDIT_REPORT.md
+✗ CITATION_AUDIT_AND_REPAIR_REPORT.md
+✗ CITATION_AUDIT_FINAL_REPORT.md
+✗ citation_audit_report.txt
+✗ CITATION_PLACEMENT_ANALYSIS.csv
+✗ CITATION_PLACEMENT_SUMMARY.md
+✗ DETAILED_IMPLEMENTATION_GUIDE.md
+✗ EQUATION_REFERENCE_v5.1.0.md
+✗ INTEGRATION_COMPLETE_v5.1.0.md
+✗ PREPUBLISH_AUDIT_v5.1.0.md
+✗ QUICK_REFERENCE_CHECKLIST.md
+✗ RECOMMENDATIONS_FOR_CITATION_MANAGEMENT.md
+✗ SECTION_5_V5.1_REPLACEMENT.md
+✗ ZENODO_REFERENCE_GUIDE.md
+✗ ZENODO_REFERENCE_STRING_PLAIN_TEXT.txt
+
+SCRIPTS & TEMPORARY FILES (7):
+✗ fix_citations.py - One-time use citation fix script (task completed)
+✗ citation_audit.ps1 - Working script
+✗ bib_keys.txt - Temporary working file
+✗ tex_keys.txt - Temporary working file
+
+================================================================================
+RATIONALE:
+================================================================================
+
+1. Superseded files are older versions no longer needed for production
+2. Audit documents served their purpose during manuscript preparation
+3. Working scripts and temporary files are development artifacts
+4. Keeping only essential files makes the repo cleaner and easier to navigate
+5. All important information from audit documents is incorporated in the manuscript
+
+================================================================================
+RECOMMENDED ACTION:
+================================================================================
+
+git rm Appendix_E.tex manuscript_v5.0.7_stable.tex references.bib \\
+  ARXIV_PUBLISHING_GUIDE_v5.1.0.md CITATION_*.md citation_*.txt citation_*.ps1 \\
+  CITATION_PLACEMENT_*.csv CITATION_PLACEMENT_*.md DETAILED_IMPLEMENTATION_GUIDE.md \\
+  EQUATION_REFERENCE_v5.1.0.md INTEGRATION_COMPLETE_v5.1.0.md \\
+  PREPUBLISH_AUDIT_v5.1.0.md QUICK_REFERENCE_CHECKLIST.md \\
+  RECOMMENDATIONS_FOR_CITATION_MANAGEMENT.md SECTION_5_V5.1_REPLACEMENT.md \\
+  ZENODO_REFERENCE_*.md ZENODO_REFERENCE_*.txt \\
+  fix_citations.py bib_keys.txt tex_keys.txt
+
+git commit -m 'Clean repository: remove superseded versions, audit documents, and working files'
+git push
+
+================================================================================

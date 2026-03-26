@@ -100,5 +100,8 @@ rubin_rsp/out/sparc175_reference_independent_report.json
 toy_models/out_*/**
 toy_models/out_sparc_runs_*/**
 
+# Standalone generated CSV/output files at toy_models root
+toy_models/out_*.csv
+
 # Notebook/editor runtime metadata
 **/.ipynb_checkpoints/

@@ -1,0 +1,2695 @@
+                     Intrinsic Response Sector as Dark Gravity:
+     A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)
+
+
+                                              Robert D. Kitcey
+                                         Independent Researcher
+                                       ORCID: 0009-0004-8679-9155
+                                         rkitcey@lernaean.net
+
+                                              February 2026
+                                            Preprint Draft v5.2
+
+
+Versioned preprint: Kitcey, R. D. (2026). Intrinsic Response Sector as Dark Gravity: A
+GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175) (v5.2.0). Zen-
+odo. doi:10.5281/zenodo.18778895
+                                                   Abstract
+         We present a falsification-first, galaxy-domain framework for explaining rotation-curve anomalies
+     without assuming particulate cold dark matter. Working within standard general relativity (GR),
+     we define a response-sector stress–energy Tµν  resp
+                                                         as the minimal effective source required so that the
+     weak-field metric potentials inferred from kinematics satisfy the Einstein equation with baryons. This
+     definition is ontologically agnostic and is best read as an effective field theory/constitutive-closure
+     candidate. Observed rotation curves define a model-independent residual, which we compress with a
+     one-parameter boundary-layer closure activated near a baryonic transition radius Rt and constrained
+     by an approximate flux-conservation law outside the activation zone.
+         Applied to 175 galaxies from the SPARC database, this model yields very strong improvement
+     over a baryons-only model for 92% of systems and passes a Bayesian Information Criterion (BIC)
+     overfitting test in 97% of cases. Crucially, we demonstrate that this 1-parameter response model is
+     strongly preferred by BIC over standard 2-parameter NFW and Burkert dark matter halo models
+     in over 90% of the SPARC sample. Further, 5-fold cross-validation shows the response model
+     has significantly lower out-of-sample prediction error (mean RMSE = 3.1 km/s) than the NFW
+     model (mean RMSE = 4.9 km/s). A cymatics-inspired extension explores oscillatory signatures
+     in residuals as eigenmodes of a linearized response operator, providing a spectral taxonomy for
+     response morphologies and predicting higher-harmonic content in galaxies with sharp baryonic
+     gradients (Appendix D) (Rossing, 1982; Tuan et al., 2014; Bender and Orszag, 1999). The baryonic
+     Tully–Fisher relation is recovered as an empirical consequence (Spearman rs = 0.95). These results
+     establish the response sector as a parsimonious and predictively powerful alternative to standard
+     halo models for describing galactic dynamics.
+
+Keywords: galaxy rotation curves, dark matter alternatives, dark matter candidates, dark matter
+identity, general relativity, gravitation, effective field theory, response-sector stress–energy, boundary-
+layer physics, SPARC database, falsification criteria, Bayesian model comparison, cross-validation
+
+
+
+
+                                                        1
+Intrinsic Response Sector as Dark Gravity                                                        Kitcey
+
+
+Executive Summary
+The dark-matter paradigm explains galactic rotation curve anomalies by postulating a new, non-
+luminous matter component. Despite decades of null results in direct, indirect, and collider searches,
+the hypothesis persists largely because no comparably rigorous alternative has been tested against the
+full breadth of observational data. This paper develops and tests such an alternative. We keep the
+Einstein tensor standard (general relativity) and do not assume particulate cold dark matter (CDM).
+Instead, we use observed galactic phenomenology—rotation curves from the SPARC database of 175
+galaxies—to infer the effective potentials and effective stress–energy required on the right-hand side of
+the Einstein equation, then compress that freedom with a low-degree-of-freedom “intrinsic medium
+response” closure.
+                                                      
+                                       bar + T resp , where T resp is the response-sector stress–energy
+The organizing principle is Gµν = 8πG Tµν     µν             µν
+that
+  (i) explains galaxy halo phenomenology without particulate CDM, and
+ (ii) admits a cosmological completion consistent with the empirical ΛCDM success set.
+The response sector is activated near a baryonic boundary layer, produces an asymptotic R1 tail in the
+extra acceleration, and is described by ≤2 degrees of freedom per galaxy. Across 175 SPARC galaxies,
+92% show very strong improvement over baryons-only, 97% pass BIC overfitting tests, and the baryonic
+Tully–Fisher relation emerges as a consequence rather than an imposed prior.
+We present explicit falsification criteria, discriminant tests (including lensing-facing statements and
+cosmological viability requirements), and a domain-partitioned roadmap from galaxy phenomenology
+through gravitational slip to large-scale structure. Claims are partitioned by domain: this work
+establishes the galaxy-domain closure and enumerates the cosmological completion requirements and
+discriminants.
+
+
+
+
+                                                   2
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+Contents
+Executive Summary                                                                                       2
+
+1 Introduction                                                                                          7
+
+2 From Phenomenology to Effective Source: The Inverse-GR Construction                                    9
+  2.1 Kinematics to Required Radial Acceleration . . . . . . . . . . . . . . . . . . . . . . . .         9
+  2.2 Weak-Field Metric Potentials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       9
+  2.3 Effective Enclosed Mass and Density . . . . . . . . . . . . . . . . . . . . . . . . . . . .       10
+  2.4 Effective Stress–Energy: What Is Being Added in GR . . . . . . . . . . . . . . . . . .            10
+  2.5 Conservation Constraint . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     10
+
+3 Minimal Response-Sector Model Specification                                                           10
+  3.1 Design Principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   10
+  3.2 Auxiliary-Field Boundary-Layer Model . . . . . . . . . . . . . . . . . . . . . . . . . . .        11
+  3.3 Operational Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      11
+  3.4 The Constitutive “Gravitational Dielectric” Alternative . . . . . . . . . . . . . . . . .         11
+  3.5 Three Completion Routes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       11
+
+4 Data and Pipeline                                                                                     12
+  4.1 The SPARC Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        12
+  4.2 Baryonic Velocity Construction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      12
+  4.3 Transition Radius Determination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       12
+  4.4 Fit Procedure and Amplitude Determination . . . . . . . . . . . . . . . . . . . . . . .           12
+  4.5 Six-Panel Diagnostic Atlas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+
+5 Results Across 175 SPARC Galaxies                                                                     13
+  5.1 Model Selection via Bayesian Information Criterion . . . . . . . . . . . . . . . . . . . .        13
+  5.2 Out-of-Sample Predictive Performance . . . . . . . . . . . . . . . . . . . . . . . . . . .        15
+  5.3 Global Fit Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      15
+  5.4 Representative Galaxy Diagnostics . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       15
+  5.5 Emergent Baryonic Tully–Fisher Relation . . . . . . . . . . . . . . . . . . . . . . . . .         20
+  5.6 Fitted vs. Robust Amplitude Comparison . . . . . . . . . . . . . . . . . . . . . . . . .          20
+  5.7 Mass-to-Light Ratio Sensitivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     20
+  5.8 Oscillatory Signatures and Negative-Q Galaxies . . . . . . . . . . . . . . . . . . . . . .        20
+
+6 Empirical Validation Ladder                                                                           20
+  6.1 Step 1: Data Reproducibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      20
+  6.2 Step 2: Baseline Fits and Residual Definitions . . . . . . . . . . . . . . . . . . . . . . .      21
+  6.3 Step 3: Non-Fragile Inference . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     21
+  6.4 Step 4: Stratified Permutation Stress Tests . . . . . . . . . . . . . . . . . . . . . . . .       21
+  6.5 Step 5: Out-of-Sample Cross-Validation . . . . . . . . . . . . . . . . . . . . . . . . . .        21
+  6.6 Step 6: Negative Controls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     21
+
+7 Falsification Criteria and Discriminant Tests                                                         21
+  7.1 Criterion 1: Compression Failure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      22
+  7.2 Criterion 2: Out-of-Sample Prediction Failure . . . . . . . . . . . . . . . . . . . . . . .       22
+  7.3 Criterion 3: Gravitational Slip / Lensing Inconsistency . . . . . . . . . . . . . . . . . .       22
+  7.4 Criterion 4: Cosmological Growth Incompatibility . . . . . . . . . . . . . . . . . . . .          22
+
+
+                                                    3
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+   7.5 The Discriminant Triad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     22
+
+8 Lensing and Cosmological Viability                                                                    22
+  8.1 Lensing: The Weyl Potential Constraint . . . . . . . . . . . . . . . . . . . . . . . . . .        23
+  8.2 Cosmological Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       23
+  8.3 Cosmological Perturbations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      23
+  8.4 Domain Partition and Honest Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . .         23
+
+9 Discussion                                                                                            24
+  9.1 The Response Sector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     24
+  9.2 Relation to MOND and TeVeS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          24
+  9.3 Relation to Emergent Gravity and Nonlocal Gravity . . . . . . . . . . . . . . . . . . .           24
+  9.4 Strengths of the Current Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       24
+  9.5 Limitations and Open Questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        24
+  9.6 The Historical Lesson . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     25
+  9.7 A Candidate Identity for the Cold Dark Matter Role . . . . . . . . . . . . . . . . . . .          25
+  9.8 Defining the CDM Role . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       25
+  9.9 The Intrinsic Response as a Candidate Identity . . . . . . . . . . . . . . . . . . . . . .        25
+  9.10 Discussion References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    29
+
+10 Conclusion                                                                                           30
+
+11 Appendix A: Comprehensive Symbol Glossary                                                            30
+
+12 Appendix B: Per-Galaxy Qest / Qbest Summary (175 galaxies)                                           38
+
+13 Appendix C. Cluster morphology operator and HFF benchmark                                            44
+   13.1 C.1 Data provenance and scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     44
+   13.2 C.2 Preregistered morphology operator . . . . . . . . . . . . . . . . . . . . . . . . . . .     44
+   13.3 C.3 Robustness grid: multi-team systematics and ROI sensitivity . . . . . . . . . . . .         44
+   13.4 C.4 Six-panel diagnostic figures (ROI = 100′′ ) . . . . . . . . . . . . . . . . . . . . . . .   45
+
+14 Appendix D. Spectral Harmonics and the Cymatic Analogy in Intrinsic Response
+   Theory                                                                                             48
+   14.1 Purpose and scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+   14.2 Unified operator statement (“DNA” of intrinsic response) . . . . . . . . . . . . . . . . 48
+   14.3 Where “harmonics” live in a unified spacetime theory . . . . . . . . . . . . . . . . . . . 48
+   14.4 Observable proxy: node count and ∆-sign flips in the SPARC window . . . . . . . . . 49
+   14.5 Consequences for lensing and stability constraints . . . . . . . . . . . . . . . . . . . . . 49
+
+15 Appendix E: Distributed Forcing and Collective Dark Gravity Modes in Groups,
+   Clusters, and Dense Stellar Systems                                                                49
+   15.1 Overview: From Single-Peak to Multi-Centered Drivers . . . . . . . . . . . . . . . . . 49
+   15.2 Mathematical Foundation: Linearity and Mode Superposition . . . . . . . . . . . . . . 50
+   15.3 Collective Organizing Minima: The Distributed-Mode Picture . . . . . . . . . . . . . . 51
+   15.4 Vibe Check: Is the Distributed-Forcing Picture Physically Coherent? . . . . . . . . . . 51
+   15.5 Globular Clusters as a Distributed-Forcing Laboratory . . . . . . . . . . . . . . . . . . 54
+   15.6 Observational Hooks and Discriminants: Why This Is Stress-Testable . . . . . . . . . 54
+   15.7 Lensing–Dynamics Consistency: The Decisive Rung . . . . . . . . . . . . . . . . . . . 56
+   15.8 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+
+
+                                                    4
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+16 References                                                                                           57
+
+
+List of Tables
+   1    Global fit performance of the single-parameter boundary-layer response model across
+        175 SPARC galaxies. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+   2    Table 2. Rung Table (Branch A) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      27
+   3    Table 3. Rung Table (Branch B) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      28
+   4    Table 4. Criticism and Rebuttal. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    29
+   5    Comprehensive Symbol Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       30
+   6    Per-Galaxy Qest / Qbest Summary (175 galaxies) . . . . . . . . . . . . . . . . . . . . .        39
+
+
+List of Figures
+   1    Conceptual schematic of the response-sector framework. . . . . . . . . . . . . . . . . .         8
+   2     Bayesian Model Comparison and Cross-Validation Performance. Panels (a-c)
+        show ∆BIC distributions for response sector, NFW, and Burkert models across the
+        175-galaxy SPARC sample. Median ∆BIC: Response −71.3 (strongly preferred), NFW
+        −54.3, Burkert −57.3. Response model preferred over NFW in 91% of galaxies and
+        strongly preferred (∆BIC < −2) in 77%. Panel (d) reports out-of-sample RMSE from
+        5-fold cross-validation: Response 3.1 km/s vs. NFW 4.9 km/s (37% improvement).
+        Panel (e) examines baryonic mass-to-light ratio (Υdisk ) sensitivity across the inferred
+        range. Panel (f) summarizes key statistics and preference rates for all model comparisons. 14
+   3    NGC 2403—a well-resolved, intermediate-mass spiral. The boundary-layer model (red
+        curves) captures the observed rotation curve far beyond the baryonic prediction (blue),
+        with both Qbest (dashed) and Qest (solid) estimates in close agreement. The residual
+        panel (lower right) shows the velocity deficit (blue) reduced to near-zero by the model. 16
+   4    DDO 154—a (Ackermann et al., 2015) gas-dominated dwarf irregular galaxy. Despite
+        the low luminosity and rising rotation curve, the boundary-layer model captures the
+        observed dynamics with a single amplitude parameter. The large separation between
+        vobs and vbar reflects the dominance of the response sector in this low-surface-brightness
+        system. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+   5    NGC 2841—a massive, high-surface-brightness spiral. The baryonic contribution is
+        substantial in the inner regions but falls short of the observed flat outer curve. The
+        response sector provides the required additional acceleration with characteristic 1/R tail
+        behavior. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+   6    UGC 06614—a low-surface-brightness galaxy. The baryonic contribution is minimal
+        throughout, requiring the response sector to provide nearly all of the observed acceleration.
+        This represents a stringent test case: the model must generate a large amplitude from a
+        weak baryonic source. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+   7    Figure 6. HFF κ–X-ray systematics summary at ROI = 100′′ . . . . . . . . . . . . . . . 45
+   8    Figure 7. Abell 2744 (CATS v4.1), ROI = 100′′ . . . . . . . . . . . . . . . . . . . . . . 46
+   9    Figure 8. MACS J0416.1−2403 (CATS v4.1), ROI = 100′′ . . . . . . . . . . . . . . . . 47
+
+
+
+
+                                                    5
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+   10   Dense Stellar Systems and Central Concentration. Observed centrally concen-
+        trated stellar system exhibiting strong gravitational organization. Such systems motivate
+        the distributed-forcing framework: a collective intrinsic response potential can generate
+        an emergent organizing minimum without requiring a central baryonic point mass. The
+        visible mass distribution does not obviously explain the organizing center, suggesting
+        gravitational field organization extends beyond simple baryonic self-gravity. . . . . . .         50
+   11   Emergent Organizing Minimum with No Central Baryons. Schematic illustra-
+        tion of the collective response field developing an organizing minimum in a multi-centered
+        baryonic configuration. The four red markers represent individual baryonic concen-
+        trations (galaxies or stellar clusters). The central organizing minimum (indicated by
+        the potential well) occurs at the geometric center with zero baryonic mass present.
+        Darker colors indicate deeper gravitational wells. Any test material (stripped stars,
+        intracluster gas, or low-baryon tracers) responds only to this collective logarithmic
+        potential and orbits the empty central point—precisely the morphology predicted by
+        the intrinsic response framework for distributed forcing configurations. . . . . . . . .          52
+   12   Collective Gravitational Minimum from Distributed Forcing. Schematic repre-
+        sentation of the effective potential landscape Φeff (x) = Φbar (x) + Φresp (x) in a multi-
+        centered baryonic system. Red markers: Individual baryonic concentrations (galaxies
+        or stellar overdensities) with deep local minima from their respective response contribu-
+        tions Φi . Teal depression (broad central bowl): Collective organizing minimum
+        arising from the superposition of long-wavelength (low-n, fundamental) response eigen-
+        modes. Gold star: Location of the global potential minimum, which is generically
+        offset from any single baryonic peak due to the weighted mode geometry. This configu-
+        ration naturally produces center offsets between dynamical centroids and photometric
+        peaks without requiring exotic dark matter inventories. The organizing center’s location
+        depends on the eigenmode profile φn (x) and the baryonic source distribution, providing
+        a testable prediction for lensing-dynamics consistency studies (Clowe et al., 2006; Euclid
+        Collaboration, 2025). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     55
+   13   Dark-Gravity Organized Globular Cluster (Schematic). Visualization of a dense
+        stellar system where distributed baryonic drivers (individual stars or stellar subgroups)
+        generate collective intrinsic response contributions whose superposition produces an
+        organizing gravitational minimum. The system exhibits deep local potential wells at
+        each stellar concentration (indicating self-bound objects via their respective Rt response
+        contributions plus baryonic self-gravity), overlaid with a broad collective organizing
+        potential. Outer members orbit this collective structure, appearing to trace “invisible
+        mass” distributions while remaining bound by pure gravitational field organization. This
+        morphology is characteristic of globular clusters and demonstrates how macroscopic
+        response organization can emerge from distributed forcing without requiring exotic dark
+        matter halos. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   56
+
+
+
+
+                                                     6
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+1    Introduction
+For nearly a century, gravitational anomalies at galactic and cosmological scales have been parameterized
+by an additional non-luminous sector. The concept originated with Zwicky’s observations of the Coma
+cluster (Zwicky, 1933), and anomalies in classical orbital mechanics—such as Mercury’s perihelion
+precession historically attributed to the unseen planet Vulcan (Le Verrier, 1859)—have precedent in
+gravitational physics. The ΛCDM concordance model fits the CMB, BAO, and large-scale structure
+(Riess et al., 2019; Ivezić et al., 2019; Euclid Collaboration, 2022, 2025) with high precision when cold
+dark matter (CDM) is treated as an effectively pressureless gravitating component.
+Yet the microphysical identity of that dominant non-baryonic component remains empirically unresolved.
+Many canonical weak-scale interaction scenarios have been constrained by direct detection, indirect
+searches, and collider experiments. Leading direct-detection experiments including (Akerib et al., 2017;
+Aprile et al., 2018; Cui et al., 2017) have placed increasingly stringent bounds on traditional WIMP
+parameter spaces. Indirect searches (Aguilar et al., 2013) have further restricted viable dark-matter
+models. This motivates renewed attention to alternatives that treat the dark sector first as an empirical
+role and only secondarily as an ontological identity.
+This paper develops an inverse-GR alternative consistent with the Discussion framing in §9: we retain
+standard GR (Einstein, 1916; Wald, 1984) on the left-hand side and ask what effective stress–energy
+must appear on the right-hand side if we do not assume particulate CDM. The organizing equation is
+                                                                
+                                      Gµν = 8πG Tµν
+                                                 bar
+                                                     + Tµν
+                                                        resp
+                                                                                                      (1)
+        resp is defined as the effective response sector required by the observed phenomenology. We
+where Tµν
+demonstrate that a simple, one-parameter closure for Tµν  resp not only explains galactic rotation curves
+
+but does so with higher statistical preference (lower Bayesian Information Criterion) and greater
+predictive accuracy (lower out-of-sample error via cross-validation) than standard two-parameter
+dark matter halo models—a claim supported by rigorous comparison across 175 SPARC galaxies (§5).
+This definition remains ontologically agnostic; we do not claim spacetime is literally a fluid or solid,
+only that it admits an EFT/constitutive response closure (Carroll, 2004, 2019).
+                                                                                   2 (R)/R. The baryonic
+In the circular-orbit regime, the data provide Vobs (R) and therefore gobs (R) = Vobs
+prediction Vbar (R) is assembled from SPARC’s stellar and gas components with specified mass-to-light
+ratios. The model-independent residual ∆(R) ≡ Vobs      2 (R) − V 2 (R) defines the “missing curvature”
+                                                                  bar
+attributable in ΛCDM to a halo, and attributable here to the response sector.
+The inverse mapping alone is underdetermined: many effective sources could reproduce a given ∆(R).
+The scientific content of this work is therefore compression. We impose a boundary-layer closure in
+which the response activates near a baryonic transition radius Rt (operationally where gbar (Rt ) ≈ a0 )
+and satisfies an approximate flux-conservation law outside the activation zone, yielding an asymptotic
+gextra ∝ 1/R tail with ≤2 degrees of freedom per galaxy.
+We further distinguish Qbest (a global fit amplitude under the imposed closure) from Qest (a robust
+outer estimator computed directly from the outer ∆(R) subset). Their strong agreement in rank across
+SPARC-175 supports the interpretation that the inferred response amplitude tracks genuine outer
+physics, while deviations diagnose where a single fixed shape requires extension.
+Rotation curves primarily constrain the Newtonian-gauge potential Φ; lensing constrains the Weyl
+potential ΦW ≡ (Φ + Ψ)/2. Consistent with §9, we treat lensing as a gateway discriminant between
+Branch A (metric equivalence, Φ ≃ Ψ) and Branch B (slip-allowed, η ≡ Ψ/Φ ̸= 1 localized to activation
+zones).
+
+
+                                                    7
+Intrinsic Response Sector as Dark Gravity                                             Kitcey
+
+
+
+
+                   Figure 1: Conceptual schematic of the response-sector framework.
+
+
+
+
+                                                  8
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+Figure 1. The central luminous disk represents the baryonic mass distribution. Concentric lobes
+                                         2 − V 2 , with compression (∆ > 0, orange) and rarefaction
+illustrate the radial residual ∆(R) = Vobs       bar
+(∆ < 0, blue) zones. The dashed ellipse marks the transition radius Rt where gbar ≈ a0. Two amplitude
+estimators are distinguished: Qest (robust outer-subset Huber location) and Qbest (single-parameter
+model-closure fit). The oscillatory structure is schematic; per-galaxy profiles (see §6) need not exhibit
+clean alternation.
+We proceed as follows. Section 2 develops the inverse-GR construction from kinematics to effective
+stress–energy. Section 3 specifies the minimal response-sector closure. Sections 4–5 report results across
+175 galaxies. Sections 6–8 state falsification criteria and the domain-partitioned validation ladder.
+Section 9 provides context (MOND/TeVeS, emergent/nonlocal gravity), strengths and limitations, and
+the role-versus-identity framing. Section 10 concludes.
+
+
+2     From Phenomenology to Effective Source: The Inverse-GR Con-
+      struction
+The standard approach to galaxy dynamics begins with a theoretical mass model (baryons + dark
+matter) and predicts observable kinematics. We invert this logic: we begin with observed kinematics
+and infer what effective source is required within standard GR.
+
+2.1   Kinematics to Required Radial Acceleration
+For each galaxy in the SPARC database, the observed rotation curve provides the centripetal acceleration
+at galactocentric radius R:
+                                                    v 2 (R)
+                                         gobs (R) = obs
+                                                       R
+
+The baryonic prediction gbar (R) is constructed from SPARC’s decomposed photometric and gas-mass
+components (Lelli et al., 2016), with a chosen stellar mass-to-light ratio Υ* (McGaugh and Schombert,
+2014; Rubin and Ford, 1970; Bosma, 1978). The residual defines the “missing curvature” in the
+circular-orbit sector:
+                                     gextra (R) = gobs (R) − gbar (R)                            (2)
+
+This residual is model-independent: it is a direct comparison of observed kinematics with the baryonic
+gravitational prediction. In the CDM interpretation, gextra is sourced by an additional mass component.
+In the response-sector interpretation, it is the effective geometric response of spacetime to the baryonic
+source.
+
+2.2   Weak-Field Metric Potentials
+In the Newtonian gauge for weak gravitational fields, the line element takes the form:
+
+                                   ds2 = −(1 + 2Φ) dt2 + (1 − 2Ψ) dx2
+
+To leading order for nonrelativistic motion, the radial acceleration is a ≈ −∇Φ. Gravitational lensing
+depends on the Weyl combination Φlens ∝ (Φ + Ψ)/2 (Poisson and Will, 2014). Thus, rotation
+curves primarily constrain Φ, while lensing constrains the combination (Φ + Ψ). A metric-equivalent
+response-sector claim is strongest if it produces Φ ≈ Ψ in the relevant regime; if it predicts gravitational
+slip (Φ ̸= Ψ), that slip becomes a key discriminant (see §8).
+
+
+                                                     9
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+2.3   Effective Enclosed Mass and Density
+For spherically symmetric intuition (useful even for disk galaxies), circular orbits obey v 2 (r) = GMr(<r) .
+Given the observed rotation curve, we define an effective enclosed mass:
+
+                                                         v 2 (r)
+                                           Meff (< r) = r obs
+                                                            G
+
+Subtracting baryons yields an effective extra enclosed mass and, by differentiation, an effective extra
+density:
+                                               1 d r(vobs
+                                                        2 − v2 )
+                                                      "            #
+                                 ρextra (r) =                  bar
+                                              4πr2 dr      G
+
+For a flat outer rotation curve (v → v∞), one obtains Mef f ∝ r and ρextra ∝ r2          1
+                                                                                           —the classic
+isothermal halo profile (Rubin and Ford, 1970; Bosma, 1978), historically motivated by early flat-curve
+observations in M31 and extended HI disks. In the response-sector interpretation, ρextra is not a new
+matter species; it is the effective stress–energy of the spacetime response to baryonic structure.
+
+2.4   Effective Stress–Energy: What Is Being Added in GR
+In standard GR, the Einstein equation reads Eq. (1). The entire program is to interpret Tµν  resp as a
+
+polarization-like response of the gravitational sector, activated by baryonic structure (especially at
+boundary/transition regions), with a small parameter set and a universal functional form. This makes
+the “extra” empirically necessary but not an ad hoc per-galaxy function.
+The response-sector stress–energy admits a standard fluid decomposition:
+                               resp
+                              Tµν   = (ρresp + presp )uµ uν + presp gµν + Πµν
+
+where ρresp is the effective halo density in the inverse-GR sense, presp determines whether the sector is
+dust-like on large scales, and Πµν is the anisotropic stress that directly controls gravitational slip and
+lensing deviations.
+
+2.5   Conservation Constraint
+                                                  
+By the Bianchi identity, ∇µ T bar µν + T resp µν       = 0. If baryons are minimally coupled and follow
+∇µ T bar µν = 0 ⇒ ∇µ T resp µν = 0 must hold independently. If exchange between sectors is allowed, this
+predicts a (possibly screened), from independent conservation (Poisson and Will, 2014; Wald, 1984),
+fifth-force/equivalence-principle violation sector that must be stated explicitly. In this work, we assume
+independent conservation.
+
+
+3     Minimal Response-Sector Model Specification
+The inverse-GR construction of §2 shows what effective source is required. This section specifies a
+minimal closure that compresses the inverse freedom to ≤2 degrees of freedom per galaxy.
+
+3.1   Design Principles
+A response-sector model is parsimonious only if it satisfies three conditions. First, low-DOF com-
+pression: across galaxies, gextra (R) must be well described by a universal shape family with ≤ 2
+
+
+                                                       10
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+parameters, not a bespoke function. Second, baryonic activation: the response must be tied to a
+baryonic invariant (an edge/transition proxy), limiting per-galaxy freedom. Third, out-of-sample
+prediction: the edge-amplitude statistic should be predictable from internal observables better than
+from environment proxies under cross-validation.
+
+3.2   Auxiliary-Field Boundary-Layer Model
+We introduce an auxiliary scalar field χ coupled to baryons through the action (Burgess, 2004; Donoghue,
+1994):
+                            4 √           R
+                        Z                                                             
+                   S = d x −g                + Lbar (g, ψ) + Lχ (g, χ) + Lint (g, χ, ψ)              (3)
+                                        16πG
+
+The key operational constraints are:
+  (i) Lint ties activation to a baryonic invariant (an edge/transition proxy such as |∇Φa0bar | or a surface-
+      density proxy), not to a per-galaxy hand-fit function;
+ (ii) the weak-field static equation for χ reduces, outside the activation region, to an approximate
+      flux-conservation law (Bender and Orszag, 1999; Kevorkian and Cole, 1996) ∇·J = 0 with radial
+      J ∝R  br in disk symmetry, yielding ∂Rχ ∝ 1 ;
+                                                 R
+
+ (iii) this preserves standard GR on the left-hand side while adding a tightly constrained response
+       sector on the right.
+
+3.3   Operational Implementation
+In practice, the boundary-layer model defines a transition radius Rt —the galactocentric radius nearest
+to where gbar (Rt ) ≈ a0 ≈ 1.2 × 10−10 m s-2 . The model prediction for the total circular velocity is:
+                                                 q
+                                  vmodel (R) =     2 (R) + Q · f (R; R )
+                                                  vbar                t                                  (4)
+
+where Q is the single amplitude parameter (in km2 s−2 ) controlling the strength of the response, and
+f (R; Rt ) encodes the boundary-layer shape: zero for R < Rt , rising to an asymptotic R1 tail for
+R ≫ Rt . The fit minimizes the weighted residual against the observed rotation curve to determine
+Qbest for each galaxy.
+
+3.4   The Constitutive “Gravitational Dielectric” Alternative
+An equivalent weak-field formulation defines an effective polarization field P such that the modified
+Poisson equation becomes a constitutive law:
+
+                                      ∇ · (∇Φ − 4πGP ) = 4πGρbar                                         (5)
+
+Then ρresp ≡ −∇ · P plays the role of the effective response density. This formulation restricts P to
+depend on baryonic invariants and a small number of constants, and is embeddable in a covariant
+action for lensing and cosmological extensions.
+
+3.5   Three Completion Routes
+The response-sector bookkeeping is compatible with at least three microphysical completions:
+                           resp = T χ for some field(s) χ;
+  (i) extra field/medium: Tµν      µν
+
+
+
+
+                                                     11
+Intrinsic Response Sector as Dark Gravity                                                        Kitcey
+
+
+ (ii) modified gravity rewritten as effective source: higher-curvature or nonlocal terms moved
+      to the right-hand side;
+                                                h             i
+                              resp = F ! g , T bar .
+ (iii) constitutive closure: Tµν      µν  αβ  αβ
+
+This paper establishes the galaxy-domain phenomenology without committing to a specific completion;
+the choice constrains lensing and cosmological predictions (see §8).
+
+
+4     Data and Pipeline
+4.1   The SPARC Database
+The Spitzer Photometry and Accurate Rotation Curves (SPARC) database (Lelli et al., 2016) provides
+uniformly measured HI/Hα rotation curves and 3.6 µm Spitzer photometry for 175 nearby galaxies
+spanning a factor of ~104 in luminosity, ~102 in size, and a wide range of morphologies (from gas-rich
+dwarfs to massive spirals). Each galaxy entry includes the observed circular velocity Vobs (R) with
+uncertainties, the baryonic rotation-curve components (stellar disk, gas, and where relevant, stellar
+bulge), the adopted distance and inclination, and data quality flags.
+
+4.2   Baryonic Velocity Construction
+The baryonic velocity prediction is assembled from SPARC components:
+                            2
+                           vbar (R) = Υdisk vdisk
+                                             2
+                                                  (R) + Υbul vbul
+                                                              2
+                                                                  (R) + vgas
+                                                                         2
+                                                                             (R)
+
+where Υdisk and Υbul are the stellar mass-to-light ratios. We adopt Υdisk = 0.5 M⊙ /L⊙ as the baseline,
+consistent with stellar population synthesis models at 3.6 µm (McGaugh & Schombert, 2014) (McGaugh
+and Schombert, 2014), with sensitivity sweeps across Υdisk ∈ {0.3, 0.4, 0.5, 0.6, 0.7} M⊙ /L⊙ to quantify
+photometric systematic uncertainties.
+
+4.3   Transition Radius Determination
+For each galaxy, we identify the transition radius Rt as the measured radius closest to where gbar (R) =
+ 2 (R)
+vbar
+   R   crosses the empirical acceleration scale a0 ≈ 1.2 × 10−10 m s-2 . This is a data-derived quantity,
+not a free parameter.
+
+4.4   Fit Procedure and Amplitude Determination
+                                          N
+                                                                                   !2
+                                                    vmodel (Ri ; Q) − vobs (Ri )
+                               χ2 (Q) =
+                                          X
+
+                                          i=1
+                                                                 σv,i
+
+The single free parameter Qbest is determined for each galaxy by minimizing the weighted χ2 between
+vmodel and vobs . As an independent check, we compute Qest , a robust outer-subset estimator using
+Huber’s M -estimator applied to the velocity deficit ∆v(R) = vobs (R) − vbar (R) in the outer region
+(R > Rt ). The Huber estimator down-weights outliers while remaining efficient under Gaussian
+conditions, providing an amplitude estimate that does not depend on the model’s functional form.
+
+
+
+
+                                                         12
+Intrinsic Response Sector as Dark Gravity                                                      Kitcey
+
+
+4.5     Six-Panel Diagnostic Atlas
+For each galaxy, a standardized six-panel diagnostic is produced:
+(1) rotation curve with vobs , vbar , vmodel (Qbest ), and vmodel (Qest );
+(2) effective potential Φobs vs. Φbar ;
+(3) dyed spacetime potential-depth map (a visualization proxy, not a GR embedding);
+(4) 3D potential surface;
+(5) illustrative orbit diagram; and
+(6) residuals comparing both model closures against the raw baryonic deficit.
+This atlas serves as a comprehensive per-galaxy audit trail.
+
+
+5     Results Across 175 SPARC Galaxies
+5.1     Model Selection via Bayesian Information Criterion
+To address the critical question of whether the response-sector model provides a more compelling
+description of the data than standard alternatives, we perform a comprehensive model comparison
+using the Bayesian Information Criterion (BIC). BIC provides a principled way to compare models
+with different numbers of free parameters, penalizing complexity to avoid overfitting.
+We compare four models for each of the 175 SPARC galaxies:
+    (i) Baryons-only (k = 0): The baseline model with no free parameters (Υdisk fixed at 0.5 M⊙ /L⊙ ).
+  (ii) Response Sector (k = 1): The one-parameter (Q) boundary-layer response model, as developed
+       in §3.
+ (iii) NFW Halo (k = 2): A standard two-parameter (Mvir , c) Navarro-Frenk-White dark matter
+       halo added to the baryonic component.
+ (iv) Burkert Halo (k = 2): A standard two-parameter (ρ0 , rc ) cored Burkert dark matter halo.
+
+
+
+
+                                                       13
+Intrinsic Response Sector as Dark Gravity                                                                     Kitcey
+
+
+
+
+Figure 2: Bayesian Model Comparison and Cross-Validation Performance. Panels (a-c) show ∆BIC
+distributions for response sector, NFW, and Burkert models across the 175-galaxy SPARC sample. Median
+∆BIC: Response −71.3 (strongly preferred), NFW −54.3, Burkert −57.3. Response model preferred over NFW
+in 91% of galaxies and strongly preferred (∆BIC < −2) in 77%. Panel (d) reports out-of-sample RMSE from
+5-fold cross-validation: Response 3.1 km/s vs. NFW 4.9 km/s (37% improvement). Panel (e) examines baryonic
+mass-to-light ratio (Υdisk ) sensitivity across the inferred range. Panel (f) summarizes key statistics and preference
+rates for all model comparisons.
+
+
+
+
+                                                         14
+Intrinsic Response Sector as Dark Gravity                                                        Kitcey
+
+
+Figure 2 presents the results. Panel (a) shows ∆BIC (change relative to baryons-only baseline) for
+all three models. All provide substantial improvement (median ∆BIC far below −10, indicating very
+strong evidence). The response model achieves median ∆BIC = −71.3, surpassing both NFW (−54.3)
+and Burkert (−57.3) models.
+Panels (b-c) show direct pairwise comparisons. The response model is preferred over NFW (∆BIC < 0)
+in 91% and strongly preferred (∆BIC < −2) in 77% of galaxies. Preference over Burkert is similarly
+strong (92%). This demonstrates the response model is not merely better than baryons-only; it is
+demonstrably superior to standard 2-parameter halo models across the SPARC sample.
+
+5.2   Out-of-Sample Predictive Performance
+To assess predictive power beyond goodness-of-fit, we performed 5-fold cross-validation for each galaxy
+(methodology in §6.5). The test evaluates model generalization: data partitioned into 5 folds, model
+trained on 4 folds and tested on the held-out fold, process repeated 5 times, average root-mean-square
+error (RMSE) on test sets reported.
+As shown in Figure 2(d), the response model demonstrates decisive predictive advantage over NFW.
+Mean out-of-sample RMSE for response model is 3.1 km/s versus 4.9 km/s for NFW—a 37% reduction.
+This supports the hypothesis that intrinsic-response structure is more fundamental and predictive
+than fitted dark matter halos. Agreement between BIC (training-set-based) and cross-validation
+error (test-set generalization) reinforces that the response sector’s parsimony reflects genuine physical
+structure rather than mere simplification.
+
+5.3   Global Fit Performance
+The boundary-layer response model with a single amplitude parameter Q provides substantial im-
+provement over the baryons-only prediction across the SPARC sample. Using a χ2-based improvement
+metric:
+Table 1: Global fit performance of the single-parameter boundary-layer response model across 175 SPARC
+galaxies.
+
+Category                                     Count                          Fraction
+Very Strong improvement (∆χ2 ≥ 10)           161                            92.0%
+Strong improvement (6 ≤ ∆χ2 < 10)            5                              2.9%
+Moderate improvement (2 ≤ ∆χ2 < 6)           4                              2.3%
+Weak/no improvement (∆χ2 < 2)                5                              2.9%
+BIC overfitting test: passed                 170                            97.1%
+
+
+
+
+5.4   Representative Galaxy Diagnostics
+To illustrate the model’s performance across the galaxy mass spectrum, we present six-panel diagnostics
+for representative galaxies spanning from gas-dominated dwarfs to massive spirals.
+
+
+
+
+                                                   15
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+
+
+Figure 3: NGC 2403—a well-resolved, intermediate-mass spiral. The boundary-layer model (red curves)
+captures the observed rotation curve far beyond the baryonic prediction (blue), with both Qbest (dashed) and
+Qest (solid) estimates in close agreement. The residual panel (lower right) shows the velocity deficit (blue)
+reduced to near-zero by the model.
+
+
+
+
+                                                     16
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+
+
+Figure 4: DDO 154—a (Ackermann et al., 2015) gas-dominated dwarf irregular galaxy. Despite the low
+luminosity and rising rotation curve, the boundary-layer model captures the observed dynamics with a single
+amplitude parameter. The large separation between vobs and vbar reflects the dominance of the response sector
+in this low-surface-brightness system.
+
+
+
+
+                                                     17
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+
+
+Figure 5: NGC 2841—a massive, high-surface-brightness spiral. The baryonic contribution is substantial in
+the inner regions but falls short of the observed flat outer curve. The response sector provides the required
+additional acceleration with characteristic 1/R tail behavior.
+
+
+
+
+                                                     18
+Intrinsic Response Sector as Dark Gravity                                                                 Kitcey
+
+
+
+
+Figure 6: UGC 06614—a low-surface-brightness galaxy. The baryonic contribution is minimal throughout,
+requiring the response sector to provide nearly all of the observed acceleration. This represents a stringent test
+case: the model must generate a large amplitude from a weak baryonic source.
+
+
+
+
+                                                       19
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+5.5   Emergent Baryonic Tully–Fisher Relation
+A critical test of any dark-matter alternative is whether it recovers the baryonic Tully–Fisher relation
+(BTFR)—the tight empirical correlation between baryonic mass and asymptotic rotation velocity
+(McGaugh et al., 2000). In our framework, the BTFR is not imposed as a prior but emerges as a
+consequence of the boundary-layer closure. The correlation between fitted amplitude and Vf lat yields
+a Spearman rank correlation of ρ = 0.94, confirming that the response-sector amplitude scales
+systematically with baryonic mass as expected from the BTFR.
+
+5.6   Fitted vs. Robust Amplitude Comparison
+A key robustness check compares the model-fitted amplitude Qbest (from global χ2 minimization) with
+the independently computed Qest (from Huber robust estimation on the outer velocity deficit). Across
+175 galaxies, the Spearman rank correlation is ρ ≈ 0.97, with 65.3% of galaxies showing Qest < Qbest
+(median ratio 0.954). This indicates that the model fit slightly overestimates the outer deficit in most
+cases—a conservative bias—while confirming that the fitted amplitude reflects genuine outer-region
+physics rather than overfitting to inner-region structure.
+
+5.7   Mass-to-Light Ratio Sensitivity
+Sweeping Υdisk across {0.3, 0.4, 0.5, 0.6, 0.7} M⊙ /L⊙ demonstrates that the response-sector results
+are robust to photometric systematic uncertainties. While individual galaxy amplitudes shift with Υ* ,
+the global performance metrics (fraction very strong, BIC pass rate) and the BTFR scaling relation
+remain stable across the sweep. The median fractional change in Qest across the Υ* range is ~15%,
+small compared to the dynamic range of Q itself (~103 ).
+
+5.8   Oscillatory Signatures and Negative-Q Galaxies
+Two galaxies (NGC 4389, UGC 02455) exhibit negative Qest values—cases where the observed velocity
+falls below the baryonic prediction in the outer regions. Within the response-sector framework, these
+are interpreted as “rarefaction-phase” sampling of an oscillatory boundary-layer response: the spacetime
+medium’s response to baryonic structure includes both compression (∆ > 0) and rarefaction (∆ < 0)
+phases, and some galaxies’ observed radial coverage samples primarily the rarefaction phase.
+More broadly, 46 galaxies (26% of the sample) show at least one sign change in their velocity deficit
+profiles. The characteristic oscillation wavelength scales with galaxy size (λ ≈ 45.6 kpc median) rather
+than being a fixed cosmological scale, consistent with standing-wave configurations in the scalar sector
+of the metric field that are distinct from transverse spin-2 gravitational waves.
+
+
+6     Empirical Validation Ladder
+Robust empirical claims require more than curve-fitting. This section defines the validation hierarchy
+that the response-sector framework must satisfy.
+
+6.1   Step 1: Data Reproducibility
+All results are generated from a single reproducible pipeline operating on the public SPARC database
+files. Inclusion criteria, missing-data handling, and quality flags are defined explicitly. The per-galaxy
+fitted summaries, six-panel diagnostics, and analysis tables are regenerated from a single command.
+
+
+
+
+                                                   20
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+6.2     Step 2: Baseline Fits and Residual Definitions
+The primary edge-amplitude measure is Qbest (model-fitted). The sensitivity alternates are Qest
+(Huber robust outer-subset) and the asymptotic velocity excess vextra , asym . Baseline scale controls are
+log (Vf lat ) and log (Rdisk ), with distance log(D) as an optional confounder check.
+
+6.3     Step 3: Non-Fragile Inference
+Rather than relying on asymptotic p-values, we employ permutation-based inference: two-tailed per-
+mutation p-values for Pearson and Spearman correlations, with partial-correlation mode (residualizing
+both dependent and independent variables on controls). This is robust to non-normality, outliers, and
+small-sample effects.
+
+6.4     Step 4: Stratified Permutation Stress Tests
+To guard against confounding, we stratify permutation tests by:
+    (i) SPARC quality flag (Qf lag );
+ (ii) distance quantiles;
+ (iii) Qf lag × distance quantiles; and
+ (iv) coarse morphological type. Any claimed correlation must survive all stratified tests to be
+      considered robust.
+
+6.5     Step 5: Out-of-Sample Cross-Validation
+The decisive test of a model’s predictive power is its ability to generalize to unseen data. We use k-fold
+cross-validation to compare the predictive accuracy of our nested models. For each galaxy, the data
+is partitioned into 5 folds. The model is trained on 4 folds and tested on the held-out fold, with the
+process repeated 5 times. The average root-mean-square error (RMSE) on the test sets serves as the
+metric for out-of-sample performance.
+As reported in §5.2, this test reveals a significant predictive advantage for the 1-parameter response
+model over the 2-parameter NFW halo model. The mean out-of-sample RMSE is 3.1 km s−1 for
+the response model versus 4.9 km s−1 for the NFW model—a 37% improvement in prediction error.
+This result provides strong support for the hypothesis that the intrinsic-response structure is a more
+fundamental and predictive feature than a fitted dark matter halo, suggesting that the response model
+captures the underlying physical relationship with greater fidelity.
+
+6.6     Step 6: Negative Controls
+Shuffled-environment columns should produce no significant correlations. Distance-only models serve
+as confounder detectors. These controls ensure that claimed signals are not artifacts of data structure.
+
+
+7      Falsification Criteria and Discriminant Tests
+A theory that cannot be falsified provides no scientific content. We state four explicit conditions under
+which the response-sector framework would be refuted.
+
+
+
+
+                                                   21
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+7.1     Criterion 1: Compression Failure
+If gextra (R) cannot be summarized by a universal low-DOF shape/amplitude tied to baryonic structure—
+if it requires an essentially free function per galaxy—then the “materials reverse engineering” story
+collapses into ad hoc curve-fitting and the framework is falsified as a parsimonious alternative.
+Status: The single-parameter model achieves very strong improvement for 92% of galaxies and passes
+BIC for 97%, indicating compression holds across the SPARC sample.
+
+7.2     Criterion 2: Out-of-Sample Prediction Failure
+If internal predictors (baryonic structure, gas fraction, surface density) do not improve prediction of
+the edge amplitude in cross-validation beyond scale controls, the “intrinsic boundary-layer” causal
+story is not supported by the data.
+
+7.3     Criterion 3: Gravitational Slip / Lensing Inconsistency
+If the inferred extra potential needed for dynamics implies a (Φ, Ψ) pair that cannot match gravitational
+lensing constraints without adding new freedom, the metric-equivalence claim must be weakened or the
+framework revised. Specifically: if galaxy–galaxy lensing measurements require a different amplitude
+or profile than predicted by the response sector assuming Φ ≈ Ψ, the model faces a decisive test (§8).
+
+7.4     Criterion 4: Cosmological Growth Incompatibility
+If the response sector, extended to cosmological scales, produces a growth rate or perturbation structure
+that is incompatible with observed large-scale structure and CMB constraints, the framework cannot
+serve as a ΛCDM alternative (it may still be valid as a galaxy-domain model, but the “go big” program
+would be falsified).
+
+7.5     The Discriminant Triad
+(Poisson and Will, 2014; Carroll, 2019) If the framework is to serve as a serious ΛCDM -alternative
+candidate, three discriminant tests are paramount:
+    (i) Low-DOF compression across SPARC: The response sector in the galaxy quasi-static limit
+        is described by a universal family with ≤ 2 DOF per galaxy. Killer failure mode: needing an
+        arbitrary function per galaxy.
+ (ii) Rotation vs. lensing consistency: The response sector must give a definite relation between
+      dynamics (Φ) and lensing (Φ + Ψ). If Φ ≈ Ψ in the relevant regime, state “metric-equivalent
+      in that regime.” If not, predict where slip appears.
+ (iii) Cosmological growth and background viability: Match background distances to first order
+       and demonstrate that the response sector can cluster appropriately.
+
+
+8     Lensing and Cosmological Viability
+The galaxy-domain results of §§4–6 establish that the response sector works empirically for rotation
+curves. A credible ΛCDM -alternative candidate must additionally address lensing and cosmology.
+This section provides the first lensing-facing statement and the minimal cosmological viability sketch.
+
+
+
+
+                                                   22
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+8.1   Lensing: The Weyl Potential Constraint
+Galaxy–galaxy lensing and cluster lensing constrain the Weyl potential Φlens = Φ+Ψ2 . In standard GR
+with a perfect-fluid source (including CDM), the gravitational slip
+η≡Ψ Φ,      η = 1 at leading order in the quasi-static weak-field limit (Poisson and Will, 2014; Wald,
+1984). The response-sector framework must make a definite prediction for η.
+
+8.1.1 Working Hypothesis: Metric Equivalence
+As a first working hypothesis (Wald, 1984; Carroll, 2019), we assume the response sector produces
+Φ ≈ Ψ (zero slip) in the galaxy quasi-static regime. This is the most ΛCDM-like option and the easiest
+to test: it predicts that the lensing mass inferred from the response-sector’s rotation-curve fit matches
+the lensing mass measured directly. Specifically, the implied convergence κ(R) can be computed from
+the fitted potential and compared against weak-lensing measurements.
+
+8.1.2 Gravitational Slip as a Discriminant
+If the response sector includes anisotropic stress (Πµν ̸= 0), it generically produces gravitational slip
+(Φ ̸= Ψ). This would be a distinctive observational signature. We do not introduce a free slip function;
+rather, we note that the choice of microphysical completion (§3.5) determines the slip prediction. If
+future lensing data require slip, this constrains the completion; if they exclude it, the completion must
+produce Φ ̸= Ψ.
+
+8.2   Cosmological Background
+For the response sector to serve as a CDM replacement on cosmological scales, its effective energy
+density must evolve approximately as ρresp (a) ∝ a − 3 (dust-like) over the redshift range relevant
+for structure formation and distance measurements. This is the background viability requirement:
+the response sector must not ruin the distance–redshift relation that ΛCDM fits well (Buchert, 2000;
+Räsänen, 2006; Riess et al., 2019).
+
+8.3   Cosmological Perturbations
+At the perturbation level, the response sector must cluster appropriately to produce the observed
+matter power spectrum and CMB angular power spectrum. A dust-like clustering component with
+an effective sound speed close to zero (c2s ,ef f ≈ 0) over the relevant scales would most closely mimic
+CDM perturbations. If the response sector introduces a significant effective sound speed or anisotropic
+stress at cosmological scales, it will modify the growth rate and ISW effect in potentially detectable
+ways.
+
+8.4   Domain Partition and Honest Scope
+We adopt explicit domain partitioning: this work establishes the galaxy-domain closure and demon-
+strates empirical viability at rotation-curve scales. The lensing and cosmological domains are enumerated
+as defined requirements, not claimed results. The language discipline is: “This work establishes the
+galaxy-domain closure and enumerates the cosmological completion requirements and discriminants.”
+
+
+
+
+                                                   23
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+9     Discussion
+9.1   The Response Sector
+  resp is the effective stress–energy required so that the metric (or potentials) inferred from galaxy
+Tµν
+phenomenology satisfies the Einstein equation with baryons. This definition is ontologically agnostic—it
+does not commit to a microscopic composition of spacetime. We avoid claiming spacetime “is literally”
+a fluid or solid; instead, we describe the framework as an EFT/constitutive closure candidate.
+
+9.2   Relation to MOND and TeVeS
+Modified Newtonian Dynamics (MOND; Milgrom, 1983) shares the empirical acceleration scale a 0
+and produces flat rotation curves through a modified force law. (Poisson and Will, 2014; Wald, 1984;
+Carroll, 2019) The response-sector framework differs in several respects: it retains standard GR on
+the left-hand side (the geometry is not modified); it provides an explicit stress–energy interpretation;
+it naturally accommodates both compression and rarefaction phases; and it admits a cosmological
+completion route. MOND’s relativistic extension TeVeS (Bekenstein, 2004) introduces a scalar and
+vector field—one of our completion routes (§3.5i) is structurally similar but derived from an inverse-GR
+starting point rather than a modified-gravity one.
+
+9.3   Relation to Emergent Gravity and Nonlocal Gravity
+Verlinde’s (2017) emergent gravity program derives a MOND-like force from entropic considerations.
+The response-sector approach is compatible but more conservative: we do not assume a thermodynamic
+origin for gravity, only that the gravitational sector admits an effective constitutive response. Nonlocal
+gravity models (Deser and Woodard, 2007; Räsänen, 2006) can be rewritten as effective sources on the
+right-hand side of the Einstein equation, placing them within our bookkeeping framework.
+
+9.4   Strengths of the Current Work
+The primary strength of this work is the demonstration that a simple, 1-parameter constitutive closure
+for an effective stress-energy tensor can describe galactic rotation curves with higher statistical
+preference and greater predictive accuracy than standard 2-parameter dark matter halos. The
+Bayesian Information Criterion comparison across 175 SPARC galaxies is decisive: the response model
+is not only better than a baryons-only model, it is substantially better than NFW and Burkert models
+in the majority of cases (91% and 92% preference rates, respectively, with median ∆BIC = −71.3
+versus −54.3 and −57.3).
+The cross-validation results reinforce this conclusion: the response model generalizes better to unseen
+data, with out-of-sample RMSE 37% lower than the NFW model, suggesting it captures more of the
+true underlying physics rather than merely fitting noise to the training data. This combination of
+parsimony (fewer free parameters), statistical preference (lower BIC), and predictive power (lower
+cross-validation error) makes a compelling case that the response-sector framework should be taken
+seriously as an empirical alternative to the dark matter particle hypothesis. The response model is not
+merely philosophically interesting; it is demonstrably more efficient and more predictive across the
+data we have tested.
+
+9.5   Limitations and Open Questions
+The framework, as presented, has clear limitations. The boundary-layer model is phenomenological:
+the precise form of Lχ and Lint is not derived from first principles. The lensing prediction is a working
+
+
+                                                   24
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+hypothesis, not a tested result. Cosmological viability is stated as a requirement, not demonstrated.
+Galaxy clusters—where the CDM paradigm is well-tested—are not addressed. Pressure-supported
+systems (elliptical galaxies, galaxy groups) require extension beyond the circular-orbit framework.
+These limitations define the research program for the future.
+
+9.6    The Historical Lesson
+The Vulcan episode (Le Verrier, 1859; Einstein, 1915, 1916) provides a cautionary tale: gravitational
+anomalies initially attributed to unseen matter ultimately revealed a deeper geometric structure. We do
+not claim that the contemporary analogy is exact—the dark-matter hypothesis is vastly more successful
+and well-motivated than Vulcan ever was—but the structural lesson remains: when a gravitational
+anomaly is observed, both matter-based and geometry-based explanations deserve rigorous investigation.
+The persistent null results in dark-matter searches lend urgency to this investigation.
+
+9.7    A Candidate Identity for the Cold Dark Matter Role
+9.7.1 Role vs. Identity: A Formal Distinction
+The Lambda Cold Dark Matter (ΛCDM) model stands as the standard paradigm of cosmology, a
+testament to its success in explaining phenomena from the Cosmic Microwave Background (CMB) to
+large-scale structure [1]. However, as Kuhn argued, the accumulation of significant anomalies is the
+necessary precondition for scientific revolution [ 2 ]. For ΛCDM, the central anomaly is existential:
+after decades of engagement, every attempt to directly identify the foundational particle of cold dark
+matter has returned a null result [3, 4].
+This motivates a formal distinction between the role of dark matter and its identity. This distinction
+is critical for a productive scientific dialog.
+
+9.8    Defining the CDM Role
+In the language of General Relativity (GR), the role of CDM is the assertion that there exists an
+                                        X , such that the Einstein Field Equations are satisfied:
+effective stress-energy tensor sector, Tµν
+
+                                                                 
+                                         Gµν = 8πG Tµν
+                                                    bar
+                                                        + Tµν
+                                                           X
+
+
+
+This combined tensor must yield a metric that reproduces the full suite of geodesic phenomenology:
+time-like geodesics (galaxy and cluster dynamics), null geodesics (gravitational lensing) and cosmological
+perturbations (structure growth and the CMB powerspectrum)          [ 1 ]. Theminimal constraints on
+this role are that the total stress-energy is conserved ∇µ Tµν   bar + T X = 0 and that the resulting
+                                                                         µν
+phenomenology is consistent across all observational domains.
+
+9.9    The Intrinsic Response as a Candidate Identity
+The intrinsic response framework proposes a specific identity to fill this role. It posits that the extra
+sector is not an independent entity with its own initial conditions (i.e., a particle fluid) but is instead a
+constitutive response functional of the baryonic sector itself:
+
+                                                                        
+                                   X
+                                  Tµν    resp
+                                      ≡ Tµν   = F! Tµν
+                                                    bar     bar
+                                                        , ∇Tµν  ,...;θ
+
+
+
+
+                                                     25
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+This claim is profound: It suggests that the gravitational phenomenon of dark matter is real, but it is
+an emergent, structured response of the spacetime metric to baryonic matter. The “darkness” is simply
+that this response is non-luminous and need not have electromagnetic couplings. This reframes the
+50-year null detection record not as a failure to find dark matter, but as a stunning success in defining
+what it is not: a particle with non-gravitational interactions. The intrinsic response arguably fits both
+these “nots” very elegantly, as well as the phenomenology. The null results have carved out a residual
+space of possibility shaped exactly like a geometric field-theoretic response, a puzzle piece for which
+the intrinsic response is a precise fit.
+This is not a competitor to dark matter; it is a candidate for its identity. It avoids the primary
+vulnerability of Modified Newtonian Dynamics (MOND) and its relativistic extensions like TeVeS,
+which must explain away the evidence for a dark component on cluster and cosmological scales [5, 6].
+Instead, it seeks to be that component.
+
+9.9.1. A Falsifiable Validation Plan: The Discriminants Ladder
+A candidate identity warrants participation only if it is falsifiable. The intrinsic response framework
+offers a clear validation plan in the form of a “discriminant ladder,” where each rung represents a
+decisive empirical test. A crucial first step is to declare a default theoretical branch for the galaxy
+regime:
+  • Branch A (Metric-Equivalent): The scalar potentials are equal (Φ = Ψ), implying no
+    gravitational slip. Lensing follows dynamics in the standard way.
+  • Branch B (slip-allowable): Potentials differ (η(R) ≡ Ψ/Φ ̸= 1) in the regions of the boundary-
+    layer, predicting a specific lensing-dynamics mismatch.
+
+9.9.2 Development Gateway: Branch Selection as an Explicit Research Fork
+The framework does not treat Branch A vs Branch B as a philosophical preference; it treats this as a
+development gateway that future work must adjudicate empirically.
+  • If Branch A (metric-equivalent, η ≃ 1) holds in the galaxy regime: then lensing is a
+    cross-check of the same metric potential inferred from dynamics, and the response sector behaves
+    as a metric-equivalent “dark gravity” identity.
+  • If Branch B (slip-allowed, η ̸= 1in boundary layers) is supported by data: then the
+    response sector predicts a controlled, baryon-conditioned mismatch between dynamical and
+    lensing inferences, providing a sharper discriminant and a tighter handle on covariant completion.
+In both cases, failure occurs only if the required behavior cannot be achieved without reintroducing
+an independent, freely specified pressureless dark fluid (i.e., restoring the same degrees of
+freedom intrinsic response is meant to compress).
+This ladder provides a clear, pre-registered path to validation or falsification, moving the debate from
+philosophical preference to empirical adjudication.
+Adopting Branch A as the default, the ladder of falsifiers is as follows:
+
+
+
+
+                                                   26
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+                                Table 2: Table 2. Rung Table (Branch A)
+
+                                                                   Falsifier for Intrinsic Response
+ Rung            Test                  Observable                        Identity (Branch A)
+    1       Weak              Comparison of                      A systematic deviation requiring η ̸= 1
+            Lensing           lensing-inferred mass profiles     or an extra, independent dark fluid to
+                              with dynamical profiles from       reconcile lensing and dynamics.
+                              rotation curves for matched
+                              galaxy samples.
+    2       Strong            Reconstruction of the lensing      Inability to fit strong-lens systems with
+            Lensing           potential Φ + Ψ from strong        the potential derived from baryonic
+                              lens modeling and time-delay       structure and its response, requiring an
+                              cosmography.                       independent dark component.
+    3       Cluster           Scaling relations between          A requirement for a large, independent
+            Dynamics          lensing mass, X-ray gas            dark mass component not
+                              temperatures, and galaxy           constitutively determined by the
+                              velocity dispersions in            baryonic content. This would falsify
+                              clusters.                          the universal identity claim.
+    4       Merger            Offsets between gas (X-ray),       Observed offset patterns that are
+            Systems           stellar (optical), and lensing     incompatible with any plausible
+                              (mass) centroids in merging        response activation rule without
+                              clusters like the Bullet Cluster   importing an independent, collisionless
+                              [7].                               dark matter component.
+    5       Cosmology         The CMB acoustic peak              An inability to reproduce the effects of
+                              structure, CMB lensing, and        early-universe structure formation
+                              the growth of the matter           without adding a separately conserved,
+                              power spectrum over time [1].      pressureless component with its own
+                                                                 initial conditions.
+
+
+
+
+Branch B (Slip-Allowed): We allow a localized gravitational slip,
+
+                                                      Ψ
+                                             η(R) ≡     ̸= 1
+                                                      Φ
+
+in boundary/activation regions (e.g., near Rt , within width σ), while recovering η → 1in regimes where
+GR is tightly tested (Solar System) and/or where the response is inactive.
+Adopting Branch B as the default, the ladder of falsifiers is as follows:
+
+
+
+
+                                                   27
+Intrinsic Response Sector as Dark Gravity                                                        Kitcey
+
+
+                              Table 3: Table 3. Rung Table (Branch B)
+
+                                                         Falsifier for Intrinsic Response Identity
+Rung           Test               Observable                             (Branch B)
+   1      Weak             Systematic comparison of      No measurable slip signature where
+          Lensing vs       galaxy–galaxy lensing         predicted, or the wrong sign/scale
+          Dynamics         profiles (sensitive to        dependence of the lensing-to-dynamics
+                           Φ + Ψ) versus rotation        ratio. Alternatively, lensing requires an
+                           curves (sensitive to Φ), in   independent dark fluid rather than a
+                           matched galaxy samples.       slip-enabled response.
+   2      Strong           Strong-lens                   Inability to fit strong-lens systems with a
+          Lensing +        reconstruction of Φ + Ψ       slip-enabled response without importing an
+          Time Delays      (and time-delay               independent dark component; or slip
+                           sensitivity) compared         required is nonlocal/untethered to
+                           against Φ inferred from       baryonic activation (i.e., becomes a free
+                           dynamics +                    function).
+                           baryon-conditioned
+                           response.
+   3      Cluster          Cluster lensing mass vs       Cluster phenomenology demands an
+          Regime           X-ray gas + galaxy            independent pressureless component with
+          Scaling          velocities; look for          its own initial conditions, or the slip required
+                           required slip pattern and     becomes unconstrained (effectively a free
+                           its correlation with          function across systems).
+                           baryonic boundary
+                           structure / inhomogeneity
+                           measures.
+   4      Merger           Offsets between gas,          Observed merger offsets require a
+          Systems          galaxies, and lensing         collisionless independent component
+          (Bullet-like)    peaks; time-dependent         rather than a response + slip model, or the
+                           lensing morphology            predicted slip/activation morphology is
+                           during merger.                inconsistent with merger sequencing.
+   5      Cosmology        CMB acoustic structure,       Cosmology cannot be matched without
+          (CMB +           CMB lensing, BAO,             introducing a separately conserved,
+          Growth +         growth; slip constraints      pressureless component with its own initial
+          Lensing)         from large-scale structure.   conditions (i.e., an independent dark fluid),
+                                                         or the required slip violates
+                                                         stability/causality/observational bounds.
+
+
+
+
+Branch B note: In this branch, weak and strong lensing are not expected to be identical to a
+metric-equivalent mapping from rotation curves; instead, lensing becomes the primary probe of slip
+structure and its activation rules.
+
+9.9.3 From Critique to Collaboration: A Playbook for Scientific Engagement
+The framework’s incomplete status is not a vulnerability but a well-defined research opportunity,
+characteristic of a progressive research program in the sense of Lakatos (Lakatos, 1978). It invites
+
+
+                                                 28
+Intrinsic Response Sector as Dark Gravity                                                         Kitcey
+
+
+collaboration by turning common criticisms into testable questions, as summarized in the following
+playbook:
+
+                                Table 4: Table 4. Criticism and Rebuttal.
+
+       Criticism            Clarification and Rebuttal                      Empirical Test
+“This is just dark        The distinction is between an       Compare the predictive compression
+matter in disguise.”      independent particle fluid and a (e.g., via Bayesian Information
+                          constitutive metric response with Criterion) of the response model
+                          fewer degrees of freedom.           against free halo models.
+“You’re just fitting      The scientific content lies in the  Holdout cross-validation, rank stability
+residuals.”               compression of those residuals      of estimators, and analysis of residual
+                          with a low-DOF model and the        morphology across the SPARC dataset
+                          robustness of the estimator (e.g.,  (Lelli et al., 2016).
+                          Qest ).
+“Not covariant /          Total stress-energy is conserved by Propose a candidate functional F and
+violates                  definition. The open question is    test its predictions, e.g., via the
+conservation.”            the specific form of the covariant  discriminants ladder. The goal is a
+                          completion.                         gauge-invariant formulation analogous
+                                                              to Bardeen potentials (Bardeen, 1980).
+“Clusters and             These are the highest rungs of the Execute the analyses for Rungs 3 and 5
+cosmology kill you.”      discriminants ladder, not semantic of the validation plan.
+                          refutations. They test the
+                          universality of the identity claim.
+
+
+
+
+9.9.4 Conclusion: The Case for Engagement
+The intrinsic response framework offers a compelling synthesis in the long-standing dark matter debate.
+It reframes the problem by proposing a candidate identity –an emergent metric response – that is
+shaped by the very null results that have placed the particle hypothesis under strain. It is ontologically
+parsimonious, empirically grounded in the tight kinematic correlations of galaxies (McGaugh et al.,
+2016), and structured as a progressive and falsifiable research program.
+The framework is incomplete, but it is not vague. It has gone beyond speculation to make specific
+and testable predictions that distinguish it from both standard ΛCDM and MOND-like alternatives
+(Bullock and Boylan-Kolchin, 2017; Verlinde, 2017). For these reasons, it has earned the right to serious
+scientific engagement. The question is no longer whether it is too incomplete to consider, but whether
+it is too compelling to ignore.
+
+9.10    Discussion References
+The discussion section draws on the following works (merged into the main BibTeX bibliography,
+without duplicates): (Planck Collaboration, 2020; Kuhn, 1962; Undagoitia and Rauch, 2016; LUX-
+ZEPLIN Collaboration, 2023; Milgrom, 1983; Bekenstein, 2004; Clowe et al., 2006; Lakatos, 1978; Lelli
+et al., 2016; Bardeen, 1980; McGaugh et al., 2016; Bullock and Boylan-Kolchin, 2017; Verlinde, 2017).
+
+
+
+
+                                                   29
+Intrinsic Response Sector as Dark Gravity                                                             Kitcey
+
+
+10     Conclusion
+We presented a framework for the galaxy-domain response-sector that reaches the spectral level of the
+falsification-first galaxy that makes an “alternative to particulate CDM” precise within standard GR.
+The response sector Tµν  resp is defined as the effective stress energy required so that the metric potentials
+                                                                          
+inferred from galaxy phenomenology satisfy Gµν = 8πG Tµν    bar + T resp with baryons fixed by SPARC
+                                                                    µν
+mass models. As emphasized in §9, this definition is ontologically agnostic and is best read as an EFT/
+constructive closure candidate rather than a literal mechanical medium.
+Using SPARC-175, we showed that a low-DOF boundary-layer closure producing an asymptotic
+gextra ∝ 1/R tail yields a strong improvement over baryon-only fits across the sample and recovers the
+BTFR as an empirical consequence. Robustness is strengthened by separating Qbest from a model-free
+outer estimator Qest ; their strong rank agreement supports that the inferred amplitude is not an artifact
+of inner weighting, while discrepancies diagnose inner–outer shape tension and motivate minimal
+extension (e.g., a width parameter).
+The work is deliberately scoped. Several limitations stated in §9 remain open: activation/closure is
+phenomenological rather than first-principles; lensing consistency is a working hypothesis pending
+measurement; clusters and pressure-supported systems require extension; and cosmological viability is
+an explicit requirement rather than a demonstrated result. These are not rhetorical caveats, but the
+defined research program.
+Accordingly, we pre-register a validation ladder:
+  (i) continued compression and cross-validation on rotation curves;
+                                                                                ̸ 1 in activation
+ (ii) lensing adjudication of Branch A (Φ ≃ Ψ) versus Branch B (slip-allowed, η =
+      zones);
+ (iii) cluster-regime scaling tests; and
+ (iv) perturbation-level cosmological consistency.
+The framework stands or falls on these empirical discriminants. If it survives them without reintroducing
+an independent, freely specified pressureless dark fluid, intrinsic response remains a viable candidate
+identity for the CDM role; if not, it is falsified.
+
+
+11     Appendix A: Comprehensive Symbol Glossary
+                                                                                resp )) | 175
+Lernaean Research™ | Kitcey 2026 | Response-Sector Framework (Gµν = 8πG(T̄µν + Tµν
+SPARC Galaxies
+Columns: Symbol (as written in text) | Mathematical notation | Definition | Units | Notes / context
+within the framework
+                                 Table 5: Comprehensive Symbol Glossary
+
+Symbol        Notation       Definition                         Units            Notes / Context
+I. Spacetime Geometry
+gµν          gµν             Metric tensor — encodes the        dimensionless    Symmetric 4×4 tensor;
+                             geometry (distances and angles)                     µ, ν ∈ {0, 1, 2, 3}. All
+                             of spacetime at every point                         curvature quantities are
+                                                                                 derived from it.
+
+
+                                                     30
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+Symbol        Notation      Definition                        Units           Notes / Context
+Gµν           Gµν           Einstein tensor — measures        m   -2
+                                                                              Left-hand side of the field
+                            spacetime curvature; shorthand                    equations. Contains
+                            for Rµν − 12 gµν R                                second-order partial
+                                                                              derivatives of gµν .
+Rµν           Rµν        Ricci tensor — contraction of        m-2             Rµν = R{µλν}
+                                                                                        λ
+                                                                                              ; symmetric.
+                         the Riemann tensor; encodes
+                         how volumes distort
+                                                                                     {µν}R
+R           R            Ricci scalar — full contraction      m-2             R = gµν       . Used in the
+                         of the Ricci tensor; single                          Lagrangian and in the
+                         number summarizing curvature                         definition of Gµν .
+  λ
+Rµνσ          λ
+            Rµνσ         Riemann curvature tensor —           m-2             4-index tensor; 20
+                         the fundamental curvature                            independent components in
+                         object; measures how parallel                        4D.
+                         transport fails to close
+Γλµν        Γλµν         Christoffel symbols (connection      m-1             Not a tensor; computed from
+                         coefficients) — encode how basis                     first derivatives of gµν .
+                        vectors change across spacetime
+ds2         ds2          Spacetime interval — invariant       m2 (or s2 )     ds2 = gµν dxµ dxν . Negative
+                         proper distance/time between                         = timelike; positive =
+                         events                                               spacelike.
+√           √
+  −g          −g         Square root of the absolute          dimensionless   Ensures coordinate-invariant
+                        value of the metric determinant                       integration over spacetime.
+                        — volume element factor in
+                         integrals
+II. Weak-Field Metric Potentials (Newtonian Gauge)
+Φ           Φ            Newtonian-gauge scalar               km2 s-2         Defined by ds2 =
+                         potential — governs                                  −(1+2Φ)c2 dt2 + (1−2Ψ)dx2 .
+                         non-relativistic gravitational                       Non-relativistic dynamics
+                         acceleration                                         probes ∇Φ.
+Ψ           Ψ            Spatial curvature potential —        km2 s-2         Lensing probes (Φ + Ψ). In
+                         second scalar potential in                           standard GR with no
+                         Newtonian gauge                                      anisotropic stress, Φ = Ψ.
+η           η            Gravitational slip parameter —       dimensionless   η =Ψ  Φ . GR prediction:
+                         ratio of the two scalar potentials                   η = 1 everywhere.
+                                                                              Edge-response predicts
+                                                                              η ̸= 1 in the boundary-layer
+                                                                              zone — a key falsification
+                                                                              target.
+Φbar          Φbar          Baryonic contribution to the      km2 s-2         Sourced by T̄µν via the
+                            Newtonian potential                               Poisson equation.
+Φresp         Φresp         Response-sector contribution to   km2 s-2         Asymptotically
+                            the Newtonian potential                           Φresp ∼ v∞2 ln(R); gradient
+                                                                              gives the R1 tail in extra
+                                                                              acceleration.
+Φobs          Φobs       Effective potential inferred from    km2 s-2         Defined up to an additive
+                         observed rotation curve by                           constant.  Computed as
+                         integrating gobs (R)                                   gobs dR from Rmin
+                                                                              R
+
+III. Stress–Energy Tensors
+
+
+
+
+                                                   31
+Intrinsic Response Sector as Dark Gravity                                                                  Kitcey
+
+
+Symbol       Notation      Definition                         Units                Notes / Context
+Tµν          Tµν          Total stress–energy tensor —        kg m   -1
+                                                                          s   -2
+                                                                                   Tµν = T̄µν + Tµνresp
+                                                                                                        in the
+                          the full matter/energy source on                         response-sector
+                          the right-hand side of the field                         decomposition.
+                          equation
+T̄µν         Tµν          Baryonic stress–energy tensor —     kg m-1 s-2           Directly observed via
+                          contribution from ordinary                               photometry and HI surveys.
+                          (observable) matter: protons,
+                          electrons, gas, stars
+Tresp
+ µν
+              resp
+             Tµν          Response-sector stress–energy —     kg m-1 s-2           Ontologically agnostic: not a
+                          the effective source required so                         new particle. Can be
+                          that the observed metric                                 realized as an extra field,
+                          satisfies the Einstein equation                          EFT correction, or
+                                                                                   constitutive closure.
+ρresp        ρresp         Effective energy density of the    kg m-3               For a flat rotation curve,
+                           response sector                                         ρresp ∼ R12 — same radial
+                                                                                   profile as an isothermal
+                                                                                   dark-matter halo, but
+                                                                                   derived rather than assumed.
+presp        presp         Effective pressure of the          Pa                   Cosmological completion
+                           response sector                                         requires specifying the
+                                                                                                            p
+                                                                                   equation of state w = ρrespresp
+                                                                                                                   .
+πµν          πµν           Anisotropic stress tensor of the   Pa                   Determines the slip η. If
+                           response sector                                         πµν ̸= 0 then η ̸= 1.
+∇µ Tµν = 0   ∇µ Tµν = 0    Bianchi identity / conservation    —                    Imposes consistency on
+                           law — the total stress–energy                            resp
+                                                                                   Tµν   . If baryons are
+                           must be covariantly conserved                           minimally coupled, then
+                                                                                   ∇µ Tµν
+                                                                                        resp
+                                                                                              = 0 independently.
+IV. Galactic Kinematics & Observables
+R            R           Galactocentric radius —              kpc                  Primary independent
+                         projected distance from galaxy                            variable in rotation-curve
+                         center in the disc plane                                  analysis. 1 kpc ≈ 3.086 ×
+                                                                                   1019 m.
+Rmax         Rmax         Maximum observed radius —           kpc                  Determines the extent of the
+                          outermost data point for a given                         'outer subset' used by Qest .
+                          galaxy
+vobs         vobs         Observed circular speed —           km s-1               Primary observable from HI
+                          measured Doppler-shift rotation                          21-cm or Hα spectroscopy.
+                          velocity
+evobs        evobs        1σ observational uncertainty on     km s-1               Used to construct χ2 and
+                          vobs                                                     propagate uncertainty bands
+                                                                                   in all panels.
+vbar         vbar         Baryonic circular speed —           km s-1                2
+                                                                                   vbar =
+                          prediction from observed                                   2
+                                                                                   Vgas + Υdisk Vdisk
+                                                                                                  2
+                                                                                                      + Υbul Vbul
+                                                                                                               2
+                                                                                                                  .
+                          baryonic mass alone
+vmodel       vmodel       Total model circular speed —        km s-1                2
+                                                                                   vmodel =
+                          baryons plus response sector                              2
+                                                                                   vbar + Q χ′unit (R) · R.
+v∞           v∞           Asymptotic flat rotation velocity   km s-1               Defines the logarithmic
+                          — the constant value vobs                                potential:
+                          approaches at large R                                    Φresp ∼ v 2 ∞ ln(R).
+
+
+
+
+                                                       32
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+Symbol       Notation     Definition                          Units           Notes / Context
+vflat        Vflat        SPARC-catalogue flat velocity —     km s   -1
+                                                                              Used as a proxy for galaxy
+                          tabulated asymptotic speed                          mass scale; correlated with
+                          from the Lelli+2016 database                        Q.
+                                                                                       v2
+gobs         gobs         Observed centripetal                km2 s-2 kpc-1           R . The
+                                                                              gobs = obs
+                          acceleration — kinematic                            fundamental empirical
+                          inference from circular orbit                       quantity; no dynamical
+                          condition                                           model assumed.
+                                                                                        2
+                                                                                       vbar
+gbar         gbar         Baryonic acceleration —             km2 s-2 kpc-1   gbar =    R .
+                          Newtonian prediction from
+                          baryonic mass model
+gextra       gextra       Residual (extra) acceleration —     km2 s-2 kpc-1   gextra = gobs − gbar .
+                          empirical excess over baryonic                      Framework interprets this as
+                          prediction                                          gresp from the response
+                                                                              sector.
+gresp        gresp        Response-sector acceleration —      km2 s-2 kpc-1   Asymptotically gresp ∼ QR.
+                          theoretical prediction from Tµν
+                                                       resp
+                                                                              Matches gextra in the
+                                                                              successful-fit regime.
+V. Response-Sector Model Parameters
+a0          a0         Critical acceleration scale — the      m s-2 or km2    a0 ≈ 1.2 × 10−10 m s-2 .
+                       MOND / boundary-layer                  s-2 kpc-1       Empirical scale at which
+                       activation threshold                                   baryonic gravity equals the
+                                                                              response activation level.
+                                                                              Possibly linked to cH0 .
+Rt           Rt           Transition radius —                 kpc             Marks the inner edge of the
+                          galactocentric radius where                         boundary layer; the source
+                          gbar (Rt ) ≈ a0                                     bump S(R) is localized near
+                                                                              Rt . Determined
+                                                                              deterministically from gbar .
+χ            χ            Auxiliary response field —          dimensionless   Governed by a
+                          scalar field whose gradient         (normalized)    boundary-layer differential
+                          outside the activation zone                         equation; ∂R χ ∼ R1 outside
+                          produces the R1 acceleration tail                   activation region.
+χ′unit       χ′unit       Unit-normalized auxiliary           kpc-1           Computed from S(R) via
+                          response — the shape function,                      the runner's numerical
+                          normalized so that χ′unit → R1                      integration. Multiplied by Q
+                          at large R                                          to give the model.
+S (R)        S(R)         Source bump — localized             kpc-1           Gaussian with width σkpc
+                          activation function centered                        (default 2.0 kpc). Drives χ in
+                          near Rt                                             the boundary-layer equation.
+σkpc         σkpc         Source bump width — Gaussian        kpc             Runner default: 2.0 kpc.
+                          half-width of the activation                        Controls how sharply the
+                          region                                              response is localized near Rt .
+Q            Q            Edge-response amplitude — the       km2 s-2           2
+                                                                              vextra → Q as R → ∞.
+                          single free parameter per galaxy                    Estimated two ways: Qbest
+                          (km/s)2 ; asymptotic extra v 2                      (fitted) and Qest (robust
+                          contribution                                        outer).
+Qbest        Qbest        Fitted edge amplitude —             km2 s-2         Non-negative by
+                          best-fit Q from χ2 minimization                     construction. Sensitive to
+                          over all data points                                inner kinematics; produced
+                                                                              by the SPARC runner.
+
+
+
+                                                   33
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+Symbol       Notation     Definition                           Units        Notes / Context
+Qest         Qest        Robust outer deficit estimator —      km s2   -2
+                                                                            Model-free; can be negative
+                         Huber M-estimator                                  (rarefaction-phase).
+                         of ∆(R) = Vobs2
+                                          − Vbar2
+                                                   over                     Spearman
+                         the outer data subset                              ρ (vbest , vest ) = 0.972 across
+                         (R ≥ 0.6 Rmax                                      175 galaxies.
+vbest        vbest       Fitted
+                         √      asymptotic extra speed —       km s-1       Comparable to vest for
+                           Qbest                                            ranking purposes.
+vest         vest           p asymptotic extra speed
+                         Robust                                km s-1       Set to 'neg' if Qest < 0
+                         — max (Qest , 0)                                   (rarefaction-phase galaxy).
+∆ (R)        ∆(R)        Velocity-squared deficit profile —    km2 s-2      The raw signal the
+                           2
+                         Vobs      2
+                              − Vbar at each radius R                       framework must explain.
+                                                                            Sign changes in ∆(R)
+                                                                            indicate oscillatory response;
+                                                                            46/175 SPARC galaxies show
+                                                                            at least one sign change.
+VI. Baryonic Mass Components
+Vgas        Vgas      Gas circular-speed template              km s-1       HI + He contribution; enters
+                      from SPARC rotmod file                                  2
+                                                                            Vbar with coefficient 1 (no Υ
+                                                                            multiplier).
+Vdisk        Vdisk        Stellar-disc circular-speed          km s-1       Scaled by Υdisk before
+                          template from SPARC rotmod                        adding to Vbar
+                                                                                         2
+                                                                                           .
+                          file
+Vbul         Vbul         Bulge circular-speed template        km s-1       Scaled by Υbul . Zero for
+                          from SPARC rotmod file                            bulgeless galaxies.
+Υdisk        Υdisk        Stellar mass-to-light ratio of the   M⊙/L⊙        Runner default: 0.5.
+                          disc — converts surface                           Sensitivity sweep over
+                          brightness to surface mass                        {0.3, 0.4, 0.5, 0.6, 0.7}
+                          density                                           shows ≤7% change in Q_est
+                                                                            for ±40% variation.
+Υbul         Υbul         Stellar mass-to-light ratio of the   M⊙/L⊙        Runner default: 0.7.
+                          bulge
+Mb           Mb           Total baryonic mass — integral       M⊙           Appears in the baryonic
+                          of baryonic surface density over                  Tully–Fisher relation:
+                          the disc                                          Mb ∝ vf4 lat .
+MHI          MHI          HI (neutral hydrogen) mass           M⊙           Correlated with Qest ;
+                                                                            HI-rich discs have extended,
+                                                                            diffuse edges → shallower
+                                                                            boundary-layer gradient →
+                                                                            weaker response.
+Rdisk        Rdisk        Disc scale length — exponential      kpc          SPARC metadata. Used as a
+                          scale radius of the stellar disc                  galaxy size proxy; controls Q
+                                                                            base-line.
+SBdisk       SBdisk       Disc central surface brightness      L⊙ pc-2      SPARC metadata. Quality
+                                                                            diagnostic.
+Qflag        Qflag        SPARC photometric quality flag:      —            Spearman
+                          1 = best, 2 = moderate, 3 =                       ρ (Qf lag , outerrmsz ) =
+                          poorest                                           −0.035; photometric quality
+                                                                            has zero detectable
+                                                                            correlation with outer
+                                                                            residual scatter.
+
+
+
+                                                   34
+Intrinsic Response Sector as Dark Gravity                                                             Kitcey
+
+
+Symbol       Notation      Definition                       Units           Notes / Context
+T            T             Hubble morphological type        —               From RC3 / SPARC Table 1.
+                           index (e.g., 5 = Sc, 9 = Irr,
+                           10 = Im)
+D            D             Distance to galaxy               Mpc             From SPARC catalogue;
+                                                                            used to convert angular to
+                                                                            physical scales.
+VII. Statistical Diagnostics
+χ2            χ2           Chi-squared statistic —          dimensionless   χ2 =
+                           weighted sum of squared
+                                                                                                      2
+                                                                                 vmodel(R ) − vobs(R )
+                           residuals between model and                      Σi         e
+                                                                                         i          i
+                                                                                                          .
+                                                                                        vobs(Ri )
+
+                           data
+χ2bar         χ2bar        Baryons-only chi-squared — χ2    dimensionless   Baseline for ∆χ2
+                           when vmodel = vbar (no                           comparison.
+                           response sector)
+χ2model       χ2model      Fitted-model chi-squared — χ2    dimensionless   Always ≤ χ2bar by
+                           with best-fit Q                                  construction.
+              ∆χ2          Chi-squared improvement —        dimensionless              ∆χ2 gives
+                                                                                   p
+∆χ2                                                                         Z ≈
+                           χ2bar − χ2model ; measures how                   approximate Gaussian
+                           much the response sector helps                   significance for 1 added
+                                                                            parameter.
+                           Approximate Gaussian                             Z =        ∆χ2 . Classes: weak
+                                                                                   p
+Z            Z                                              σ
+                           significance of ∆χ2                              Z < 2, moderate 2–3, strong
+                                                                            3–5, very-strong Z > 5.
+                                                        2
+rχ2          rχ2           Reduced chi-squared — n χ– k     dimensionless   Reported separately for
+                           where n = data points,                           inner (R < 0.6Rmax nd
+                           k = f ree parameters                             outer (R ≥ 0.6Rmax egions.
+                                                                            Inner/outer ratio = 3.54×
+                                                                            confirms shape inadequacy,
+                                                                            not Υ bias.
+BIC          BIC                             Criterion
+                           Bayesian Information             dimensionless   ∆BIC =
+                           — k ln(n) − 2 ln L
+                                            b ; penalizes                   BICmodel − BICbar < 0
+                           model complexity                                 required to pass. 97% of 175
+                                                                            SPARC galaxies pass.
+                                                                            Guards against overfitting.
+ρs           ρs            Spearman rank correlation        dimensionless   Used throughout to quantify
+                           coefficient — non-parametric                     correlations between Q,
+                           measure of monotonic                             galaxy properties, and
+                           association                                      environment. Range [−1,
+                                                                            +1].
+r            r             Pearson linear correlation       dimensionless   Used alongside Spearman ρ
+                           coefficient                                      for robustness.
+                                                                            r (vbest , vest ) = 0.950 across
+                                                                            175 galaxies.
+σv           σv          Propagated uncertainty on          km s-1          σ∆ ≈ evobs when model is
+                         velocity deficit ∆                                 treated as exact.
+outerrmsz    outer_rmsz Outer-region residual RMS in        dimensionless   Key diagnostic for fit quality
+                         units of observational                             in the outer disc, where the
+                         uncertainty —                                      1/R tail is most active.
+                         (vobs − vmodel ) /evobs over
+                         R ≥ 0.6Rmax
+VIII. Oscillatory Boundary-Layer Response
+
+
+                                                   35
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+Symbol       Notation      Definition                          Units          Notes / Context
+Φresp (r)    Φresp (r)     Oscillatory response potential —    km s  2   -2
+                                                                              Φresp =
+                           the full spatial form of the                       A cos(κr + δ)e{− L } ;
+                                                                                                  r
+
+
+                           response-sector potential                          encoding amplitude,
+                                                                              wavenumber, phase, and
+                                                                              decay scale.
+A            A             Oscillation amplitude — peak        km2 s-2        Related to Q in the
+                           response-potential strength                        asymptotic regime.
+κ            κ             Radial wavenumber of the            kpc-1          κ = 2π λ . Galaxy-size
+                           oscillatory response                               dependent, not a fixed
+                                                                              cosmological scale.
+λ            λ             Oscillation wavelength —            kpc            Median λ ≈ 45.6 kpc across
+                           spatial period of the                              the 46 sign-change galaxies;
+                           boundary-layer standing wave                       scales with Rmax ot a
+                                                                              cosmological constant.
+δ            δ             Phase offset of the oscillatory     rad            Depends on initial conditions
+                           response                                           at Rt .
+L            L             Damping / decay scale of the        kpc            Characterizes how quickly
+                           oscillatory response                               the oscillation envelope falls
+                                                                              off with radius.
+λ
+2            λ/2           Half-wavelength of oscillation      kpc            M edian ≈ 22.8 kpc.
+                                                                              Scaling λ2 ≈ Rmax the key
+                                                                              empirical result
+                                                                              distinguishing
+                                                                              galaxy-geometry resonance
+                                                                              from cosmological scale.
+∆ (R) = 0    ∆(R) = 0      Nodal radius — galactocentric       kpc            Stars at this radius orbit on
+radius                     radius where                                       pure baryonic gravity.
+                             2
+                           Vobs = Vbar
+                                    2
+                                       exactly                                Framework predicts
+                                                                              morphological ring features
+                                                                              here — a testable prediction.
+IX. Action Principle and Field Theory
+S           S            Action — integral of the              J·s            R =
+                                                                              S
+                                                                                    √  R
+                         Lagrangian density over                                             + Lbar + Lχ + Lint .
+                                                                                                               
+                                                                                d4 x −g 16πG
+                         spacetime; extremizing S yields
+                         the field equations
+Lbar        Lbr          Baryonic Lagrangian density —         J m-3          Minimally coupled to
+                         standard matter fields (ψ)                           gravity.
+Lχ          Lχ           Response-field Lagrangian             J m-3          Choice of Lχ (e.g.,
+                         density — kinetic and potential                      f (X) − V (χ)) controls the
+                         terms for χ                                          field equations for χ and the
+                                                                              form of Tµν resp
+                                                                                               .
+Lint         Lit           Interaction Lagrangian —            J m-3          Must tie activation to a
+                           couples χ to baryonic fields ψ                     baryonic invariant (e.g.,
+                                                                              |∇Φbar |
+                                                                                 a0    ) so the response is
+                                                                              not a free function per
+                                                                              galaxy.
+X            X             Kinetic invariant of the response   kpc-2          Used in k-essence /
+                           field — X = g µν ∂µχ ∂νχ                           AQUAL-type response fields:
+                                                                              f(X) controls the equation of
+                                                                              motion.
+
+
+
+                                                    36
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+Symbol       Notation     Definition                           Units           Notes / Context
+f (X)        f (X)        Non-linear kinetic function for      Jm   -3
+                                                                               Choosing f so that the static
+                          the response field                                   equation has conserved
+                                                                               radial flux outside activation
+                                                                               yields ∂_R χ ~ 1/R.
+G            G            Newton's gravitational constant      m3 kg-1 s-2     G ≈ 6.674 × 10−11 m3
+                                                                               kg-1 s-2 . Appears in the
+                                                                               coupling 8πG between
+                                                                               geometry and stress-energy.
+8πG          8πG          Gravitational coupling constant      m kg-1 s-2      Right-hand side coefficient in
+                          in the field equation                                Gµν = 8πG Tµν .
+X. Cosmological Sector
+ΛCDM       ΛCDM           Standard cosmological model —        —               The empirically successful
+                          Lambda (dark energy) + Cold                          baseline the response sector
+                          Dark Matter                                          must be consistent with at
+                                                                               large scales.
+H0           H0           Hubble constant — present-day        km s-1 Mpc-1    H0 ≈ 70 km s-1 Mpc-1 . The
+                          rate of cosmic expansion                             product cH0 ∼ a0 motivates
+                                                                               a possible cosmological origin
+                                                                               for the acceleration scale.
+w            w            Equation-of-state parameter of       dimensionless   Cosmological viability
+                          the response sector —                                requires w ≈ 0 (dust-like)
+                                p
+                          w = ρresp
+                                  resp
+                                                                               over structure-formation
+                                                                               epochs.
+a (t)        a(t)         Cosmological scale factor —          dimensionless   Cosmological completion
+                          dimensionless ratio of physical                      requires specifying how
+                          to comoving distances                                  resp
+                                                                               Tµν    evolves with a.
+ρresp (a)    ρresp (a)    Redshift evolution of                kg m-3          Must behave approximately
+                          response-sector energy density                       as ∝ a(−3) (pressureless)
+                                                                               over target epochs to
+                                                                               preserve structure formation.
+κlens        κlens        Lensing convergence — integral       dimensionless   κlens ∝ Φ + Ψ. With
+                          of (Φ+Ψ) along the line of sight                     η ̸= 1, the lensing signal
+                                                                               differs from the kinematic
+                                                                               signal — the primary
+                                                                               cluster/lensing prediction.
+δenv         δenv         Environment overdensity —            dimensionless   Used in SPARC analysis as
+                          local large-scale density contrast                   an environment proxy.
+                          around a galaxy                                      Partial correlations with
+                                                                               Qest should become weak
+                                                                               once internal (scale)
+                                                                               covariates are controlled.
+XI. Baryonic Tully–Fisher Relation
+BTFR        BTFR         Baryonic Tully–Fisher Relation        —               Tight empirical scaling
+                        — Mb ∝ vf4 lat                                         relation across 4 orders of
+                                                                               magnitude in baryonic mass.
+                                                                               Emerges as a consequence of
+                                                                               the response-sector
+                                                                               mechanism rather than an
+                                                                               imposed prior.
+
+
+
+
+                                                   37
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+Symbol        Notation      Definition                       Units              Notes / Context
+Mb ∝ v   4          4
+              Mb ∝ vflat    BTFR functional form             M ⊙ vs km s   -1
+                                                                                Derivable when gextra is the
+                                                                                geometric mean of gbar and
+                                                                                a0 , i.e., when the response
+                                                                                sector couples to gbar at the
+                                                                                transition scale.
+Q ∝ Vf2 lat         2
+              Q ∝ Vflat     BTF-anchor prediction — the      km2 s-2            The BTF correlation Q ∝
+                            response amplitude Q scales as                      Vf2lat is a prediction of the
+                            the square of the asymptotic                        mechanism, not a
+                            velocity                                            mass-accounting identity.
+                                                                                Confirmed empirically across
+                                                                                SPARC 175.
+
+
+
+
+Unit conventions: R in kpc; velocities in km/s; accelerations in (km/s)2 /kpc. Conversion: 1 (km/s)2 /kpc
+= 106 /kpc_in_m m/s2 . kpc_in_m = 3.0857 × 1019 m.
+
+
+12     Appendix B: Per-Galaxy Qest / Qbest Summary (175 galaxies)
+         √
+vbest = Qbest from atlas runner (km/s); vest =   max (Qest , 0) or "neg" if Qest < 0; ratio = vvbest ;
+                                               p
+                                                                                                 est
+
+
+Qf lag = photometric quality (1 = best); T = morphological type; rχ2 = reduced χmodel . ⋆ =
+                                                                                        2
+
+rarefaction-phase (Qest < 0).
+
+
+
+
+                                                   38
+                           Table 6: Per-Galaxy Qest / Qbest Summary (175 galaxies)
+
+
+
+
+                                                                                                 Intrinsic Response Sector as Dark Gravity
+     Galaxy        vbest              vest                Ratio             Qflag    T    rχ2
+
+     CamB          10.6               6.6                 0.623             2        10   3.9
+     D512-2        44.7               29.1                0.652             2        10   9.5
+     D564-8        26.9               19.5                0.726             2        10   3.0
+     D631-7        51.3               53.1                1.034             1        10   1.0
+     DDO064        59.0               39.6                0.672             1        10   1.3
+     DDO154        47.6               43.6                0.915             2        10   20.9
+     DDO161        54.2               56.3                1.038             1        10   8.8
+     DDO168        56.5               46.8                0.828             2        10   3.6
+     DDO170        52.5               51.2                0.975             2        10   6.2
+     ESO079-G014   136.0              142.2               1.045             1        4    18.9
+     ESO116-G012   99.7               98.3                0.986             1        7    2.6
+     ESO444-G084   74.9               53.7                0.718             2        10   19.0
+     ESO563-G021   220.0              268.9               1.222             1        4    24.4
+     F561-1        31.4               28.5                0.907             3        9    0.6
+     F563-1        103.0              105.3               1.022             1        9    0.6
+     F563-V1       17.1               15.5                0.906             3        10   0.7
+     F563-V2       123.0              107.5               0.874             1        10   2.2
+     F565-V2       93.0               69.0                0.741             2        10   10.3
+39
+
+
+
+
+     F567-2        45.4               39.1                0.861             3        9    0.7
+     F568-1        120.0              120.2               1.002             1        5    0.1
+     F568-3        105.0              90.9                0.866             1        7    2.4
+     F568-V1       110.0              105.3               0.957             1        7    0.2
+     F571-8        112.0              117.9               1.052             1        5    20.9
+     F571-V1       75.3               71.8                0.954             2        7    0.5
+     F574-1        87.7               88.2                1.006             1        7    0.5
+     F574-2        11.4               9.5                 0.833             3        9    0.1
+     F579-V1       106.0              97.9                0.923             1        5    3.1
+     F583-1        70.0               71.5                1.022             1        9    0.2
+     F583-4        60.0               56.8                0.946             1        5    1.4
+     IC2574        71.7               52.0                0.725             2        9    49.5
+     IC4202        188.0              181.9               0.968             1        4    48.6
+     KK98-251      33.9               26.7                0.787             2        10   1.3
+     NGC0024       106.0              93.2                0.879             1        5    12.7
+     NGC0055       62.0               70.9                1.144             2        9    2.5
+     NGC0100       75.5               78.7                1.042             1        6    0.3
+     NGC0247       83.8               90.1                1.076             2        7    44.8
+     NGC0289       144.0              150.0               1.042             2        4    2.3
+     NGC0300       85.0               84.3                0.992             2        7    2.2
+
+
+
+
+                                                                                                 Kitcey
+     NGC0801       157.0              158.0               1.007             1        5    13.6
+     NGC0891       152.0              141.5               0.931             1        3    14.2
+                                                           Intrinsic Response Sector as Dark Gravity
+     Galaxy    vbest   vest    Ratio   Qflag   T    rχ2
+
+     NGC1003   92.4    103.2   1.117   1       6    16.5
+     NGC1090   128.0   131.3   1.026   1       4    2.8
+     NGC1705   86.0    68.5    0.796   3       11   9.9
+     NGC2366   55.1    42.5    0.772   3       10   6.4
+     NGC2403   108.0   121.5   1.125   1       6    42.0
+     NGC2683   146.0   133.6   0.915   2       3    5.7
+     NGC2841   254.0   256.7   1.011   1       3    49.7
+     NGC2903   154.0   153.0   0.993   1       4    20.8
+     NGC2915   81.6    78.9    0.967   2       11   0.8
+     NGC2955   183.0   173.1   0.946   1       3    5.8
+     NGC2976   74.4    53.3    0.717   2       5    0.7
+     NGC2998   169.0   169.2   1.001   1       5    7.8
+     NGC3109   66.5    58.6    0.881   1       9    4.7
+     NGC3198   117.0   132.0   1.129   1       5    28.6
+     NGC3521   168.0   127.0   0.756   1       4    2.9
+     NGC3726   104.0   133.2   1.280   2       5    4.7
+     NGC3741   48.2    47.1    0.978   1       10   2.4
+     NGC3769   97.1    105.8   1.089   2       3    0.7
+     NGC3877   102.0   92.6    0.907   2       5    4.1
+     NGC3893   150.0   144.4   0.962   1       5    3.0
+40
+
+
+
+
+     NGC3917   119.0   113.3   0.952   1       6    12.8
+     NGC3949   129.0   92.7    0.719   2       4    1.2
+     NGC3953   156.0   142.1   0.911   1       4    14.4
+     NGC3972   103.0   102.8   0.998   1       4    1.8
+     NGC3992   208.0   206.7   0.994   1       4    22.8
+     NGC4010   96.7    100.5   1.039   2       7    1.6
+     NGC4013   141.0   148.2   1.051   2       3    5.1
+     NGC4051   88.8    85.4    0.962   2       4    0.8
+     NGC4068   33.9    22.4    0.661   2       10   0.2
+     NGC4085   85.9    70.4    0.819   2       5    3.4
+     NGC4088   93.7    103.2   1.101   1       4    2.5
+     NGC4100   148.0   140.2   0.948   1       4    8.5
+     NGC4138   137.0   124.2   0.906   2       0    4.7
+     NGC4157   132.0   147.1   1.114   1       3    2.0
+     NGC4183   92.4    95.5    1.033   1       6    0.7
+     NGC4214   87.8    75.4    0.859   2       10   4.5
+     NGC4217   117.0   115.9   0.991   1       3    29.5
+     NGC4559   91.6    99.3    1.084   1       6    2.8
+     NGC5005   198.0   151.5   0.765   1       4    1.1
+     NGC5033   175.0   171.1   0.978   1       5    5.6
+
+
+
+
+                                                           Kitcey
+     NGC5055   141.0   149.5   1.060   1       4    42.9
+     NGC5371   130.0   139.4   1.073   1       4    26.2
+                                                             Intrinsic Response Sector as Dark Gravity
+     Galaxy     vbest   vest    Ratio   Qflag   T    rχ2
+
+     NGC5585    75.8    80.2    1.058   1       7    10.2
+     NGC5907    174.0   178.0   1.023   1       5    15.9
+     NGC5985    250.0   250.0   1.000   1       3    15.0
+     NGC6015    130.0   140.8   1.083   2       6    19.0
+     NGC6195    154.0   161.8   1.050   1       3    4.5
+     NGC6503    102.0   104.9   1.029   1       6    4.6
+     NGC6674    212.0   216.5   1.021   1       3    10.8
+     NGC6789    60.4    38.6    0.640   2       11   1.5
+     NGC6946    120.0   122.2   1.018   1       6    10.8
+     NGC7331    165.0   181.2   1.098   1       3    11.1
+     NGC7793    87.3    82.0    0.939   1       7    1.4
+     NGC7814    179.0   177.5   0.992   1       2    9.9
+     PGC51017   6.2     5.1     0.815   3       11   1.8
+     UGC00128   115.0   120.6   1.049   1       8    26.9
+     UGC00191   71.6    66.9    0.934   1       9    39.0
+     UGC00634   97.0    87.4    0.901   2       9    23.3
+     UGC00731   90.0    64.2    0.713   1       10   110.1
+     UGC00891   56.4    45.6    0.808   2       9    5.1
+     UGC01230   96.9    94.4    0.974   1       9    0.3
+     UGC01281   53.6    50.2    0.937   1       8    0.1
+41
+
+
+
+
+     UGC02023   45.7    30.4    0.665   2       10   0.1
+     UGC02259   89.1    78.4    0.880   2       8    58.2
+     UGC02487   301.0   298.4   0.991   1       0    30.5
+     UGC02885   238.0   253.2   1.064   1       5    6.3
+     UGC02916   171.0   138.2   0.808   2       2    34.2
+     UGC02953   232.0   235.1   1.013   2       2    276.8
+     UGC03205   175.0   184.6   1.055   1       2    33.1
+     UGC03546   145.0   154.9   1.068   1       1    3.3
+     UGC03580   94.1    113.4   1.206   2       1    44.6
+     UGC04278   72.6    75.6    1.041   1       7    1.3
+     UGC04305   14.5    5.1     0.354   3       10   2.6
+     UGC04325   102.0   80.2    0.787   1       9    64.9
+     UGC04483   23.9    18.8    0.785   2       10   4.4
+     UGC04499   63.2    61.0    0.965   1       8    1.4
+     UGC05005   75.8    88.6    1.168   1       10   1.2
+     UGC05253   189.0   184.7   0.977   2       2    23.6
+     UGC05414   54.5    41.7    0.764   1       10   3.3
+     UGC05716   64.4    66.3    1.030   2       9    16.3
+     UGC05721   87.0    73.4    0.843   1       7    11.4
+     UGC05750   99.1    62.8    0.633   1       8    10.7
+
+
+
+
+                                                             Kitcey
+     UGC05764   78.9    48.4    0.613   2       10   299.1
+     UGC05829   71.3    51.3    0.720   2       10   8.9
+                                                            Intrinsic Response Sector as Dark Gravity
+     Galaxy     vbest   vest    Ratio   Qflag   T    rχ2
+
+     UGC05918   49.4    37.4    0.757   2       10   6.9
+     UGC05986   113.0   102.4   0.906   2       9    12.6
+     UGC05999   84.2    78.1    0.927   2       10   2.7
+     UGC06399   80.2    75.0    0.935   1       9    1.1
+     UGC06446   77.4    74.2    0.958   1       7    3.2
+     UGC06614   125.0   168.4   1.347   1       1    7.3
+     UGC06628   18.5    15.1    0.817   2       9    0.6
+     UGC06667   101.0   78.0    0.772   1       6    56.4
+     UGC06786   202.0   201.5   0.998   1       0    59.0
+     UGC06787   213.0   226.3   1.062   2       2    95.2
+     UGC06818   56.3    59.3    1.054   2       9    2.5
+     UGC06917   92.5    91.6    0.991   1       9    4.5
+     UGC06923   70.1    60.7    0.866   2       10   0.5
+     UGC06930   89.7    91.2    1.016   1       7    0.9
+     UGC06973   117.0   103.5   0.885   3       2    67.8
+     UGC06983   97.2    96.8    0.996   1       6    2.5
+     UGC07089   60.3    60.8    1.008   2       8    0.6
+     UGC07125   48.9    49.7    1.016   1       9    0.7
+     UGC07151   72.2    59.3    0.822   1       6    13.0
+     UGC07232   38.6    26.2    0.678   2       10   0.7
+42
+
+
+
+
+     UGC07261   72.5    62.0    0.855   2       8    6.3
+     UGC07323   80.3    62.4    0.777   1       8    5.4
+     UGC07399   111.0   94.7    0.853   1       8    27.9
+     UGC07524   65.3    67.7    1.037   1       9    0.9
+     UGC07559   29.6    22.9    0.773   2       10   0.5
+     UGC07577   10.8    7.9     0.734   2       10   0.1
+     UGC07603   68.8    57.5    0.836   1       7    8.4
+     UGC07608   80.7    56.8    0.704   1       10   5.4
+     UGC07690   56.0    46.7    0.835   2       10   7.5
+     UGC07866   31.0    23.4    0.754   2       10   1.2
+     UGC08286   86.1    76.4    0.888   1       6    45.3
+     UGC08490   77.6    73.5    0.947   1       9    8.2
+     UGC08550   59.6    51.8    0.868   1       7    19.7
+     UGC08699   150.0   158.6   1.057   2       2    11.9
+     UGC08837   40.9    31.6    0.773   2       10   0.3
+     UGC09037   86.5    115.7   1.338   2       6    11.6
+     UGC09133   199.0   201.3   1.011   1       2    22.9
+     UGC09992   29.3    24.2    0.827   2       10   1.9
+     UGC10310   68.8    60.0    0.872   1       9    5.6
+     UGC11455   203.0   205.1   1.010   1       6    14.6
+
+
+
+
+                                                            Kitcey
+     UGC11557   36.2    43.9    1.212   2       8    1.4
+     UGC11820   67.2    66.2    0.985   1       9    17.9
+                                                             Intrinsic Response Sector as Dark Gravity
+     Galaxy     vbest   vest    Ratio   Qflag   T    rχ2
+
+     UGC11914   365.0   180.9   0.496   1       2    111.5
+     UGC12506   207.0   206.7   0.998   2       6    1.4
+     UGC12632   67.1    62.6    0.934   1       9    6.2
+     UGC12732   77.4    79.8    1.031   1       9    4.4
+     UGCA281    31.8    22.6    0.711   3       11   5.6
+     UGCA442    55.1    50.6    0.918   1       9    13.4
+     UGCA444    40.8    30.3    0.743   2       10   1.4
+43
+
+
+
+
+                                                             Kitcey
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+13     Appendix C. Cluster morphology operator and HFF benchmark
+This appendix documents the preregistered cluster morphology operator used to compare a gravitational-
+lensing convergence field (κ; treated here as a response proxy) against an observational hot-gas tracer
+constructed from Chandra imaging. The benchmark dataset is two Hubble Frontier Fields (HFF)
+clusters (Abell 2744 and MACS J0416.1−2403) using public HFF lens-model products (Mikulski
+Archive for Space Telescopes [MAST], 2019).
+
+13.1    C.1 Data provenance and scope
+• κ maps (multi-team lens models): HFF community lens reconstructions accessed from the MAST
+Frontier Fields HLSP archive (MAST, 2019).
+• X-ray proxy (stacked Chandra img2 maps) (Weisskopf et al., 2002; NASA/GSFC HEASARC, 2025;
+Fruscione et al., 2006): HEASARC-served *_full_img2.fits.gz image products were stacked into a
+common WCS grid and used as a morphology/centroid proxy for the hot intracluster medium (ICM)
+(NASA/GSFC HEASARC, 2025; Weisskopf et al., 2002).
+For reproducibility, the X-ray proxy construction follows a lightweight procedure using the (Fruscione
+et al., 2006) CIAO toolset: implemented in toy models/make_chandra_xray_map.py, each img2
+image is divided by a scalar exposure keyword (EXPOSURE, with LIVETIME/ONTIME fallbacks),
+reprojected onto a common WCS grid (Mikulski Archive for Space Telescopes (MAST), 2019), and
+combined as an exposure-weighted mean rate map.
+Important limitation: this work does not perform event-level Chandra reduction (exposure map
+correction, background modeling, point-source masking, etc.) in CIAO (Fruscione et al., 2006). The
+X-ray product is therefore intended as a geometric locator of bright ICM structure for centroid
+comparisons, not a calibrated surface-brightness measurement.
+
+13.2    C.2 Preregistered morphology operator
+For each cluster, each κ team model, and each ROI radius, we apply the same fixed operator to κ and
+to the X-ray proxy map:
+  1) Smoothing: apply Gaussian smoothing with σ = 8 arcsec independently to κ and X-ray maps.
+  2) ROI restriction: within a circular ROI (fixed ICRS center per cluster), compute pixel-intensity
+     thresholds at the 99th, 97th, and 95th percentiles of the smoothed pixels.
+  3) Primary-blob selection: for each thresholded map, select the largest connected component above
+     threshold.
+  4) Centroid definition: compute the unweighted mask centroid of that connected component.
+  5) Measured quantity: record the κ–X-ray centroid separation in arcseconds.
+(Mikulski Archive for Space Telescopes (MAST), 2019; Weisskopf et al., 2002; Fruscione et al., 2006)
+This definition is intentionally simple and falsifiable: it is fixed across clusters, teams, and thresholds,
+with only the ROI radius swept to quantify footprint sensitivity.
+
+13.3    C.3 Robustness grid: multi-team systematics and ROI sensitivity
+We evaluated ROI radius ∈ {80′′ , 100′′ , 120′′ } for each cluster across available HFF teams, and report
+both
+
+
+                                                    44
+Intrinsic Response Sector as Dark Gravity                                                       Kitcey
+
+
+  (i) cross-team spread at fixed ROI, and
+ (ii) ROI sensitivity within each team model. The complete tables are in toy_models/HFF_ALL_T
+      EAMS_SYSTEMATICS_ANALYSIS.md and the per-team measurements are available from
+      author upon request.
+At ROI = 100′′ , Abell 2744 shows a relatively stable median κ–X-ray separation (≈ 66–67′′ across
+thresholds) with small cross-team IQRs (≈ 1–1.5′′ ) but with a nontrivial full range at high thresholds.
+MACS J0416.1−2403 shows much larger cross-team dispersion at higher thresholds (IQRs that grow to
+tens of arcseconds), reflecting stronger lens-model dependence of the inferred morphology under this
+operator.
+
+
+
+
+                 Figure 7: Figure 6. HFF κ–X-ray systematics summary at ROI = 100′′ .
+
+
+13.4    C.4 Six-panel diagnostic figures (ROI = 100′′ )
+For interpretability, we generated per-team six-panel diagnostics at ROI = 100′′ , including κ, X-ray
+proxy, threshold masks, and centroid overlays. Representative examples are shown below; the complete
+figure sets are available from the author upon request.
+
+
+
+
+                                                  45
+Intrinsic Response Sector as Dark Gravity                                       Kitcey
+
+
+
+
+                      Figure 8: Figure 7. Abell 2744 (CATS v4.1), ROI = 100′′
+
+
+
+
+                                                46
+Intrinsic Response Sector as Dark Gravity                                           Kitcey
+
+
+
+
+                 Figure 9: Figure 8. MACS J0416.1−2403 (CATS v4.1), ROI = 100′′ .
+
+
+
+
+                                               47
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+14     Appendix D. Spectral Harmonics and the Cymatic Analogy in
+       Intrinsic Response Theory
+14.1    Purpose and scope
+This appendix formalizes the “cymatics” analogy used throughout the paper by identifying a single
+spectral object—the eigen-spectrum of an intrinsic response operator—that plays the same mathematical
+role as the Laplacian/biharmonic eigenmodes in Chladni plate experiments (Rossing, 1982; Tuan et al.,
+2014) (Rossing, 1982). In brief: eigenfunctions are the response-sector mode shapes, eigenvalues set
+the characteristic spatial scales, and nodal sets correspond to compression/rarefaction boundaries.
+Although the underlying response dynamics may be written covariantly on spacetime (Carroll, 2019;
+Wald, 1984), the galaxy-rotation regime probed by SPARC is effectively stationary, so the empirically
+constrained “harmonics” are spatial overtones (additional radial nodes) rather than temporal frequency
+multiples.
+
+14.2    Unified operator statement (“DNA” of intrinsic response)
+Let Φresp denote the response-sector potential (or any equivalent scalar response field used to encode
+the inferred metric perturbation in the weak-field limit). Define the intrinsic response through a driven,
+self-adjoint elliptic operator on a spatial slice:
+
+
+                                            L Φresp = S [ρbar ] ,
+
+where S [ρbar ] is the constitutive driving functional built from the baryonic sector, and the operator is
+taken in the minimal Sturm–Liouville form derived from (Bender and Orszag, 1999; Kevorkian and
+Cole, 1996)
+
+
+                                       L ≡ −∇ · (α(x)∇ ) + β(x),
+
+with α(x) ≥ 0 controlling propagation (“permittivity/elasticity”) and β(x) ≥ 0 encoding activa-
+tion/screening (“mass” or quenching). The intrinsic “pattern DNA” is the eigen-spectrum
+
+
+                                    L φn = λn φn ,        ⟨φm , φn ⟩ = δmn ,
+
+yielding the modal response
+
+                                                                      ⟨φn , S⟩
+                                  Φresp(x) = Σn cn φn(x) ,     cn =            .
+                                                                        λn
+
+This is a direct analog of Chladni/cymatics: φn are mode shapes; the λn set intrinsic spatial scales;
+and the source overlap ⟨φn , S⟩ is the excitation/selection rule that determines which modes are visible
+in a given galaxy.
+
+14.3    Where “harmonics” live in a unified spacetime theory
+In the covariant formulation (Hawking and Ellis, 1973; Wald, 1984; Carroll, 2019), Spacetime unification
+means that the fundamental response dynamics can be written covariantly (e.g., for a scalar template,
+a hyperbolic operator D such as (□ – m_ef fˆ2)χ = J). In stationary or quasi-stationary systems,
+
+
+                                                     48
+Intrinsic Response Sector as Dark Gravity                                                           Kitcey
+
+
+variable separation reduces the covariant problem to a spatial eigenproblem: χ(t, x) = Σn qn(t)φn(x) ,
+where φn are eigenfunctions of the induced spatial operator L and qn (t) obey driven oscillator equations
+with characteristic frequencies Ω2n ∝ λn . SPARC rotation curves constrain the near-static regime in
+which qn (t) has equilibrated, leaving the spatial spectral content as the observable imprint (Carroll,
+2019; Hawking & Ellis, 1973; Wald, 1984).
+
+14.4    Observable proxy: node count and ∆-sign flips in the SPARC window
+SPARC provides baryonic mass models and high-quality rotation curves for 175 disk galaxies (Lelli et
+al., 2016). Define ∆(R) operationally (McGaugh and Schombert, 2014; Ivezić et al., 2019) as the signed
+                                                                                                2 – v 2 ).
+residual between the observed and baryonic expectations in the rotation curve (e.g., ∆v 2(R) ≡ vobs  bar
+In an oscillatory response sector, Φresp (and therefore the inferred extra acceleration) can alternate in
+sign across radius, producing compression and rarefaction lobes. In the operator language above, each
+change in radial sign in ∆(R) corresponds to crossing a nodal annulus/shell of the net excited response
+pattern Σn cn φn . Hence, within the finite SPARC radial sampling window, the number of ∆-sign flips
+provides a model-agnostic proxy for the degree of higher-n (harmonic/overtone) participation: zero
+flips indicates a fundamental-dominated response; multiple flips indicate increasing harmonic content
+(higher node count) selected by ⟨φn , S⟩ and by activation/quenching boundaries.
+
+14.5    Consequences for lensing and stability constraints
+Because the response tensor is effectively inferred from kinematics, sign-alternating lobes should be
+treated as an empirical prediction of the effective sector rather than as an immediate pathology. In
+particular, annular rarefaction phases imply a ring-like suppression of weak-lensing observables (e.g.,
+∆Σ or κ relative to control stacks) in the same radial ranges, providing a falsifiable discriminant
+using upcoming wide-field surveys (Scaramella et al., 2022; Euclid Collaboration, 2025; Ivezić et al.,
+2019). At the fundamental level, (Buniy et al., 2006; Rubakov, 2006, 2014) the minimal non-negotiable
+stability line is to keep the underlying response-field EFT free of ghosts/gradient instabilities; for broad
+k-essence classes this is ensured by requiring a positive kinetic coefficient (P,X ≥ 0), which enforces the
+null energy condition for the fundamental field stress-energy even if the effective, inverse-constructed
+response density changes sign locally (Rubakov, 2006). For context, relativistic MOND completions
+(e.g., TeVeS) also introduce extra fields that alter lensing but do not generically predict phase-correlated
+annular suppression tied to ∆-sign flips (Bekenstein, 2004).
+
+
+15     Appendix E: Distributed Forcing and Collective Dark Gravity
+       Modes in Groups, Clusters, and Dense Stellar Systems
+15.1    Overview: From Single-Peak to Multi-Centered Drivers
+The SPARC rotation-curve analysis in the main text constrains the intrinsic response sector in a regime
+dominated by a single strong baryonic concentration (disk galaxy mass distribution). In that limit,
+Appendices A–D establish the effective operator, spectral mode basis, and empirical phenomenology.
+This appendix extends the framework to regimes where baryonic driving comes from multiple, spatially
+separated mass concentrations:
+   • Galaxy groups: multiple galaxies with comparable masses and separations of order 100 kpc
+     to 1 Mpc (Bullock and Boylan-Kolchin, 2017).
+   • Galaxy clusters: tens to thousands of galaxies embedded in diffuse thermal gas; gravitational
+     centers inferred from X-ray / lensing often offset from any single luminous peak (Clowe et al.,
+
+                                                    49
+Intrinsic Response Sector as Dark Gravity                                                              Kitcey
+
+
+       2006; Mikulski Archive for Space Telescopes (MAST), 2019).
+   • Globular clusters: hundreds of thousands to millions of stars experiencing rapid relaxation
+     and multi-body encounters; outer members can appear kinematically bound to invisible central
+     mass(es) (Bullock and Boylan-Kolchin, 2017).
+Our central claim: within the intrinsic response framework, these systems naturally exhibit collective
+gravitational minima—organizing centers in the effective potential whose location and strength
+are determined by the weighted superposition of mode overlaps from distributed baryonic sources.
+Crucially, such centers need not coincide with any single baryonic peak. This mechanism provides a
+parsimonious alternative to invoking separate “dark matter” inventories for each subsystem (Clowe
+et al., 2006) or to evoking exotic multi-component models (Bekenstein, 2004; Verlinde, 2017).
+
+
+
+
+Figure 10: Dense Stellar Systems and Central Concentration. Observed centrally concentrated stellar
+system exhibiting strong gravitational organization. Such systems motivate the distributed-forcing framework: a
+collective intrinsic response potential can generate an emergent organizing minimum without requiring a central
+baryonic point mass. The visible mass distribution does not obviously explain the organizing center, suggesting
+gravitational field organization extends beyond simple baryonic self-gravity.
+
+
+15.2     Mathematical Foundation: Linearity and Mode Superposition
+Recall from Appendix D that the intrinsic response is governed by a linear, self-adjoint operator L
+acting on a spatial slice (Bender and Orszag, 1999; Kevorkian and Cole, 1996):
+                                              L Φresp = S[ρbar ],                                           (6)
+where S[ρbar ] is the constitutive source built from the baryonic density distribution. The eigen-expansion
+is:
+                                                                 ⟨φn , S[ρbar ]⟩
+                                Φresp (x) =     cn φn (x), cn =                                          (7)
+                                            X
+                                                                                 .
+                                            n                          λn
+
+Key point: linearity means that if the baryonic source consists of N spatially separated concentrations,
+                                                       N
+                                          ρbar (x) =         ρi (x − ri ),
+                                                       X
+
+                                                       i=1
+
+
+                                                       50
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+then the response decomposes additively:
+                                                 N
+                                   Φresp (x) =         Φi (x − ri ) + Φcross ,                         (8)
+                                                 X
+
+                                                 i=1
+
+where Φi is the response to the i-th baryonic concentration and Φcross reflects interference/coherence
+terms. In the weak-overlap regime (large separations, low-cost fundamental mode activation), cross-
+terms are subdominant.
+
+15.3    Collective Organizing Minima: The Distributed-Mode Picture
+When multiple baryonic sources are present, each contribution Φi has its own local minimum region.
+However, the global minimum of the total potential
+
+                                      Φeff (x) = Φbar (x) + Φresp (x)                                  (9)
+
+may not lie at any individual source location. Instead, the effective potential landscape can exhibit:
+  1. Per-object local minima: each baryonic concentration ρi is self-bound by its own response
+     contribution Φi plus local self-gravity.
+  2. A global organizing minimum: if the total response field is dominated by a single, long-
+     wavelength (low-n, fundamental) eigenmode, its spatial extent encompasses all sources. The
+     nodal structure of this mode defines a weighted centroid location—a gravitational organizing
+     center for the entire system.
+  3. Offset structure: the location of the global minimum is generically offset from any single
+     baryonic peak. It is instead a weighted-average position, controlled by the eigenmode’s profile
+     and the baryonic source distribution.
+
+15.4    Vibe Check: Is the Distributed-Forcing Picture Physically Coherent?
+We assess internal consistency and theoretical soundness using six criteria:
+
+1) Self-consistency and low-parameter count
+Pass if: the framework uses the same operator closure and mode basis as single-galaxy systems
+(Appendices A–D), without ad hoc modifications per system type.
+Pass if: the resulting phenomenology is predictive: given baryonic mass models and geometry, the
+spectrum of expected outcomes (center offsets, mode participation, etc.) can be computed before
+observing dynamics or lensing.
+✓Vibe-check verdict: Pass. No new fields or tunable couplings per system. The operator and
+its spectrum are unified. Phenomenological variations arise purely from varying baryonic drivers and
+system geometry.
+
+2) Observability: Is there a clear kinematic signature of collective organization?
+Pass if: the inferred dynamical center (from circular velocity curves, velocity dispersions, or radial
+velocity centroids in line-of-sight data) is systematically offset from the photometric center in a manner
+correlating with configuration asymmetry, substructure fraction, or relaxation timescale.
+
+
+
+                                                        51
+Intrinsic Response Sector as Dark Gravity                                                                   Kitcey
+
+
+
+
+Figure 11: Emergent Organizing Minimum with No Central Baryons. Schematic illustration of the
+collective response field developing an organizing minimum in a multi-centered baryonic configuration. The four
+red markers represent individual baryonic concentrations (galaxies or stellar clusters). The central organizing
+minimum (indicated by the potential well) occurs at the geometric center with zero baryonic mass present.
+Darker colors indicate deeper gravitational wells. Any test material (stripped stars, intracluster gas, or low-baryon
+tracers) responds only to this collective logarithmic potential and orbits the empty central point—precisely the
+morphology predicted by the intrinsic response framework for distributed forcing configurations.
+
+
+Fail if: the kinematic center is indistinguishable from the brightest/most massive galaxy in all observed
+systems, implying that intrinsic response generates no net collective offset over and above standard
+N-body dynamics.
+✓Vibe-check verdict: Pass. Distributed baryonic driving, when filtered through an intrinsic
+long-wavelength mode, naturally yields offset organizing centers tied to configuration geometry, not
+luminosity.
+
+3) Emergent screening and coherence length
+Pass if: the framework naturally explains why the effective response length scale and screening
+properties vary with environment (e.g., denser regions or higher tidal fields suppress large-scale
+coherence).
+Fail if: screening is arbitrary or scale-free, or requires system-by-system parameter tuning.
+✓Vibe-check verdict: Pass. The activation parameter β(x) and propagation coefficient α(x) in
+operator L can vary with local environment (density, tidal stress). This induces environment-dependent
+
+
+                                                        52
+Intrinsic Response Sector as Dark Gravity                                                          Kitcey
+
+
+mode cutoffs and effective range in a principled way (see Appendix D.5).
+
+4) Lensing orientation: Metric-equivalent vs. slip-permitted branches
+Metric-equivalent branch: the intrinsic response that affects dynamics also sources the Weyl potential
+as an effective mass would (i.e., lensing tracks the inferred dynamical “dark gravity” contribution).
+Slip-permitted branch: the intrinsic response produces a controlled gravitational slip (|ηslip | ≪ 1)
+with explicit qualitative consequences (e.g., predictable offsets or discrepancies between dynamical
+mass inferences and lensing mass inferences, with environment/geometry dependence).
+Fail if: the framework uses an opportunistic mix—“lenses when convenient, doesn’t when inconvenient”—
+without a governing rule for ηslip behavior across regimes.
+✓Vibe-check verdict: Pass. Both branches are conceptually legitimate within a single-field
+gravitational ontology; the decisive step is committing to one branch (or a clearly delimited regime
+split) and confronting lensing datasets as a primary discriminant.
+
+5) Parameter discipline: “Nothing up my sleeve”
+Pass if: the constitutive/operator closure can plausibly be specified with a small, physically inter-
+pretable parameter set, e.g.:
+   • One universal transition/normalization scale (often written µ0 or Λresp ; conceptually “the
+     scale that sets when low-cost macromodes become relevant”),
+   • One environment-control parameter (e.g., a local density-contrast proxy or tidal-field
+     coupling), or equivalent proxy for density contrast / tidal forcing / boundary-condition class),
+   • Optionally one nonlocality/relaxation knob: kernel scale and/or relaxation time that
+     governs coherence vs. texture in distributed-forcing regimes.
+The key is that these parameters are global (shared across systems) and tied to clear physical roles in
+the operator picture (mode cost, mode support, coherence), not tuned system-by-system.
+Fail if: the extension requires a growing list of per-system knobs (custom kernels, bespoke thresholds,
+ad hoc slip switches, object-by-object amplitude tuning), such that explanatory power comes primarily
+from flexibility rather than from predictive compression.
+✓Vibe-check verdict: Pass (conditional). A mode-selection/operator framework can remain
+disciplined, but only if we are ruthless about:
+   1. Global parameters,
+   2. Fixed functional forms, and
+   3. Resisting “just one more knob” to rescue every outlier.
+
+Verdict: Does intrinsic response pass the vibe check?
+Yes. It is conceptually coherent across the board, uses standard effective-theory logic (linear dust limit
+/ nonlinear constitutive limit), naturally targets galaxy and group regularities, has a generic route
+to screening, and has a principled lensing fork. We posit that this is stronger grounding than other
+theories and therefore sufficient to justify investment toward quantitative proving.
+
+
+
+
+                                                   53
+Intrinsic Response Sector as Dark Gravity                                                              Kitcey
+
+
+15.5    Globular Clusters as a Distributed-Forcing Laboratory
+Dense stellar systems are extreme distributed-forcing environments. The baryonic driver is a rapidly
+evolving multi-body configuration {ri (t), vi (t) | i = 1 . . . N∗ }, and the intrinsic response behavior is
+governed by which spatial modes are preferentially excited and remain macroscopically expressed under
+coarse-graining.
+During formation and subsequent relaxation (phase mixing, two-body encounters, dynamical friction),
+the coarse-grained field can become increasingly dominated by the lowest-cost, large-scale organizing
+component of the response (Bullock and Boylan-Kolchin, 2017). In that case, Φresp develops a smooth
+collective minimum at an organizing centroid of the stellar distribution—without requiring a single
+dominant central luminous object. √Outer members can then visibly appear to orbit “nothing” while
+remaining tightly bound by Reff = −Φtotal .
+Alternatively, the response may reside predominantly in high-spatial-frequency (high-n) texture:
+locally real, but macroscopically subdominant under coarse-graining. This is still predictive: improved
+kinematic sensitivity would reveal either residual variance/correlation structure consistent with textured
+response, or progressively tighter bounds on the operator-controlled response in this regime.
+
+What we would be potentially seeing (Figure 12):
+   • Deep local potential wells at each observed galaxy or stellar concentration → each object
+     remains self-bound by its own Rt response plus baryons.
+   • A broad, smooth central bowl (the dark-green/teal depression) whose minimum sits at an
+     organizing centroid—often tens to hundreds of kpc away from the brightest or most
+     massive galaxy.
+   • Overall morphology looks exactly like a smooth central “dark halo” on cluster scales, even
+     though every source of the extra gravity is a peripheral baryonic overdensity.
+
+15.6    Observational Hooks and Discriminants: Why This Is Stress-Testable
+Distributed forcing implies structured (not arbitrary) phenomenology:
+
+(i) Center offsets
+Dynamical centers inferred from kinematics (velocity centroid, circular velocity analysis, dispersion
+inversion) need not coincide with photometric centers. Offsets should correlate with:
+   • Configuration asymmetry (deviation from spherical/symmetric distribution),
+   • Substructure fraction (presence of satellites, merging components),
+   • Relaxation state (dynamical age, phase-space coherence).
+Because low-cost modes reflect the overall geometry and are affected by recent mergers or tidal
+encounters, center offsets become a sensitive probe of the system’s assembly history.
+
+(ii) Multi-lobed morphology
+Convergence/potential maps can show multi-blob structure reflecting the excited mode mix rather than
+a one-to-one mapping between baryonic peaks and gravitational peaks. In the language of Appendix
+D, if multiple eigenmodes n = 1, 2, 3, . . . participate with significant amplitudes |cn |, the resulting Φresp
+is a superposition of potential patterns, each with its own spatial texture and nodal structure.
+
+                                                      54
+Intrinsic Response Sector as Dark Gravity                                                            Kitcey
+
+
+
+
+Figure 12: Collective Gravitational Minimum from Distributed Forcing. Schematic representation
+of the effective potential landscape Φeff (x) = Φbar (x) + Φresp (x) in a multi-centered baryonic system. Red
+markers: Individual baryonic concentrations (galaxies or stellar overdensities) with deep local minima from
+their respective response contributions Φi . Teal depression (broad central bowl): Collective organizing
+minimum arising from the superposition of long-wavelength (low-n, fundamental) response eigenmodes. Gold
+star: Location of the global potential minimum, which is generically offset from any single baryonic peak
+due to the weighted mode geometry. This configuration naturally produces center offsets between dynamical
+centroids and photometric peaks without requiring exotic dark matter inventories. The organizing center’s
+location depends on the eigenmode profile φn (x) and the baryonic source distribution, providing a testable
+prediction for lensing-dynamics consistency studies (Clowe et al., 2006; Euclid Collaboration, 2025).
+
+
+
+
+                                                     55
+Intrinsic Response Sector as Dark Gravity                                                                Kitcey
+
+
+
+
+Figure 13: Dark-Gravity Organized Globular Cluster (Schematic). Visualization of a dense stellar
+system where distributed baryonic drivers (individual stars or stellar subgroups) generate collective intrinsic
+response contributions whose superposition produces an organizing gravitational minimum. The system exhibits
+deep local potential wells at each stellar concentration (indicating self-bound objects via their respective Rt
+response contributions plus baryonic self-gravity), overlaid with a broad collective organizing potential. Outer
+members orbit this collective structure, appearing to trace “invisible mass” distributions while remaining bound
+by pure gravitational field organization. This morphology is characteristic of globular clusters and demonstrates
+how macroscopic response organization can emerge from distributed forcing without requiring exotic dark matter
+halos.
+
+
+(iii) Environmental dependence
+Because the effective propagation/quenching parameters (α, β in Appendix D.2) can vary with
+environment, the prevalence and scale of collective minima and offsets should correlate with:
+   • Tidal field strength (external gravitational stress),
+   • Local density contrast (ρlocal /ρ̄),
+   • Relaxation measures (two-body encounter rate, Coulomb logarithm).
+
+15.7    Lensing–Dynamics Consistency: The Decisive Rung
+Rotation curves constrain primarily the effective matter distribution as experienced by pressure (orbital
+kinematics), encoded in the dominant term of Φeff .
+Gravitational lensing probes the Weyl combination (metric perturbation), generically:
+
+                                κ ∝ Φeff +          (additional curvature terms).                           (10)
+                                             X
+
+                                             slip
+
+
+In a single-field gravitational ontology: the natural expectation is that photons follow the same
+spacetime geometry as massive tracers. The strongest branch of the framework is metric-equivalent
+behavior in the relevant weak-field regime (minimal gravitational slip, |ηslip | ≪ 1), under which the
+inferred “dark gravity” contribution lenses as any effective mass distribution would.
+
+                                                          56
+Intrinsic Response Sector as Dark Gravity                                                       Kitcey
+
+
+Therefore, the strongest discriminant in galaxy groups and clusters is whether the same intrinsic-
+response organization that shapes dynamics also maps consistently onto lensing (Clowe et al., 2006).
+If gravitational slip is present in a covariant completion, it must be controlled (not opportunistic)
+and should yield falsifiable relations between dynamical centroids and lensing centroids, including
+environment- and morphology-dependent signatures that can be confronted directly with group/cluster
+datasets from e.g. Euclid (Euclid Collaboration, 2025), LSST (Ivezić et al., 2019), or dedicated cluster
+surveys (Mikulski Archive for Space Telescopes (MAST), 2019).
+
+15.8    Summary
+Appendix E introduces no new ontology beyond Appendix D. It is the distributed-forcing extension:
+when baryonic driving is multi-centered (groups, clusters, dense stellar systems), the gravitational
+field’s intrinsic response can organize into:
+  • Collective minima and
+  • Center offsets
+as global mode-geometry effects operating within the unified gravitational field.
+This supplies a coherent, testable alternative to automatically defaulting to an exotic particulate
+inventory in every “dark gravity” configuration. It identifies lensing–dynamics consistency and
+environment-dependent centroid structure as the decisive discriminants in the next observational
+rung.
+
+
+16     References
+
+References
+Ackermann, M. et al. (2015). Searching for dark matter annihilation from Milky Way dwarf spheroidal
+  galaxies. Physical Review Letters, 115(23):231301.
+Aguilar, M. et al. (2013). First result from the Alpha Magnetic Spectrometer on the International
+ Space Station. Physical Review Letters, 110(14):141102.
+Akerib, D. S. et al. (2017). Results from a search for dark matter in the complete LUX exposure.
+ Physical Review Letters, 118(2):021303.
+Aprile, E. et al. (2018). Dark matter search results from a one-ton-year exposure of XENON1T.
+ Physical Review Letters, 121(11):111302.
+Bardeen, J. M. (1980). Gauge-invariant cosmological perturbations. Physical Review D, 22(8):1882–1905.
+Bekenstein, J. D. (2004). Relativistic gravitation theory for the modified Newtonian dynamics paradigm.
+  Physical Review D, 70(8):083509.
+Bender, C. M. and Orszag, S. A. (1999). Advanced Mathematical Methods for Scientists and Engineers
+  I. Springer, 2nd edition.
+Bosma, A. (1978). The distribution and kinematics of neutral hydrogen in spiral galaxies of type
+ Sab–Scd. PhD thesis, University of Groningen.
+Buchert, T. (2000). On average properties of inhomogeneous fluids in general relativity: Dust
+ cosmologies. General Relativity and Gravitation, 32(1):105–125.
+
+
+
+                                                  57
+Intrinsic Response Sector as Dark Gravity                                                        Kitcey
+
+
+Bullock, J. S. and Boylan-Kolchin, M. (2017). Small-scale challenges to the λCDM paradigm. Annual
+ Review of Astronomy and Astrophysics, 55:343–387.
+Buniy, R. V., Hsu, S. D. H., and Murray, B. M. (2006). The null energy condition and instability.
+ Physical Review D, 74:063518.
+Burgess, C. P. (2004). Quantum gravity in everyday life: General relativity as an effective field theory.
+ Living Reviews in Relativity, 7(1):5.
+Carroll, S. M. (2004). Spacetime and Geometry: An Introduction to General Relativity. Addison-Wesley.
+Carroll, S. M. (2019). Spacetime and Geometry: An Introduction to General Relativity. Cambridge
+  University Press, 2nd edition.
+Clowe, D. et al. (2006). A direct empirical proof of the existence of dark matter. The Astrophysical
+  Journal Letters, 648(2):L109–L113.
+Cui, X. et al. (2017). Dark matter results from 54-ton-day exposure of PandaX-II experiment. Physical
+ Review Letters, 119(18):181302.
+Deser, S. and Woodard, R. P. (2007). Nonlocal cosmology. Physical Review Letters, 99(11):111301.
+Donoghue, J. F. (1994). General relativity as an effective field theory: The leading quantum corrections.
+ Physical Review D, 50(6):3874–3888.
+Einstein, A. (1915). Erklärung der perihelbewegung des Merkur aus der allgemeinen relativitätstheorie.
+  Sitzungsberichte der Königlich Preußischen Akademie der Wissenschaften, pages 831–839.
+Einstein, A. (1916). Die grundlage der allgemeinen relativitätstheorie. Annalen der Physik, 354(7):769–
+  822.
+Euclid Collaboration (2022). Euclid preparation. I. the Euclid wide survey. Astronomy & Astrophysics,
+  662:A112.
+Euclid Collaboration (2025). Euclid. I. overview of the Euclid mission. Astronomy & Astrophysics,
+  697:A1.
+Fruscione, A. et al. (2006). CIAO: Chandra’s data analysis system. In Proceedings of SPIE, volume
+  6270, page 62701V.
+Hawking, S. W. and Ellis, G. F. R. (1973). The Large Scale Structure of Space-Time. Cambridge
+ University Press.
+Ivezić, v., Kahn, S. M., Tyson, J. A., et al. (2019). LSST: From science drivers to reference design and
+  anticipated data products. The Astrophysical Journal, 873(2):111.
+Kevorkian, J. and Cole, J. D. (1996). Multiple Scale and Singular Perturbation Methods. Springer, 1st
+  edition.
+Kuhn, T. S. (1962). The Structure of Scientific Revolutions. University of Chicago Press, 1st edition.
+Lakatos, I. (1978). The Methodology of Scientific Research Programmes. Cambridge University Press.
+Le Verrier, U. J. (1859). Théorie du mouvement de Mercure. Annales de l’Observatoire de Paris,
+  5:1–196.
+Lelli, F., McGaugh, S. S., and Schombert, J. M. (2016). SPARC: Mass models for 175 disk galaxies
+  with Spitzer photometry and accurate rotation curves. The Astronomical Journal, 152(6):157.
+
+
+
+                                                   58
+Intrinsic Response Sector as Dark Gravity                                                       Kitcey
+
+
+LUX-ZEPLIN Collaboration (2023). First dark matter search results from the LUX-ZEPLIN (LZ)
+ experiment. Physical Review Letters, 131(4):041002.
+McGaugh, S. S., Lelli, F., and Schombert, J. M. (2016). Radial acceleration relation in rotationally
+ supported galaxies. Physical Review Letters, 117(20):201101.
+McGaugh, S. S. and Schombert, J. M. (2014). Color–mass-to-light-ratio relations for disk galaxies. The
+ Astronomical Journal, 148(5):77.
+McGaugh, S. S., Schombert, J. M., Bothun, G. D., and de Blok, W. J. G. (2000). The baryonic
+ Tully–Fisher relation. The Astrophysical Journal, 533(2):L99–L102.
+Mikulski Archive for Space Telescopes (MAST) (2019). Hubble Space Telescope Frontier Fields (HLSP
+ archive). Retrieved February 24, 2026.
+Milgrom, M. (1983). A modification of the Newtonian dynamics as a possible alternative to the hidden
+ mass hypothesis. The Astrophysical Journal, 270:365–370.
+NASA/GSFC HEASARC (2025). Archive access and documentation. Retrieved February 24, 2026.
+Planck Collaboration (2020). Planck 2018 results. VI. cosmological parameters. Astronomy & Astro-
+  physics, 641:A6.
+Poisson, E. and Will, C. M. (2014). Gravity: Newtonian, Post-Newtonian, Relativistic. Cambridge
+  University Press.
+Räsänen, S. (2006). Accelerated expansion from structure formation. Journal of Cosmology and
+ Astroparticle Physics, 2006(11):003.
+Riess, A. G. et al. (2019). Large Magellanic Cloud Cepheid standards provide a 1% foundation for the
+  determination of the Hubble constant. The Astrophysical Journal, 876(1):85.
+Rossing, T. D. (1982). Chladni’s law for vibrating plates. American Journal of Physics, 50(3):271–274.
+Rubakov, V. A. (2006). The null energy condition and instability. Physical Review D, 74(6):063518.
+Rubakov, V. A. (2014). The null energy condition and its violation. Physics-Uspekhi, 57(2):128–142.
+Rubin, V. C. and Ford, W. K. (1970). Rotation of the Andromeda Nebula from a spectroscopic survey
+  of emission regions. The Astrophysical Journal, 159:379.
+Tuan, P. H., Bambi, C., Giannoni, M.-J., and Li, J.-J. (2014). From vibrating plates to laser cavities:
+  Nodal patterns and semiclassical correspondence. Physical Review E, 89(2):022911.
+Undagoitia, T. M. and Rauch, L. (2016). Dark matter direct-detection experiments. Journal of Physics
+ G: Nuclear and Particle Physics, 43(1):013001.
+Verlinde, E. (2017). Emergent gravity and the dark universe. SciPost Physics, 2:016.
+Wald, R. M. (1984). General Relativity. University of Chicago Press.
+Weisskopf, M. C. et al. (2002). An overview of the performance and scientific results from the Chandra
+ X-Ray Observatory. Publications of the Astronomical Society of the Pacific, 114(791):1–24.
+Zwicky, F. (1933). Die rotverschiebung von extragalaktischen nebeln. Helvetica Physica Acta, 6:110–127.
+
+
+
+
+                                                  59
+
