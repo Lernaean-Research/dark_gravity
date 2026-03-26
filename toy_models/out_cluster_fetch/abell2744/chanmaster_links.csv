@@ -1,6 +1,0 @@
-catalog,index,ID,access_url,aws,sciserver,content_length_bytes
-chanmaster,0,ivo://nasa.heasarc/chanmaster?5776,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/7//25907/,s3://nasa-heasarc/chandra/data/byobsid/7/25907/,/FTP/chandra/data/byobsid/7/25907/,147099469
-chanmaster,1,ivo://nasa.heasarc/chanmaster?5786,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/7//25917/,s3://nasa-heasarc/chandra/data/byobsid/7/25917/,/FTP/chandra/data/byobsid/7/25917/,133015636
-chanmaster,2,ivo://nasa.heasarc/chanmaster?5791,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/2//25922/,s3://nasa-heasarc/chandra/data/byobsid/2/25922/,/FTP/chandra/data/byobsid/2/25922/,137708445
-chanmaster,3,ivo://nasa.heasarc/chanmaster?5795,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/6//25926/,s3://nasa-heasarc/chandra/data/byobsid/6/25926/,/FTP/chandra/data/byobsid/6/25926/,220102435
-chanmaster,4,ivo://nasa.heasarc/chanmaster?5824,https://heasarc.gsfc.nasa.gov/FTP/chandra/data/byobsid/5//25955/,s3://nasa-heasarc/chandra/data/byobsid/5/25955/,/FTP/chandra/data/byobsid/5/25955/,168386430

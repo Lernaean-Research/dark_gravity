@@ -1,8 +1,0 @@
-x,y,n,pearson_r,spearman_rho
-gbar_half_rt_kms2_per_kpc,q_best_kms2,3,0.13066915242136795,-0.5
-s_in_dlng_dlnr,q_best_kms2,3,-0.8212206633261304,-1.0
-gbar_half_rt_kms2_per_kpc,v_extra_asym_kms,3,-0.04433348451180841,-0.5
-s_in_dlng_dlnr,v_extra_asym_kms,3,-0.9081898621296454,-1.0
-gbar_half_rt_kms2_per_kpc,r_t_kpc,3,0.21658393147093896,-0.5
-s_in_dlng_dlnr,outer_resid_mean_z,2,-1.0,-1.0
-s_in_dlng_dlnr,outer_resid_rms_z,2,1.0,1.0

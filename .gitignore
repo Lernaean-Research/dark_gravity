@@ -1,3 +1,4 @@
+/rubin_rsp/rubin_rsp/
 .venv/
 __pycache__/
 *.pyc
@@ -84,3 +85,20 @@ toy_models/out_predictions/**
 !toy_models/data/**/*.json
 !toy_models/data/**/*.yml
 !toy_models/data/**/*.yaml
+
+# Rubin notebook runtime outputs (generated per run)
+rubin_rsp/out/**
+
+# Keep canonical review docs and notebook source; drop volatile data products.
+rubin_rsp/data/sparc_rubin_overlap.csv
+rubin_rsp/data/sparc175_reference.csv
+rubin_rsp/data/sparc_coord_cache.csv
+rubin_rsp/data/sparc175_unresolved_independent.csv
+rubin_rsp/out/sparc175_reference_independent_report.json
+
+# Toy-model generated result trees (large/volatile)
+toy_models/out_*/**
+toy_models/out_sparc_runs_*/**
+
+# Notebook/editor runtime metadata
+**/.ipynb_checkpoints/
