@@ -1,0 +1,115 @@
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 17, in run_case
+    result = func()
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 44, in markdown_basic_usage_as_written
+    w = Wilson(
+        scale=0.25,
+        eft="SMEFT",
+        basis="Warsaw",
+    )
+TypeError: Wilson.__init__() missing 1 required positional argument: 'wcdict'
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\wcxf\classes.py", line 374, in validate
+    eft_instance = EFT[self.eft]
+                   ~~~^^^^^^^^^^
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\wcxf\classes.py", line 114, in __getitem__
+    return cls.get_instance(item)
+           ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\wcxf\classes.py", line 145, in get_instance
+    return cls.instances[_name]
+           ~~~~~~~~~~~~~^^^^^^^
+KeyError: 'KSL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 17, in run_case
+    result = func()
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 63, in attachment_smoke_test_custom_ksl
+    w = Wilson(
+        {"c1": 0.13, "kappa": 1.0},
+    ...<2 lines>...
+        basis="custom_ksl",
+    )
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\classes.py", line 149, in __init__
+    self.wc.validate()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\wcxf\classes.py", line 376, in validate
+    raise ValueError(f"EFT {self.eft} not defined")
+ValueError: EFT KSL not defined
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 17, in run_case
+    result = func()
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 72, in smeft_control_from_note
+    w = Wilson(
+        {"uH_33": 1e-6},
+    ...<2 lines>...
+        basis="Warsaw",
+    )
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\classes.py", line 149, in __init__
+    self.wc.validate()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\.venv\Lib\site-packages\wilson\wcxf\classes.py", line 382, in validate
+    assert unknown_keys == set(), \
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Wilson coefficients do not exist in this basis: {'uH_33'}
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 93, in smeft_control_with_running_probe
+    "initial": dict(w.dict),
+                    ^^^^^^
+AttributeError: 'Wilson' object has no attribute 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 17, in run_case
+    result = func()
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 98, in smeft_control_with_running_probe
+    "initial": dict(w.dict),
+                    ^^^^^^
+AttributeError: 'Wilson' object has no attribute 'dict'
+Traceback (most recent call last):
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 17, in run_case
+    result = func()
+  File "D:\#Documents\#Publication\Spacetime_Mechanics\tools\wilson_compatibility_test.py", line 106, in inspect_available_top_level_objects
+    import wcxf
+ModuleNotFoundError: No module named 'wcxf'
+python_version=3.13.11 (tags/v3.13.11:6278944, Dec  5 2025, 16:26:58) [MSC v.1944 64 bit (AMD64)]
+wilson_version=2.5.2
+Wilson_signature=(wcdict, scale, eft, basis)
+
+=== markdown_basic_usage_as_written ===
+{
+  "status": "error",
+  "exception_type": "TypeError",
+  "message": "Wilson.__init__() missing 1 required positional argument: 'wcdict'"
+}
+
+=== attachment_smoke_test_custom_ksl ===
+{
+  "status": "error",
+  "exception_type": "ValueError",
+  "message": "EFT KSL not defined"
+}
+
+=== smeft_control_from_note ===
+{
+  "status": "error",
+  "exception_type": "AssertionError",
+  "message": "Wilson coefficients do not exist in this basis: {'uH_33'}"
+}
+
+=== smeft_control_with_running_probe ===
+{
+  "status": "error",
+  "exception_type": "AttributeError",
+  "message": "'Wilson' object has no attribute 'dict'"
+}
+
+=== inspect_available_top_level_objects ===
+{
+  "status": "error",
+  "exception_type": "ModuleNotFoundError",
+  "message": "No module named 'wcxf'"
+}
+

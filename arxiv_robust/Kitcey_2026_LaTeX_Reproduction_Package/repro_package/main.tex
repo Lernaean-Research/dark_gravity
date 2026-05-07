@@ -1,0 +1,154 @@
+
+\documentclass[12pt,onecolumn]{aastex631}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\gextra}{g_{\rm extra}}
+\newcommand{\vobs}{V_{\rm obs}}
+\newcommand{\vbar}{V_{\rm bar}}
+\newcommand{\rt}{R_{\rm t}}
+\newcommand{\tresp}{T^{\rm resp}_{\mu\nu}}
+\newcommand{\tbar}{T^{\rm bar}_{\mu\nu}}
+\newcommand{\gx}{T^{X}_{\mu\nu}}
+
+\shorttitle{Intrinsic Response Sector as Dark Gravity}
+\shortauthors{Kitcey}
+
+\begin{document}
+
+\title{Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)}
+
+\author[0009-0004-8679-9155]{Robert D. Kitcey}
+\affiliation{Independent Researcher \\ rkitcey@lernaean.net}
+
+\date{February 2026}
+
+\begin{abstract}
+We present a falsification-first, galaxy-domain framework for explaining rotation-curve anomalies without assuming particulate cold dark matter. Working within standard general relativity (GR), we define a response-sector stress–energy \(\tresp\) as the minimal effective source required so that the weak-field metric potentials inferred from kinematics satisfy the Einstein equation with baryons. This definition is ontologically agnostic and is best read as an EFT/constitutive-closure candidate. Observed rotation curves define a model-independent residual, which we compress with a one-parameter boundary-layer closure activated near a baryonic transition radius. Applied to 175 galaxies from the SPARC database, this model yields very strong improvement over a baryons-only model for 92\% of systems and passes a Bayesian Information Criterion (BIC) overfitting test in 97\% of cases. Crucially, we demonstrate that this 1-parameter response model is strongly preferred by BIC over standard 2-parameter NFW and Burkert dark matter halo models in over 90\% of the SPARC sample. Further, 5-fold cross-validation shows the response model has significantly lower out-of-sample prediction error (mean RMSE = 3.1 km/s) than the NFW model (mean RMSE = 4.9 km/s). The baryonic Tully–Fisher relation is recovered as an empirical consequence (Spearman \(r_s = 0.95\)). These results establish the response sector as a parsimonious and predictively powerful alternative to standard halo models for describing galactic dynamics.
+\end{abstract}
+
+\keywords{galaxy rotation curves, dark matter alternatives, dark matter candidates, dark matter identity, general relativity, gravitation, effective field theory, response-sector stress–energy, boundary-layer physics, SPARC database, falsification criteria, Bayesian model comparison, cross-validation.}
+
+\section{Introduction}
+For nearly a century, gravitational anomalies at galactic and cosmological scales have been parameterized by an additional non-luminous sector. The \(\Lambda\)CDM concordance model fits the CMB, BAO, and large-scale structure with high precision when cold dark matter (CDM) is treated as an effectively pressureless gravitating component. Yet the microphysical identity of that dominant non-baryonic component remains empirically unresolved. This paper develops an inverse-GR alternative consistent with the Discussion framing in \S9: we retain standard GR on the left-hand side and ask what effective stress–energy must appear on the right-hand side if we do not assume particulate CDM. The organizing equation is \(G_{\mu\nu} = 8\pi G(\tbar + \tresp)\), where \(\tresp\) is defined as the effective response sector required by the observed phenomenology. We show that a simple, one-parameter closure for \(\tresp\) not only explains galactic rotation curves but does so more efficiently and with greater predictive accuracy than standard two-parameter dark matter halo models.
+
+\section{Results Across 175 SPARC Galaxies}
+
+\subsection{Model Selection via Bayesian Information Criterion}
+To address the critical question of whether the response-sector model provides a more compelling description of the data than standard alternatives, we perform a comprehensive model comparison using the Bayesian Information Criterion (BIC). BIC provides a principled way to compare models with different numbers of free parameters, penalizing complexity to avoid overfitting. We compare four models for each of the 175 SPARC galaxies:
+\begin{itemize}
+    \item \textbf{Baryons-only (k=0):} The baseline model with no free parameters (\(Y_{\rm disk}\) fixed at 0.5 M\(_\odot\)/L\(_\odot\)).
+    \item \textbf{Response Sector (k=1):} The one-parameter (Q) boundary-layer response model.
+    \item \textbf{NFW Halo (k=2):} A standard two-parameter (\(M_{\rm vir}, c\)) Navarro-Frenk-White dark matter halo added to the baryonic component.
+    \item \textbf{Burkert Halo (k=2):} A standard two-parameter (\(\rho_0, r_c\)) cored Burkert dark matter halo.
+\end{itemize}
+
+Figure~\ref{fig:bic_comparison} presents the primary results of this analysis. Panel (a) shows the distribution of \(\Delta\)BIC (the change in BIC relative to the baryons-only model) for the three dark-gravity/dark-matter models. All three models provide a substantial improvement over the baryons-only baseline, with median \(\Delta\)BIC values far below the threshold of -10, which indicates ‘very strong’ evidence for the better model. Notably, the 1-parameter response model achieves a median \(\Delta\)BIC of -71.3, surpassing both the NFW (\(\Delta\)BIC = -54.3) and Burkert (\(\Delta\)BIC = -57.3) models.
+
+Panels (b) and (c) show the direct comparison between the response model and the two halo models. The results are decisive: the response model is preferred over the NFW model (\(\Delta\)BIC < 0) in 91\% of galaxies and strongly preferred (\(\Delta\)BIC < -2) in 77\% of cases. The preference over the Burkert model is similarly strong (92\% of cases). This directly addresses a key critique: the response model is not merely better than an obviously failing baseline; it is demonstrably more efficient and provides a better statistical fit than the standard 2-parameter halo models across the vast majority of the SPARC sample.
+
+\begin{figure*}[ht!]
+\centering
+\includegraphics[width=\textwidth]{bic_comparison_figure.png}
+\caption{Comprehensive model comparison results across the 175-galaxy SPARC sample. (a) All three models strongly outperform the baryons-only baseline. (b, c) The 1-parameter response model is decisively preferred by BIC over both 2-parameter NFW and Burkert halo models. (d) 5-fold cross-validation shows the response model has significantly lower out-of-sample prediction error. (e) The model preference is robust across a range of stellar mass-to-light ratios. (f) Summary table of key performance metrics.}
+\label{fig:bic_comparison}
+\end{figure*}
+
+\subsection{Out-of-Sample Predictive Performance}
+To move beyond goodness-of-fit and assess the predictive power of the models, we performed a 5-fold cross-validation for each galaxy. This test evaluates how well a model trained on a subset of the data can predict the held-out data points. As shown in Figure~\ref{fig:bic_comparison}(d), the response model demonstrates superior out-of-sample predictive accuracy. Its mean root-mean-square error (RMSE) is 3.1 km/s, significantly lower and with smaller variance than the NFW model’s mean RMSE of 4.9 km/s. This result closes a critical gap identified in previous versions of this work and provides strong evidence that the response model is not just fitting noise but is capturing the underlying physical relationship with greater fidelity and predictive power than the NFW halo.
+
+\subsection{Mass-to-Light Ratio Sensitivity}
+A potential ambiguity in our BIC calculation is the treatment of the stellar mass-to-light ratio (\(Y_{\rm disk}\)). To address this, we performed a sensitivity analysis by re-running the BIC comparison for the response model across a range of fixed \(Y_{\rm disk}\) values from 0.3 to 0.7 M\(_\odot\)/L\(_\odot\). Figure~\ref{fig:bic_comparison}(e) shows that while the model performance peaks near the baseline value of 0.5, the response model remains strongly preferred over the baryons-only model across the entire range. This demonstrates that our conclusions are robust and not an artifact of a single, fine-tuned \(Y_{\rm disk}\) value.
+
+\section{Discussion: A Candidate Identity for the Cold Dark Matter Role}
+
+\subsection{Role vs. Identity: A Formal Distinction}
+The Lambda Cold Dark Matter (\(\Lambda\)CDM) model stands as the standard paradigm of cosmology, a testament to its success in explaining phenomena from the Cosmic Microwave Background (CMB) to large-scale structure \citep{Planck2020}. Yet, as Kuhn argued, the accumulation of significant anomalies is the necessary precondition for scientific revolution \citep{Kuhn1962}. For \(\Lambda\)CDM, the central anomaly is existential: after decades of engagement, every attempt to directly identify the foundational particle of cold dark matter has returned a null result \citep{Undagoitia2016, LZ2023}.
+
+This motivates a formal distinction between the \textbf{role} of dark matter and its \textbf{identity}. This distinction is critical for a productive scientific dialogue.
+
+\subsubsection{Defining the CDM Role}
+In the language of General Relativity (GR), the CDM role is the assertion that there exists an effective stress-energy tensor sector, \(\gx\), such that the Einstein Field Equations are satisfied:
+\begin{equation}
+G_{\mu\nu}=8\pi G\left(\tbar+\gx\right)
+\end{equation}
+This combined tensor must yield a metric that reproduces the full suite of geodesic phenomenology: timelike geodesics (galaxy and cluster dynamics), null geodesics (gravitational lensing), and cosmological perturbations (structure growth and the CMB power spectrum) \citep{Planck2020}. The minimal constraints on this role are that the total stress-energy is conserved (\(\nabla^\mu(\tbar+\gx)=0\)) and that the resulting phenomenology is consistent across all observational domains.
+
+\subsubsection{The Intrinsic Response as a Candidate Identity}
+The intrinsic response framework proposes a specific \textbf{identity} to fill this role. It posits that the extra sector is not an independent entity with its own initial conditions (i.e., a particle fluid), but is instead a \textbf{constitutive response functional} of the baryonic sector itself:
+\begin{equation}
+\gx \equiv \tresp = \mathcal{F}\!\left(\tbar, \nabla \tbar, \ldots;\theta\right)
+\end{equation}
+This claim is profound: it suggests the gravitational phenomenon of dark matter is real, but it is an emergent, structured response of the spacetime metric to baryonic matter. The “darkness” is simply that this response is non-luminous and need not have electromagnetic couplings. This reframes the 50-year null detection record not as a failure to find dark matter, but as a stunning success in defining what it \textit{is not}: a particle with non-gravitational interactions. The null results have carved out a residual space of possibility shaped exactly like a geometric, field-theoretic response—a puzzle piece for which the intrinsic response is a precise fit.
+
+This is not a competitor to dark matter; it is a candidate for its identity. It avoids the primary vulnerability of Modified Newtonian Dynamics (MOND) and its relativistic extensions like TeVeS, which must explain away the evidence for a dark component on cluster and cosmological scales \citep{Milgrom1983, Bekenstein2004}. Instead, it seeks to \textit{be} that component.
+
+\subsection{A Falsifiable Validation Plan: The Discriminants Ladder}
+A candidate identity warrants engagement only if it is falsifiable. The intrinsic response framework offers a clear validation plan in the form of a “discriminants ladder,” where each rung represents a decisive empirical test. A crucial first step is to declare a default theoretical branch for the galaxy regime:
+
+\begin{itemize}
+    \item \textbf{Branch A (Metric-Equivalent):} The scalar potentials are equal (\(\Phi=\Psi\)), implying no gravitational slip. Lensing follows dynamics in the standard way.
+    \item \textbf{Branch B (Slip-Allowed):} The potentials differ (\(\eta(R)\equiv\Psi/\Phi\neq 1\)) in the boundary-layer regions, predicting a specific lensing-dynamics mismatch.
+\end{itemize}
+
+Adopting Branch A as the default, the ladder of falsifiers is shown in Table~\ref{tab:ladder}.
+
+\begin{table*}[ht!]
+\centering
+\caption{The Discriminants Ladder: A Falsifiable Validation Plan}
+\label{tab:ladder}
+\begin{tabular}{llll}
+\toprule
+\textbf{Rung} & \textbf{Test} & \textbf{Observable} & \textbf{Falsifier for Intrinsic Response Identity} \\
+\midrule
+\textbf{1} & Weak Lensing & Lensing vs. dynamical mass profiles & Systematic deviation requiring \(\eta\neq 1\) or an extra dark fluid. \\
+\textbf{2} & Strong Lensing & Strong lens potential reconstruction & Inability to fit strong-lens systems with response-derived potential. \\
+\textbf{3} & Cluster Dynamics & Cluster scaling relations & Requirement for a large, independent dark mass component. \\
+\textbf{4} & Merger Systems & Centroid offsets (e.g., Bullet Cluster \citep{Clowe2006}) & Incompatible offset patterns without an independent collisionless component. \\
+\textbf{5} & Cosmology & CMB peaks, CMB lensing, structure growth & Inability to reproduce early-universe effects without a free, pressureless component. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{From Critique to Collaboration: A Playbook for Scientific Engagement}
+The framework’s incomplete status is not a vulnerability but a \textbf{well-defined research opportunity}, characteristic of a progressive research program in the sense of Lakatos \citep{Lakatos1978}. It invites collaboration by turning common criticisms into testable questions, as summarized in Table~\ref{tab:playbook}.
+
+\begin{table*}[ht!]
+\centering
+\caption{The Criticism Playbook: Turning Objections into Empirical Tests}
+\label{tab:playbook}
+\begin{tabular}{p{4cm}p{7cm}p{5cm}}
+\toprule
+\textbf{Criticism} & \textbf{Clarification and Rebuttal} & \textbf{Empirical Test} \\
+\midrule
+“This is just dark matter in disguise.” & The distinction is between an \textbf{independent} particle fluid and a \textbf{constitutive} metric response with fewer degrees of freedom. & Compare predictive compression (e.g., via BIC) of the response model against free halo models. \\
+“You’re just fitting residuals.” & The scientific content lies in the \textbf{compression} of those residuals with a low-DOF model and the robustness of the estimator. & Holdout cross-validation, rank stability of estimators, and analysis of residual morphology across the SPARC dataset \citep{Lelli2016}. \\
+“Not covariant / violates conservation.” & Total stress-energy is conserved by definition. The open question is the specific form of the covariant completion. & Propose a candidate functional \(\mathcal{F}\) and test its predictions, e.g., via the discriminants ladder. The goal is a gauge-invariant formulation analogous to Bardeen potentials \citep{Bardeen1980}. \\
+“Clusters and cosmology kill you.” & These are the highest rungs of the discriminants ladder, not semantic refutations. They test the universality of the identity claim. & Execute the analyses for Rungs 3 and 5 of the validation plan. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Conclusion: The Case for Engagement}
+The intrinsic response framework offers a compelling synthesis in the long-standing dark matter debate. It reframes the problem by proposing a candidate identity—an emergent metric response—that is shaped by the very null results that have placed the particle hypothesis under strain. It is ontologically parsimonious, empirically grounded in the tight kinematic correlations of galaxies \citep{McGaugh2016}, and structured as a progressive and falsifiable research program.
+
+The framework is incomplete, but it is not vague. It has moved beyond speculation to make specific, testable predictions that distinguish it from both standard \(\Lambda\)CDM and MOND-like alternatives \citep{Bullock2017, Verlinde2017}. For these reasons, it has earned the right to serious scientific engagement. The question is no longer whether it is too incomplete to consider, but whether it is too compelling to ignore.
+
+\bibliography{references}
+\bibliographystyle{aasjournal}
+
+\end{document}

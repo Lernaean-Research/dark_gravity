@@ -1,0 +1,11 @@
+{
+  "source_of_truth": {
+    "docx": "../Kitcey_2026_Intrinsic_Response_Sector_DM_Candidacy.v.5.0.7.docx",
+    "pdf": "../Kitcey_2026_Intrinsic_Response_Sector_DM_Candidacy.v.5.0.7.pdf"
+  },
+  "notes": [
+    "PDF is the visual/semantic reference.",
+    "DOCX is used only to extract text and structure into a clean LaTeX project.",
+    "Do not use pandoc as the primary authoring path for arxiv_robust."
+  ]
+}

@@ -1,0 +1,34 @@
+\section{Empirical Validation Ladder}
+
+Robust empirical claims require more than curve-fitting. This section defines the validation hierarchy that the response-sector framework must satisfy.
+
+\subsection{Step 1: Data Reproducibility}
+
+All results are generated from a single reproducible pipeline operating on the public SPARC database files. Inclusion criteria, missing-data handling, and quality flags are defined explicitly. The per-galaxy fitted summaries, six-panel diagnostics, and analysis tables are regenerated from a single command.
+
+\subsection{Step 2: Baseline Fits and Residual Definitions}
+
+The primary edge-amplitude measure is \textbf{(see PDF for definition; symbol and equation not recovered from DOCX extraction)}. Sensitivity alternates include \textbf{(see PDF for the ``Huber robust outer-subset'' definition)} and \textbf{(see PDF for the asymptotic-velocity-excess definition)}. Baseline scale controls include \textbf{(see PDF; list of baseline controls not recovered)} with distance \textbf{(see PDF; distance variable definition)} as an optional confounder check.
+
+\subsection{Step 3: Non-Fragile Inference}
+
+Rather than relying on asymptotic $p$-values, we employ permutation-based inference: two-tailed permutation $p$-values for Pearson and Spearman correlations, with a partial-correlation mode (residualizing both dependent and independent variables on controls). This is robust to non-normality, outliers, and small-sample effects.
+
+\subsection{Step 4: Stratified Permutation Stress Tests}
+
+To guard against confounding, we stratify permutation tests by:
+\begin{itemize}
+	\item SPARC quality flag \textbf{(see PDF; flag name/values not recovered)};
+	\item distance quantiles;
+	\item \textbf{(see PDF; additional stratification axis not recovered)} $\times$ distance quantiles; and
+	\item coarse morphological type.
+\end{itemize}
+Any claimed correlation must survive all stratified tests to be considered robust.
+
+\subsection{Step 5: Out-of-Sample Cross-Validation}
+
+The decisive test uses repeated $k$-fold cross-validation to compare nested models: baseline (scale controls only), extended (scale + intrinsic-structure features), and full (scale + structure + environment). If the response-sector hypothesis is correct, intrinsic-structure features should improve out-of-sample prediction of the edge amplitude more than environment features.
+
+\subsection{Step 6: Negative Controls}
+
+Shuffled-environment columns should produce no significant correlations. Distance-only models serve as confounder detectors. These controls ensure that claimed signals are not artifacts of data structure.

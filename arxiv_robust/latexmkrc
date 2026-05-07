@@ -1,0 +1,13 @@
+# latexmk configuration for arxiv_robust
+# Keep it pdfLaTeX-first for maximal arXiv compatibility.
+
+$out_dir = 'build';
+$pdf_mode = 1;
+$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
+$bibtex = 'bibtex %O %B';
+
+# Only build the actual paper entrypoint by default.
+@default_files = ('main.tex');
+
+# Make sure we rerun enough times for refs/cites.
+$max_repeat = 5;

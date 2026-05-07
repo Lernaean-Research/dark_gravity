@@ -1,0 +1,14 @@
+wilson_version=2.5.2
+has_wcxf_attr=True
+eft_keys_sample=["SMEFT", "WET-2", "WET-3", "WET-4", "WET"]
+basis_keys_sample=[["SMEFT", "Higgs-Warsaw up"], ["SMEFT", "SMEFTsim_general"], ["SMEFT", "SMEFTsim_MFV"], ["SMEFT", "SMEFTsim_top"], ["SMEFT", "SMEFTsim_topU3l"], ["SMEFT", "SMEFTsim_U35"], ["SMEFT", "Warsaw"], ["WET-2", "JMS"], ["WET-3", "Bern"], ["WET-3", "flavio"]]
+warsaw_count=1635
+warsaw_sample=["G", "Gtilde", "W", "Wtilde", "phi", "phiBox", "phiD", "phiG", "phiB", "phiW", "phiWB", "phiGtilde", "phiBtilde", "phiWtilde", "phiWtildeB", "uphi_11", "uphi_12", "uphi_13", "uphi_21", "uphi_22", "uphi_23", "uphi_31", "uphi_32", "uphi_33", "dphi_11", "dphi_12", "dphi_13", "dphi_21", "dphi_22", "dphi_23", "dphi_31", "dphi_32", "dphi_33", "ephi_11", "ephi_22", "ephi_33", "eW_11", "eW_22", "eW_33", "eB_11"]
+chosen=G
+created_ok=True
+public_methods=["clear_cache", "from_wc", "get_option", "load_wc", "match_run", "matching_parameters", "parameters", "set_default_option", "set_option", "wc"]
+has_wc=True
+wc_dict_sample=["G"]
+match_run_ok=True
+out_type=WC
+out_dict_sample=["G", "phi", "phiBox", "phiD", "phiG", "phiB", "phiW", "phiWB", "phiGtilde", "phiBtilde"]

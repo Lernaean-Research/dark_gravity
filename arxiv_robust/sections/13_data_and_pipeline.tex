@@ -1,0 +1,33 @@
+\section{Data and Pipeline}
+
+% TODO: Port text/equations into each subsection; verify against the PDF.
+
+\subsection{The SPARC Database}
+The Spitzer Photometry and Accurate Rotation Curves (SPARC) database \citep{Lelli2016SPARC} provides uniformly measured HI/H$\alpha$ rotation curves and $3.6\,\mu\mathrm{m}$ Spitzer photometry for 175 nearby galaxies spanning a factor of $\sim 10^4$ in luminosity, $\sim 10^2$ in size, and a wide range of morphologies (from gas-rich dwarfs to massive spirals). Each galaxy entry includes the observed circular velocity \emph{(see PDF: $V_{\mathrm{obs}}(R)$ with uncertainties)}, the baryonic rotation-curve components (stellar disk, gas, and where relevant, stellar bulge), the adopted distance and inclination, and data quality flags.
+
+\subsection{Baryonic Velocity Construction}
+The baryonic velocity prediction is assembled from SPARC components:
+
+\emph{(Equation from PDF: $V_{\mathrm{bar}}^2 = V_{\mathrm{gas}}^2 + \Upsilon_{\star,\mathrm{disk}} V_{\mathrm{disk}}^2 + \Upsilon_{\star,\mathrm{bulge}} V_{\mathrm{bulge}}^2$ or equivalent.)}
+
+where $\Upsilon_{\star,\mathrm{disk}}$ and $\Upsilon_{\star,\mathrm{bulge}}$ are the stellar mass-to-light ratios. We adopt \emph{(see PDF: baseline $\Upsilon_\star$ choice)} as the baseline, consistent with stellar population synthesis models at $3.6\,\mu\mathrm{m}$ \citep{McGaughSchombert2014}, with sensitivity sweeps across \emph{(see PDF: range of $\Upsilon_\star$)} to quantify photometric systematic uncertainties.
+
+\subsection{Transition Radius Determination}
+For each galaxy, we identify the transition radius $R_t$ as the measured radius closest to where \emph{(see PDF: baryonic/observed relation criterion)} crosses the empirical acceleration scale \emph{(see PDF: $a_0$ or equivalent)}. This is a data-derived quantity, not a free parameter.
+
+\subsection{Fit Procedure and Amplitude Determination}
+The single free parameter \emph{(see PDF: amplitude parameter, e.g. $Q$)} is determined for each galaxy by minimizing the weighted \emph{(see PDF: $\chi^2$ definition)} between \emph{(see PDF: model prediction)} and \emph{(see PDF: observed rotation curve)}. As an independent check, we compute \emph{(see PDF: robust outer amplitude estimator, e.g. $Q_{\mathrm{est}}$)}, a robust outer-subset estimator using Huber's M-estimator applied to the velocity deficit \emph{(see PDF: $\Delta V^2(R)$)} in the outer region ($R > R_t$). The Huber estimator down-weights outliers while remaining efficient under Gaussian conditions, providing an amplitude estimate that does not depend on the model's functional form.
+
+\subsection{Six-Panel Diagnostic Atlas}
+For each galaxy, a standardized six-panel diagnostic is produced:
+
+\begin{enumerate}
+\item rotation curve with \emph{(see PDF: $V_{\mathrm{obs}}$, $V_{\mathrm{bar}}$, and model curves)};
+\item effective potential \emph{(see PDF: $\Phi(R)$ proxy)} vs. \emph{(see PDF: radius/acceleration)};
+\item dyed spacetime potential-depth map (a visualization proxy, not a GR embedding);
+\item 3D potential surface;
+\item illustrative orbit diagram; and
+\item residuals comparing both model closures against the raw baryonic deficit.
+\end{enumerate}
+
+This atlas serves as a comprehensive per-galaxy audit trail.

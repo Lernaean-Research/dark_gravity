@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "generated_utc": "2026-04-06T00:51:32.645197+00:00",
+    "seed": 20260545,
+    "satellites": 24,
+    "gas_nodes": 16,
+    "max_order": 5,
+    "radial_points": 36,
+    "shell_directions": 48,
+    "enable_time_memory": true,
+    "tau_mem_myr": 220.0,
+    "assembly_time_myr": 4200.0,
+    "assembly_alpha": 0.5,
+    "mode_tau_power": 0.2,
+    "input_csv": "D:\\#Documents\\#Publication\\Spacetime_Mechanics\\repro_checks\\cluster_mass_summary.csv",
+    "input_sha256": "b7784c1fd5dd1384c173704b5a091d182bafd99446ec8acb587091956517fc4c",
+    "anchor": {
+      "z": 0.224,
+      "m500_msun": 474331850000000.06,
+      "mbar_msun": 64034799750000.01,
+      "mgas_msun": 59291481250000.01,
+      "mstar_msun": 4743318500000.001,
+      "sigma_kms": 747.7300678465688
+    },
+    "r500_kpc": 1124.70707856434,
+    "gas_profile": {
+      "beta": 0.67,
+      "rc_kpc": 134.9648494277208,
+      "r_max_kpc": 1124.70707856434
+    },
+    "constants": {
+      "G_KPC": 4.3009e-06,
+      "A0_KMS2": 3702.813,
+      "H0_KMS_MPC": 67.4,
+      "OMEGA_M": 0.315,
+      "OMEGA_L": 0.685
+    }
+  },
+  "gates": {
+    "higher_modes_non_negligible": {
+      "value": 0.05051489941091603,
+      "pass": true,
+      "criterion": "0.05 <= higher_mode_fraction(R500) <= 0.55"
+    },
+    "closure_improves_with_modes": {
+      "value": 0.049523605987234376,
+      "pass": true,
+      "criterion": "closure_full(R500) > closure_ground(R500)"
+    },
+    "cluster_scale_closure": {
+      "value": 1.1139895250913057,
+      "pass": true,
+      "criterion": "0.65 <= closure_full(R500) <= 1.20"
+    },
+    "inner_profile_reasonable": {
+      "value": 0.7368388573257652,
+      "pass": true,
+      "criterion": "0.65 <= closure_full(0.5 R500) <= 1.35"
+    },
+    "outer_profile_not_divergent": {
+      "value": 1.2550907598902035,
+      "pass": true,
+      "criterion": "0.50 <= closure_full(1.4 R500) <= 1.50"
+    },
+    "baryon_fraction_physical": {
+      "value": 0.11994126072952044,
+      "pass": true,
+      "criterion": "0.10 <= f_b(R500) <= 0.22"
+    },
+    "velocity_dispersion_anchor": {
+      "value": 820.4342542801021,
+      "pass": true,
+      "criterion": "|sigma_pred - sigma_anchor| / sigma_anchor <= 0.25",
+      "reference": 747.7300678465688
+    }
+  },
+  "key_rows": {
+    "at_half_r500": {
+      "r_kpc": 562.3535392821701,
+      "g_bar_total": 381.33033998169543,
+      "g_bar_gas": 333.45930934228835,
+      "g_bar_galaxies": 47.871030639407074,
+      "g_resp_ground": 1865.9832065609435,
+      "g_resp_higher": 190.91582995592478,
+      "g_resp_total": 2056.8990365168684,
+      "m_eff_bary_msun": 28038894163991.832,
+      "m_eff_ground_msun": 165243045407398.97,
+      "m_eff_full_msun": 179280923302511.62,
+      "m_obs_analog_msun": 243310896975740.53,
+      "closure_ground": 0.6791436284248076,
+      "closure_full": 0.7368388573257652,
+      "higher_mode_fraction": 0.09281730729925358,
+      "mean_activation": 0.9998339014496903,
+      "baryon_fraction_full": 0.15639641768622586,
+      "gas_mass_enclosed_msun": 24518978172822.668,
+      "shell_directions": 48,
+      "time_memory_enabled": 1,
+      "memory_factor_mean": 0.9097212219021902,
+      "mode_1": 1865.9832065609435,
+      "memory_factor_mode_1": 0.9259222483605132,
+      "memory_factor_mode_2": 0.9149075619080301,
+      "memory_factor_mode_3": 0.9077207413367534,
+      "memory_factor_mode_4": 0.9022572104923149,
+      "memory_factor_mode_5": 0.8977983474133389,
+      "mode_2": 145.39688546270594,
+      "mode_3": 31.778171688692947,
+      "mode_4": 9.87847436393961,
+      "mode_5": 3.8622984405862777
+    },
+    "at_r500": {
+      "r_kpc": 1129.2059068785975,
+      "g_bar_total": 214.4886382114319,
+      "g_bar_gas": 199.98865637993742,
+      "g_bar_galaxies": 14.499981831494493,
+      "g_resp_ground": 1494.2920865067733,
+      "g_resp_higher": 79.4999462272608,
+      "g_resp_total": 1573.7920327340341,
+      "m_eff_bary_msun": 63590352078223.85,
+      "m_eff_ground_msun": 506609435424732.44,
+      "m_eff_full_msun": 530179120108020.75,
+      "m_obs_analog_msun": 475928281340496.3,
+      "closure_ground": 1.0644659191040713,
+      "closure_full": 1.1139895250913057,
+      "higher_mode_fraction": 0.05051489941091603,
+      "mean_activation": 0.9999858040708957,
+      "baryon_fraction_full": 0.11994126072952044,
+      "gas_mass_enclosed_msun": 59291481250000.01,
+      "shell_directions": 48,
+      "time_memory_enabled": 1,
+      "memory_factor_mean": 0.9362889045386146,
+      "mode_1": 1494.2920865067733,
+      "memory_factor_mode_1": 0.947723496539494,
+      "memory_factor_mode_2": 0.9399500696921599,
+      "memory_factor_mode_3": 0.9348775558622164,
+      "memory_factor_mode_4": 0.9310207746868073,
+      "memory_factor_mode_5": 0.9278726259123954,
+      "mode_2": 70.85901204222534,
+      "mode_3": 7.508316838441488,
+      "mode_4": 0.983809659386997,
+      "mode_5": 0.14880768720697973
+    },
+    "at_outer": {
+      "r_kpc": 1554.345182575918,
+      "g_bar_total": 113.9739827684557,
+      "g_bar_gas": 105.54962681733882,
+      "g_bar_galaxies": 8.424355951116896,
+      "g_resp_ground": 1212.247576036666,
+      "g_resp_higher": 42.82672849279231,
+      "g_resp_total": 1255.0743045294582,
+      "m_eff_bary_msun": 64023781666214.46,
+      "m_eff_ground_msun": 744992124162796.1,
+      "m_eff_full_msun": 769049624373797.2,
+      "m_obs_analog_msun": 612744232489668.2,
+      "closure_ground": 1.215828864085404,
+      "closure_full": 1.2550907598902035,
+      "higher_mode_fraction": 0.03412286295579013,
+      "mean_activation": 0.9999978273527577,
+      "baryon_fraction_full": 0.0832505206908412,
+      "gas_mass_enclosed_msun": 59291481250000.01,
+      "shell_directions": 48,
+      "time_memory_enabled": 1,
+      "memory_factor_mean": 0.9456964703743964,
+      "mode_1": 1212.247576036666,
+      "memory_factor_mode_1": 0.9554426484521842,
+      "memory_factor_mode_2": 0.9488170437323209,
+      "memory_factor_mode_3": 0.9444935294116314,
+      "memory_factor_mode_4": 0.941206224552214,
+      "memory_factor_mode_5": 0.9385229057236316,
+      "mode_2": 39.87514885969292,
+      "mode_3": 2.721112284848274,
+      "mode_4": 0.21275199572909212,
+      "mode_5": 0.01771535252202346
+    }
+  },
+  "outputs": {
+    "toy_cluster_sources.csv": "810681b99f4b5ec573cca90a726bcbb78995ce8d038ffe6895fd5e2a077d932d",
+    "toy_cluster_profile.csv": "d547ec457e272c93ed675c16129b3ef3b89d6225101f80ac8c06c8ad0e2b4798",
+    "toy_cluster_summary.json": "ff25339022ffeff62cd69aad746a048d72d4ca03e52c7e3e98b0bbc4fadabd77"
+  }
+}

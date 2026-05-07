@@ -38,14 +38,21 @@ arxiv/scratch/
 
 # arXiv working directories and exports
 arxiv/
-arxiv_robust/
 overleaf_export/
 *_overleaf.zip
 *_export.zip
 *.zip
 
+# arxiv_robust: exclude build/scratch cruft but allow the repro_package
 arxiv_robust/build/
 arxiv_robust/scratch/
+arxiv_robust/*/build/
+arxiv_robust/*/scratch/
+# exclude debug/archive Python files from repro_package
+arxiv_robust/**/sparc_analysis_ARCHIVE_*.py
+arxiv_robust/**/sparc_analysis_repaired_attempt.py
+# exclude empty/transient LaTeX artifacts
+arxiv_robust/**/*.synctex\(busy\)
 
 # --- toy_models: keep methodology + manifests, avoid huge third-party data ---
 # Raw FITS / archives / compressed products are typically enormous and/or not ours.

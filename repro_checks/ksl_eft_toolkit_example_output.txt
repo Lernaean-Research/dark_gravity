@@ -1,0 +1,112 @@
+Initial coefficients at mu*:
+{'c1': 0.13, 'kappa': 1.0, 'cR2': 0.0, 'cRicci2': 0.0, 'cBoxPhi': 0.0, 'cGradPhiR': 0.0}
+
+Evolved coefficients at 1 GeV using placeholder gamma:
+{'c1': 0.12644514316360442, 'kappa': 1.01395947979003, 'cR2': 0.0, 'cRicci2': 0.0, 'cBoxPhi': 0.0, 'cGradPhiR': 0.0}
+
+T_Q_to_C approx 1.979e-116
+rho_CKBU approx 6.959e-43 GeV^4, convention_factor=1
+
+Toy fit seed:
+{'c1': 0.11, 'kappa': 0.81, 'cR2': 0.0, 'cRicci2': 0.0, 'cBoxPhi': 0.0, 'cGradPhiR': 0.0}
+
+Toy nuisance blocks:
+['lattice_systematics', 'correlation_bias']
+
+Toy nuisance seed:
+{'lattice_scale_shift': 0.02, 'common_response_shift': -0.03, 'corr_length_bias': -0.15}
+
+Toy covariance matrix:
+[[6.10351563e-09 2.18750000e-05]
+ [2.18750000e-05 6.40000000e-01]]
+
+Toy fitted coefficients:
+{'c1': 0.1268888608485429, 'kappa': 0.9981830747594888, 'cR2': 0.0, 'cRicci2': 0.0, 'cBoxPhi': 0.0, 'cGradPhiR': 0.0}
+
+Toy fitted nuisance parameters:
+{'lattice_scale_shift': 0.0034415225719990335, 'common_response_shift': 0.0022025744378346883, 'corr_length_bias': -1.5165829184905111e-12}
+
+Compact fit summary table:
+parameter             | kind        | value        | error    
+----------------------+-------------+--------------+----------
+c1                    | coefficient | 0.126889     | 0.0277367
+kappa                 | coefficient | 0.998183     | 0.426826 
+lattice_scale_shift   | nuisance    | 0.00344152   | 0.0454759
+common_response_shift | nuisance    | 0.00220257   | 0.0788865
+corr_length_bias      | nuisance    | -1.51658e-12 | 0.2      
+
+Free-parameter order:
+['c1', 'kappa', 'lattice_scale_shift', 'common_response_shift', 'corr_length_bias']
+
+Approximate parameter errors:
+{'c1': 0.02773665013607206, 'kappa': 0.4268261092069694, 'lattice_scale_shift': 0.04547593576588244, 'common_response_shift': 0.078886486003249, 'corr_length_bias': 0.20000000000000007}
+
+Approximate parameter covariance:
+[[ 7.69321761e-04  4.57578758e-04 -8.64608518e-04 -5.53349455e-04
+   2.53818733e-13]
+ [ 4.57578758e-04  1.82180528e-01  5.23398152e-03 -3.05714512e-03
+  -2.00397550e-02]
+ [-8.64608518e-04  5.23398152e-03  2.06806073e-03 -2.76441132e-04
+   1.26812570e-13]
+ [-5.53349455e-04 -3.05714512e-03 -2.76441132e-04  6.22307767e-03
+   8.13758245e-14]
+ [ 2.53841228e-13 -2.00397550e-02  1.26803738e-13  8.11663254e-14
+   4.00000000e-02]]
+
+Parameter correlation export:
+{
+  "parameter_names": [
+    "c1",
+    "kappa",
+    "lattice_scale_shift",
+    "common_response_shift",
+    "corr_length_bias"
+  ],
+  "matrix": [
+    [
+      1.0,
+      0.03865101195678113,
+      -0.6854627465669051,
+      -0.25289652830631243,
+      4.5755116801587654e-11
+    ],
+    [
+      0.03865101195678074,
+      1.0,
+      0.2696494650586363,
+      -0.09079511137794635,
+      -0.23475315312704195
+    ],
+    [
+      -0.685462746566915,
+      0.26964946505863036,
+      1.0,
+      -0.07705811980115594,
+      1.3942821411295569e-11
+    ],
+    [
+      -0.25289652830631254,
+      -0.09079511137794273,
+      -0.0770581198011541,
+      1.0,
+      5.1577797807564954e-12
+    ],
+    [
+      4.57591717662657e-11,
+      -0.23475315312704215,
+      1.394185031020539e-11,
+      5.144501263673339e-12,
+      1.0
+    ]
+  ]
+}
+
+Observable residuals at optimum:
+{'bag_shift': -4.237865137203664e-06, 'correlation_length': -0.015188508644628396}
+
+Prior residuals at optimum:
+{'nuisance:lattice_scale_shift': 0.06883045143998066, 'nuisance:common_response_shift': 0.027532180472933602, 'nuisance:corr_length_bias': -7.582914592452556e-12, 'coefficient:c1': 0.13777721697085799}
+
+Toy chi2 = 0.027
+Toy dof = 1
+Toy reduced chi2 = 0.027

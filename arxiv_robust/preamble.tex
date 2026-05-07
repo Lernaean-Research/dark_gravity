@@ -1,0 +1,88 @@
+% Preamble for arxiv_robust (pdfLaTeX-first)
+
+% ---- Encoding & fonts (MOST robust on arXiv) ----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Minimal Unicode support for text pasted/extracted from DOCX.
+% Keep mappings conservative and math-safe.
+\usepackage{newunicodechar}
+\newunicodechar{′}{\ensuremath{^{\prime}}}
+\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
+\newunicodechar{−}{\ensuremath{-}}
+% Make dashes safe in math mode (prevents "\textendash invalid in math mode" warnings)
+\providecommand{\UnicodeEnDash}{\ifmmode\text{--}\else\textendash\fi}
+\providecommand{\UnicodeEmDash}{\ifmmode\text{---}\else\textemdash\fi}
+\newunicodechar{–}{\UnicodeEnDash}
+\newunicodechar{—}{\UnicodeEmDash}
+\newunicodechar{≤}{\ensuremath{\le}}
+\newunicodechar{≥}{\ensuremath{\ge}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{∝}{\ensuremath{\propto}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{∇}{\ensuremath{\nabla}}
+\newunicodechar{∂}{\ensuremath{\partial}}
+\newunicodechar{⊙}{\ensuremath{\odot}}
+\newunicodechar{☉}{\ensuremath{\odot}}
+\newunicodechar{★}{\ensuremath{\star}}
+\newunicodechar{☆}{\ensuremath{\star}}
+\newunicodechar{□}{\ensuremath{\Box}}
+\newunicodechar{■}{\ensuremath{\blacksquare}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{Λ}{\ensuremath{\Lambda}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{Φ}{\ensuremath{\Phi}}
+\newunicodechar{Ψ}{\ensuremath{\Psi}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+\newunicodechar{Υ}{\ensuremath{\Upsilon}}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{ε}{\ensuremath{\epsilon}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ν}{\ensuremath{\nu}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{φ}{\ensuremath{\phi}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+
+% Default: Latin Modern (Computer Modern successor; excellent math coverage)
+\usepackage{lmodern}
+
+% Optional: Times-like text+math (common physics look)
+% Enable by uncommenting BOTH lines below and commenting out lmodern above.
+% \usepackage{newtxtext}
+% \usepackage{newtxmath}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+
+% ---- Math ----
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+
+% ---- Figures & tables ----
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% ---- References (numeric) ----
+\usepackage[numbers,sort&compress]{natbib}
+
+% ---- Hyperlinks (keep conservative for arXiv) ----
+\usepackage[hidelinks]{hyperref}
+
+% Pandoc-ish compatibility helpers (harmless; useful if you paste content)
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}

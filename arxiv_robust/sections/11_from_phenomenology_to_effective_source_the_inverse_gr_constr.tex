@@ -1,0 +1,46 @@
+\section{From Phenomenology to Effective Source: The Inverse-GR Construction}
+
+% TODO: Port text/equations into each subsection; verify against the PDF.
+
+The standard approach to galaxy dynamics begins with a theoretical mass model (baryons + dark matter) and predicts observable kinematics. We invert this logic: we begin with observed kinematics and infer what effective source is required within standard GR.
+
+\subsection{Kinematics to Required Radial Acceleration}
+For each galaxy in the SPARC database, the observed rotation curve provides the centripetal acceleration at galactocentric radius $R$:
+
+\emph{(Equation from PDF: $a_{\mathrm{obs}}(R)$ in terms of $V(R)$ and $R$.)}
+
+The baryonic prediction $a_{\mathrm{bar}}(R)$ is constructed from SPARC's decomposed photometric and gas-mass components \citep{Lelli2016SPARC}, with a chosen stellar mass-to-light ratio $\Upsilon_\star$. The residual defines the ``missing curvature'' in the circular-orbit sector:
+
+\emph{(Equation from PDF: $\Delta a(R) \equiv a_{\mathrm{obs}}(R) - a_{\mathrm{bar}}(R)$.)}
+
+This residual is model-independent: it is a direct comparison of observed kinematics with the baryonic gravitational prediction. In the CDM interpretation, $\Delta a$ is sourced by an additional mass component. In the response-sector interpretation, it is the effective geometric response of spacetime to the baryonic source.
+
+\subsection{Weak-Field Metric Potentials}
+In the Newtonian gauge for weak gravitational fields, the line element takes the form:
+
+\emph{(Equation from PDF: weak-field metric with potentials $\Phi$ and $\Psi$.)}
+
+To leading order for nonrelativistic motion, the radial acceleration is $a \approx -\nabla \Phi$. Gravitational lensing depends on the Weyl combination $\propto (\Phi + \Psi)/2$. Thus, rotation curves primarily constrain $\Phi$, while lensing constrains the combination $(\Phi + \Psi)$. A metric-equivalent response-sector claim is strongest if it produces $\Phi \approx \Psi$ in the relevant regime; if it predicts gravitational slip ($\Phi \neq \Psi$), that slip becomes a key discriminant (see \S\,8).
+
+\subsection{Effective Enclosed Mass and Density}
+For spherically symmetric intuition (useful even for disk galaxies), circular orbits obey $V^2/R = GM(<R)/R^2$. Given the observed rotation curve, we define an effective enclosed mass:
+
+\emph{(Equation from PDF: $M_{\mathrm{eff}}(<R)$ in terms of $V(R)$.)}
+
+Subtracting baryons yields an effective extra enclosed mass and, by differentiation, an effective extra density:
+
+\emph{(Equations from PDF: $\Delta M(<R)$ and $\rho_{\mathrm{eff}}(R)$ / $\Delta\rho(R)$.)}
+
+For a flat outer rotation curve ($V \to \mathrm{const}$), one obtains $M \propto R$ and $\rho \propto R^{-2}$---the classic isothermal halo profile. In the response-sector interpretation, this effective density is not a new matter species; it is the effective stress--energy of the spacetime response to baryonic structure.
+
+\subsection{Effective Stress–Energy: What Is Being Added in GR}
+In standard GR, the Einstein equation reads $G_{\mu\nu} = 8\pi G\,T_{\mu\nu}$. The entire program is to interpret an additional contribution $T^{(\mathrm{resp})}_{\mu\nu}$ as a polarization-like response of the gravitational sector, activated by baryonic structure (especially at boundary/transition regions), with a small parameter set and a universal functional form. This makes the ``extra'' empirically necessary but not an ad hoc per-galaxy function.
+
+The response-sector stress--energy admits a standard fluid decomposition:
+
+\emph{(Equation from PDF: $T^{(\mathrm{resp})}_{\mu\nu}$ decomposed into $\rho$, $p$, 4-velocity, and anisotropic stress $\pi_{\mu\nu}$.)}
+
+where $\rho$ is the effective halo density in the inverse-GR sense, $p$ determines whether the sector is dust-like on large scales, and the anisotropic stress directly controls gravitational slip and lensing deviations.
+
+\subsection{Conservation Constraint}
+By the Bianchi identity, $\nabla^\mu G_{\mu\nu} = 0$. If baryons are minimally coupled and follow $\nabla^\mu T^{(\mathrm{bar})}_{\mu\nu} = 0$, then $\nabla^\mu T^{(\mathrm{resp})}_{\mu\nu}$ must hold independently. If exchange between sectors is allowed, this predicts a (possibly screened) fifth-force/equivalence-principle violation sector that must be stated explicitly. In this work, we assume independent conservation.

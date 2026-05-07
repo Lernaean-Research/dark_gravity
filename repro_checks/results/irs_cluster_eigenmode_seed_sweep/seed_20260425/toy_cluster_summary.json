@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "generated_utc": "2026-04-06T00:31:00.454338+00:00",
+    "seed": 20260425,
+    "satellites": 24,
+    "gas_nodes": 16,
+    "max_order": 5,
+    "radial_points": 36,
+    "input_csv": "D:\\#Documents\\#Publication\\Spacetime_Mechanics\\repro_checks\\cluster_mass_summary.csv",
+    "input_sha256": "b7784c1fd5dd1384c173704b5a091d182bafd99446ec8acb587091956517fc4c",
+    "anchor": {
+      "z": 0.224,
+      "m500_msun": 474331850000000.06,
+      "mbar_msun": 64034799750000.01,
+      "mgas_msun": 59291481250000.01,
+      "mstar_msun": 4743318500000.001,
+      "sigma_kms": 747.7300678465688
+    },
+    "r500_kpc": 1124.70707856434,
+    "gas_profile": {
+      "beta": 0.67,
+      "rc_kpc": 134.9648494277208,
+      "r_max_kpc": 1124.70707856434
+    },
+    "constants": {
+      "G_KPC": 4.3009e-06,
+      "A0_KMS2": 3702.813,
+      "H0_KMS_MPC": 67.4,
+      "OMEGA_M": 0.315,
+      "OMEGA_L": 0.685
+    }
+  },
+  "gates": {
+    "higher_modes_non_negligible": {
+      "value": 0.04913534978330807,
+      "pass": false,
+      "criterion": "0.05 <= higher_mode_fraction(R500) <= 0.55"
+    },
+    "closure_improves_with_modes": {
+      "value": 0.05482255029822425,
+      "pass": true,
+      "criterion": "closure_full(R500) > closure_ground(R500)"
+    },
+    "cluster_scale_closure": {
+      "value": 1.2516438611144143,
+      "pass": false,
+      "criterion": "0.65 <= closure_full(R500) <= 1.20"
+    },
+    "inner_profile_reasonable": {
+      "value": 0.7361671286990252,
+      "pass": true,
+      "criterion": "0.65 <= closure_full(0.5 R500) <= 1.35"
+    },
+    "outer_profile_not_divergent": {
+      "value": 1.37278070035864,
+      "pass": true,
+      "criterion": "0.50 <= closure_full(1.4 R500) <= 1.50"
+    },
+    "baryon_fraction_physical": {
+      "value": 0.10857582247250418,
+      "pass": true,
+      "criterion": "0.10 <= f_b(R500) <= 0.22"
+    },
+    "velocity_dispersion_anchor": {
+      "value": 869.6482306891611,
+      "pass": true,
+      "criterion": "|sigma_pred - sigma_anchor| / sigma_anchor <= 0.25",
+      "reference": 747.7300678465688
+    }
+  },
+  "key_rows": {
+    "at_half_r500": {
+      "r_kpc": 562.3535392821701,
+      "g_bar_total": 382.89644293704816,
+      "g_bar_gas": 333.45930934228835,
+      "g_bar_galaxies": 49.43713359475981,
+      "g_resp_ground": 1897.06263077969,
+      "g_resp_higher": 156.04752577370633,
+      "g_resp_total": 2053.1101565533963,
+      "m_eff_bary_msun": 28154048376523.566,
+      "m_eff_ground_msun": 167643443134488.38,
+      "m_eff_full_msun": 179117484407815.25,
+      "m_obs_analog_msun": 243310896975740.53,
+      "closure_ground": 0.6890091862642854,
+      "closure_full": 0.7361671286990252,
+      "higher_mode_fraction": 0.07600543267277335,
+      "mean_activation": 0.9998412388033827,
+      "baryon_fraction_full": 0.1571820220097684,
+      "gas_mass_enclosed_msun": 24518978172822.664,
+      "mode_1": 1897.06263077969,
+      "mode_2": 131.39251577217124,
+      "mode_3": 20.428942805280272,
+      "mode_4": 3.6473857587141425,
+      "mode_5": 0.5786814375406759
+    },
+    "at_r500": {
+      "r_kpc": 1129.2059068785975,
+      "g_bar_total": 218.15666042945628,
+      "g_bar_gas": 199.98865637993742,
+      "g_bar_galaxies": 18.16800404951886,
+      "g_resp_ground": 1703.0933769376252,
+      "g_resp_higher": 88.00630959453093,
+      "g_resp_total": 1791.099686532156,
+      "m_eff_bary_msun": 64677826110507.99,
+      "m_eff_ground_msun": 569601109528429.2,
+      "m_eff_full_msun": 595692711670566.0,
+      "m_obs_analog_msun": 475928281340496.3,
+      "closure_ground": 1.19682131081619,
+      "closure_full": 1.2516438611144143,
+      "higher_mode_fraction": 0.04913534978330807,
+      "mean_activation": 0.9999906963497756,
+      "baryon_fraction_full": 0.10857582247250418,
+      "gas_mass_enclosed_msun": 59291481250000.01,
+      "mode_1": 1703.0933769376252,
+      "mode_2": 78.6867306543012,
+      "mode_3": 8.172211376485999,
+      "mode_4": 1.0119950894639522,
+      "mode_5": 0.13537247427978294
+    },
+    "at_outer": {
+      "r_kpc": 1554.345182575918,
+      "g_bar_total": 115.17931191124487,
+      "g_bar_gas": 105.5496268173388,
+      "g_bar_galaxies": 9.629685093906057,
+      "g_resp_ground": 1337.084857577606,
+      "g_resp_higher": 45.159862878369054,
+      "g_resp_total": 1382.244720455975,
+      "m_eff_bary_msun": 64700863645797.766,
+      "m_eff_ground_msun": 815795340748188.4,
+      "m_eff_full_msun": 841163456617884.1,
+      "m_obs_analog_msun": 612744232489668.2,
+      "closure_ground": 1.3313798767774512,
+      "closure_full": 1.37278070035864,
+      "higher_mode_fraction": 0.032671394732093254,
+      "mean_activation": 0.9999981881701638,
+      "baryon_fraction_full": 0.07691830064271261,
+      "gas_mass_enclosed_msun": 59291481250000.01,
+      "mode_1": 1337.084857577606,
+      "mode_2": 42.098352264451485,
+      "mode_3": 2.8266946495726915,
+      "mode_4": 0.21726527644651494,
+      "mode_5": 0.017550687898361103
+    }
+  },
+  "outputs": {
+    "toy_cluster_sources.csv": "7a9fa5bd5478cc153d37b3af499ca6cdbf8c9a155c6009f062a240acd76a64ab",
+    "toy_cluster_profile.csv": "8e1f763d4df9fef1ce937306ff4cab198a300662f63c9064a1082db46660db0d",
+    "toy_cluster_summary.json": "1fde0f05b38f5e6e3f641105927abf0f72f869a227692a9e810f83693e9952a7"
+  }
+}

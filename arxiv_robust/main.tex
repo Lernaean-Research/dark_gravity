@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+
+% Robust arXiv-friendly workflow:
+% - Engine: pdfLaTeX
+% - Bibliography: BibTeX + natbib (numeric)
+% - Fonts: default Latin Modern (clean math); optional Times-like via newtx
+
+\input{preamble}
+\input{macros}
+
+\title{Intrinsic Response Sector as Dark Gravity: A GR-Compatible Candidate Identity for the Cold Dark Matter Role (SPARC-175)}
+\author{Robert D.\ Kitcey\\Independent Researcher\\\texttt{rkitcey@lernaean.net}}
+\date{February 2026}
+
+\begin{document}
+\maketitle
+
+% If a DOCX->LaTeX bootstrap exists, include it directly.
+% This provides a complete, publishable draft while allowing incremental
+% migration into the curated section files.
+\IfFileExists{sections/99_pandoc_body.tex}{
+	\input{sections/99_pandoc_body}
+}{
+	\begin{abstract}
+	\input{sections/00_abstract}
+	\end{abstract}
+
+	\input{sections/00_executive_summary}
+
+	\tableofcontents
+
+	\input{sections/00_includes}
+
+	\bibliographystyle{unsrtnat}
+	\bibliography{references}
+}
+
+\end{document}

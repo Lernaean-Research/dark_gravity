@@ -1,0 +1,46 @@
+\section{Minimal Response-Sector Model Specification}
+
+% TODO: Port text/equations into each subsection; verify against the PDF.
+
+The inverse-GR construction of \S\,2 shows what effective source is required. This section specifies a minimal closure that compresses the inverse freedom to $\le 2$ degrees of freedom per galaxy.
+
+\subsection{Design Principles}
+A response-sector model is parsimonious only if it satisfies three conditions. First, low-DOF compression: across galaxies, the inferred response must be well described by a universal shape family with $\mathcal{O}(1)$ parameters, not a bespoke function. Second, baryonic activation: the response must be tied to a baryonic invariant (an edge/transition proxy), limiting per-galaxy freedom. Third, out-of-sample prediction: the edge-amplitude statistic should be predictable from internal observables better than from environment proxies under cross-validation.
+
+\subsection{Auxiliary-Field Boundary-Layer Model}
+We introduce an auxiliary scalar field coupled to baryons through the action:
+
+\emph{(Equation from PDF: action defining auxiliary field and coupling.)}
+
+The key operational constraints are:
+
+\begin{itemize}
+\item ties activation to a baryonic invariant (an edge/transition proxy such as \emph{(see PDF)} or a surface-density proxy), not to a per-galaxy hand-fit function;
+\item the weak-field static equation for the auxiliary field reduces, outside the activation region, to an approximate flux-conservation law $\nabla\cdot \bm{J}=0$ with radial $J$ in disk symmetry, yielding an asymptotic \emph{(see PDF)} tail;
+\item this preserves standard GR on the left-hand side while adding a tightly constrained response sector on the right.
+\end{itemize}
+
+\subsection{Operational Implementation}
+In practice, the boundary-layer model defines a transition radius $R_t$---the galactocentric radius nearest to where \emph{(see PDF)} peaks. The model prediction for the total circular velocity is:
+
+\emph{(Equation from PDF: $V_{\mathrm{model}}^2(R)$ in terms of $V_{\mathrm{bar}}^2(R)$ and response contribution.)}
+
+where \emph{(see PDF)} is the single amplitude parameter (in $\mathrm{km}^2\,\mathrm{s}^{-2}$) controlling the strength of the response, and \emph{(see PDF)} encodes the boundary-layer shape: zero for $R < R_t$, rising to an asymptotic tail for $R > R_t$. The fit minimizes the weighted residual against the observed rotation curve to determine the amplitude parameter for each galaxy.
+
+\subsection{The Constitutive “Gravitational Dielectric” Alternative}
+An equivalent weak-field formulation defines an effective polarization field $\bm{P}$ such that the modified Poisson equation becomes a constitutive law:
+
+\emph{(Equation from PDF: modified Poisson/constitutive law with $\bm{P}$.)}
+
+Then \emph{(see PDF)} plays the role of the effective response density. This formulation restricts $\bm{P}$ to depend on baryonic invariants and a small number of constants, and is embeddable in a covariant action for lensing and cosmological extensions.
+
+\subsection{Three Completion Routes}
+The response-sector bookkeeping is compatible with at least three microphysical completions:
+
+\begin{itemize}
+\item extra field/medium: $T^{(\mathrm{resp})}_{\mu\nu}$ arises from some field(s) \emph{(see PDF)};
+\item modified gravity rewritten as effective source: higher-curvature or nonlocal terms moved to the right-hand side;
+\item constitutive closure: \emph{(see PDF)}.
+\end{itemize}
+
+This paper establishes the galaxy-domain phenomenology without committing to a specific completion; the choice constrains lensing and cosmological predictions (see \S\,8).
